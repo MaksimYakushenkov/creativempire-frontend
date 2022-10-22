@@ -1,0 +1,62 @@
+import React, { Component } from 'react';
+import { Route, Switch, Link, withRouter, useHistory } from "react-router-dom";
+import { HelmetProvider, Helmet } from 'react-helmet-async';
+
+import ArticleFull from './components/articleFull/ArticleFull';
+import Blog from './components/blog/Blog';
+import articlesApi from './utils/mainApi';
+
+function App() {
+  const [articlesList, setAcrticleList] = React.useState([]);
+  const [article, setAcrticle] = React.useState([]);
+  React.useEffect(() => {
+    getArticlesData();
+  }, []);
+  
+  function getArticlesData() {
+    articlesApi.getArticles()
+    .then(data => {
+      setAcrticleList(data.articles);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  }
+  function getArticle(url) {
+    articlesApi.getArticle(url)
+    .then(data => {
+      setAcrticle(data.article[0]);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  }
+  
+
+return (
+    <div className="App">
+    <div className="page">
+    <h1>Hello</h1>
+    <HelmetProvider><Helmet><title>My Title</title></Helmet></HelmetProvider>
+    <Switch>
+    <Route exact path="/">
+    
+      <Link to="/blog" className="burger__link">Главная</Link>
+    </Route>
+    <Route path="/blog">
+    <HelmetProvider><Helmet><title>Blog</title></Helmet></HelmetProvider>
+
+    <Blog
+    articlesList={articlesList} />
+    </Route>
+    <Route path="/articles/:url">
+
+    <ArticleFull article={article} getArticle={getArticle} />
+    </Route>
+    </Switch>
+    </div>
+    </div>
+);
+}
+
+export default App;
