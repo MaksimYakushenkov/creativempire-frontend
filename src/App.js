@@ -5,6 +5,8 @@ import { HelmetProvider, Helmet } from 'react-helmet-async';
 import ArticleFull from './components/articleFull/ArticleFull';
 import Blog from './components/blog/Blog';
 import articlesApi from './utils/mainApi';
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
 
 function App() {
   const [articlesList, setAcrticleList] = React.useState([]);
@@ -36,11 +38,11 @@ function App() {
 return (
     <div className="App">
     <div className="page">
-    <h1>Hello</h1>
     <HelmetProvider><Helmet><title>My Title</title></Helmet></HelmetProvider>
     <Switch>
     <Route exact path="/">
-    
+      <Header />
+      <Home />
       <Link to="/blog" className="burger__link">Главная</Link>
     </Route>
     <Route path="/blog">

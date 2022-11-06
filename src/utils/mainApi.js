@@ -28,7 +28,7 @@ class ArticlesApi {
 }
 
 const articlesApi = new ArticlesApi({
-  baseUrl: 'http://localhost:3000',
+  baseUrl: 'https://api.creativempire.online',
 });
 
 export default articlesApi;
