@@ -1,12 +1,13 @@
 {
   "name": "test",
-  "homepage": "http://a0637716.xsph.ru/",
+  "homepage": "./",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "animate.css": "^4.1.1",
     "cors": "^2.8.5",
     "react": "^18.2.0",
+    "react-collapse": "^5.1.1",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-helmet-async": "^1.3.0",
