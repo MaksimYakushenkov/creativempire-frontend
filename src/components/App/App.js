@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Route, Switch, Link, withRouter, useHistory } from "react-router-dom";
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
-import ArticleFull from './components/articleFull/ArticleFull';
-import Blog from './components/blog/Blog';
-import articlesApi from './utils/mainApi';
-import Header from './components/Header/Header';
-import Home from './components/Home/Home';
+import ArticleFull from '../articleFull/ArticleFull';
+import Blog from '../blog/Blog';
+import articlesApi from '../../utils/mainApi';
+import Header from '../Header/Header';
+import Home from '../Home/Home';
 
 function App() {
   const [articlesList, setAcrticleList] = React.useState([]);
@@ -43,7 +43,7 @@ return (
     <Route exact path="/">
       <Header />
       <Home />
-      <Link to="/blog" className="burger__link">Главная</Link>
+      
     </Route>
     <Route path="/blog">
     <HelmetProvider><Helmet><title>Blog</title></Helmet></HelmetProvider>

@@ -1,0 +1,46 @@
+.collapse__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.collapse__li {
+  margin: 24px 0;
+}
+
+.collapse__li div {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+}
+
+.collapse__header {
+  cursor: pointer;
+  color: #ccc3c3;
+}
+
+.collapse__li span {
+  font-size: 26px;
+  font-weight: 800;
+  color: #ccc3c3;
+  width: 20px;
+}
+.collapse__text {
+  color: white;
+  transform: scaleY(0);
+  transform-origin: top;
+  height: 0;
+  transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.collapse__text_visible {
+  transform: scaleY(1);
+  height: 160px;
+}
+
+.collapse__text p {
+  font-size: 18px;
+  line-height: 24px;
+  color: #ccc3c3;
+}

@@ -1,0 +1,130 @@
+.design-area {
+  position: relative;
+  overflow: hidden;
+  background-color: #1e1e22;
+}
+
+.design-area::before {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  content: '';
+  border-radius: 50%;
+  background: #fc653c;
+  -webkit-animation: zoomInOut 5s infinite;
+  animation: zoomInOut 5s infinite;
+  left: -10%;
+  top: 20%;
+  -webkit-filter: blur(350px);
+  filter: blur(350px);
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+  z-index: -1;
+}
+
+.design-area::after {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  content: '';
+  border-radius: 50%;
+  background: #fc653c;
+  -webkit-animation: zoomInOut 5s infinite;
+  animation: zoomInOut 5s infinite;
+  right: -8%;
+  top: -15%;
+  -webkit-filter: blur(110px);
+  filter: blur(110px);
+  z-index: -1;
+}
+
+.design-area__container {
+  
+}
+
+.design-area__shapes {
+
+}
+
+.design-area__header {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.design-area__dots {
+  position: absolute;
+  -webkit-animation: circle_rotate 27s infinite;
+  animation: circle_rotate 27s infinite;
+  right: 10%;
+  top: 30%;
+}
+
+.design-area__wave-line {
+  max-width: 35%;
+  -webkit-animation: down-up-one 10s infinite;
+  animation: down-up-one 10s infinite;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.design-area__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.design-area__details {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 30px;
+  justify-content: center;
+}
+
+.design-area__column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.design-area__column-item {
+  background-color: #16161c;
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  height: 309px;
+}
+
+.design-area__column-image {
+  width: 74px;
+}
+
+.design-area__column-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  line-height: 28px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #faebd7;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.design-area__arrow {
+  width: 60px;
+}
+
+
+
+

@@ -4,8 +4,15 @@
 @import url(./vendor/normalize.css);
 @import url(./vendor/fonts/fonts.css);
 
+@import url(./assets/css/animations.css);
+@import url(./components/App/App.css);
 @import url(./components/Header/Header.css);
 @import url(./components/Menu/Menu.css);
 @import url(./components/Home/Home.css);
 @import url(./components/Slider/Slider.css);
 @import url(./components/ourServices/OurServices.css);
+@import url(./components/collapse/Collapse.css);
+@import url(./components/AboutUs/AboutUs.css);
+@import url(./components/Statistics/Statistics.css);
+@import url(./components/DesignArea/DesignArea.css);
+
