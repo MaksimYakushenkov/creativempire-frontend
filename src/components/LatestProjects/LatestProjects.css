@@ -1,0 +1,110 @@
+.latestProjects {
+  background: #17171a;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  gap: 60px;
+}
+
+.latestProjects__header {
+  width: 800px;
+  text-align: center;
+}
+
+.latestProjects__slider {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.latestProjects__project {
+  width: 400px;
+  padding-left: 15px;
+  margin-bottom: 30px;
+}
+
+.latestProjects__image {
+  width: 100%;
+  height: 268px;
+}
+
+.latestProjects__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  -webkit-box-shadow: 5px 0 15px rgb(252 101 60 / 25%);
+  box-shadow: 5px 0 15px rgb(252 101 60 / 25%);
+  padding: 20px;
+}
+
+.latestProjects__title {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  line-height: 26px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #faebd7;
+  text-decoration: none;
+  text-align: center;
+}
+
+.latestProjects__subtitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  color: #fc653c;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.latestProjects__subtitle::before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background-color: #fc653c;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.latestProjects__subtitle::after {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background-color: #fc653c;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fc653c;
+}
+
+.slick-dots li button:before {
+  color: #fff;
+}
+
+.latestProjects__hover-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -269px;
+  width: 400px;
+  height: 269px;
+  background: #00000096;
+  transition: 0.75s;
+}
+
+.latestProjects__project:hover .latestProjects__hover-container{
+  top: 0;
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  -o-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}

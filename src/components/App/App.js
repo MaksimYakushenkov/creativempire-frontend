@@ -9,30 +9,30 @@ import Header from '../Header/Header';
 import Home from '../Home/Home';
 
 function App() {
-  const [articlesList, setAcrticleList] = React.useState([]);
-  const [article, setAcrticle] = React.useState([]);
-  React.useEffect(() => {
-    getArticlesData();
-  }, []);
+  // const [articlesList, setAcrticleList] = React.useState([]);
+  // const [article, setAcrticle] = React.useState([]);
+  // React.useEffect(() => {
+  //   getArticlesData();
+  // }, []);
   
-  function getArticlesData() {
-    articlesApi.getArticles()
-    .then(data => {
-      setAcrticleList(data.articles);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-  }
-  function getArticle(url) {
-    articlesApi.getArticle(url)
-    .then(data => {
-      setAcrticle(data.article[0]);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-  }
+  // function getArticlesData() {
+  //   articlesApi.getArticles()
+  //   .then(data => {
+  //     setAcrticleList(data.articles);
+  //   })
+  //   .catch((err) => {
+  //     console.log(err);
+  //   });
+  // }
+  // function getArticle(url) {
+  //   articlesApi.getArticle(url)
+  //   .then(data => {
+  //     setAcrticle(data.article[0]);
+  //   })
+  //   .catch((err) => {
+  //     console.log(err);
+  //   });
+  // }
   
 
 return (
@@ -47,13 +47,13 @@ return (
     </Route>
     <Route path="/blog">
     <HelmetProvider><Helmet><title>Blog</title></Helmet></HelmetProvider>
-
+{/* 
     <Blog
     articlesList={articlesList} />
     </Route>
     <Route path="/articles/:url">
 
-    <ArticleFull article={article} getArticle={getArticle} />
+    <ArticleFull article={article} getArticle={getArticle} /> */}
     </Route>
     </Switch>
     </div>

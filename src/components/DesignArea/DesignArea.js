@@ -1,6 +1,7 @@
 import React from 'react';
 import sliderDots from '../../assets/images/slider/slider-dots.png';
 import sliderWaveLine from '../../assets/images/slider/slider-wave-line.png';
+import designAreaMiddle from '../../assets/images/design-area/design-middle.png';
 import iconRightArrow from '../../assets/images/icons/right-arrow.webp';
 import iconIdea from '../../assets/images/icons/idea.webp';
 import iconWebPage from '../../assets/images/icons/web-page.webp';
@@ -16,53 +17,57 @@ function DesignArea() {
       <div className='design-area__container'>
         <div className='design-area__header'>
           <h3 className='section__title first-color'>••• А вы знали, что... •••</h3>
-          <h2 className='section__subtitle'>Особенности нашей веб-разработки</h2>
+          <h2 className='section__subtitle'>Нашими услугами по <br />веб-разработке являются</h2>
         </div>
         <div className='design-area__details'>
           <div className='design-area__column'>
-            <div className='design-area__column-item'>
+            <div className='design-area__column-item ml-30'>
               <img className='design-area__column-image' src={iconIdea} alt='Test' />
               <a className='design-area__column-link' href='https://github.com'>
-                Текст на ссылке
+              Создание <br/>веб-сайта с 0
                 <img className='design-area__arrow' src={iconRightArrow} alt='Test' />
               </a>
             </div>
             <div className='design-area__column-item'>
-            <img className='design-area__column-image' src={iconIdea} alt='Test' />
+            <img className='design-area__column-image' src={iconWebPage} alt='Test' />
               <a className='design-area__column-link' href='https://github.com'>
-                Текст на ссылке
+              Обслуживание вашего сайта
                 <img className='design-area__arrow' src={iconRightArrow} alt='Test' />
               </a>
             </div>
           </div>
           <div className='design-area__row'>
+          <div className='design-area__middle'>
+                <img className='design-area__middle-image' src={designAreaMiddle} alt='Test' />
+                </div>
             <div className='design-area__column-item'>
-                <img className='design-area__column-image' src={iconIdea} alt='Test' />
+               
+                <img className='design-area__column-image' src={iconShopping} alt='Test' />
                 <a className='design-area__column-link' href='https://github.com'>
-                  Текст на ссылке
+                  Интернет-магазины <br/>и eCommerce
                   <img className='design-area__arrow' src={iconRightArrow} alt='Test' />
                 </a>
             </div>
-            <div className='design-area__column-item'>
-            <img className='design-area__column-image' src={iconIdea} alt='Test' />
+            <div className='design-area__column-item mb_60'>
+            <img className='design-area__column-image' src={iconSeo} alt='Test' />
               <a className='design-area__column-link' href='https://github.com'>
-                Текст на ссылке
+                Проведение SEO оптимизации
                 <img className='design-area__arrow' src={iconRightArrow} alt='Test' />
               </a>
             </div>
           </div>
           <div className='design-area__column'>
             <div className='design-area__column-item'>
-                <img className='design-area__column-image' src={iconIdea} alt='Test' />
+                <img className='design-area__column-image' src={iconUserExperience} alt='Test' />
                 <a className='design-area__column-link' href='https://github.com'>
-                  Текст на ссылке
+                Исследование пользовательского опыта
                   <img className='design-area__arrow' src={iconRightArrow} alt='Test' />
                 </a>
             </div>
-            <div className='design-area__column-item'>
-            <img className='design-area__column-image' src={iconIdea} alt='Test' />
+            <div className='design-area__column-item ml-30'>
+            <img className='design-area__column-image' src={iconGraphicDesign} alt='Test' />
               <a className='design-area__column-link' href='https://github.com'>
-                Текст на ссылке
+              Разработка UX/UI дизайна
                 <img className='design-area__arrow' src={iconRightArrow} alt='Test' />
               </a>
             </div>

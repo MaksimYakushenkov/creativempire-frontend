@@ -1,0 +1,121 @@
+.work {
+  background: #17171a;
+  padding: 60px 0 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.work__container {
+
+}
+
+.work__header {
+  
+}
+
+.work__process-container {
+  display: flex;
+  margin-top: 100px;
+  gap: 30px;
+}
+
+.work__process {
+  width: 300px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.work__process:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.work__process:hover .work__process-image_container::before {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-animation: rotated_circle 5s linear infinite;
+  animation: rotated_circle 5s linear infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.work__process-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.work__process-image_container::before {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  content: '';
+  left: -14px;
+  top: -14px;
+  transition: 0.5s;
+  border-radius: 50%;
+  transform: scale(0);
+  border: 2px dashed #fc653c;
+}
+
+.work__process-number {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  opacity: 0.15;
+  line-height: 1;
+  font-size: 85px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  font-weight: 700;
+  position: absolute;
+  color: transparent;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: #293043;
+  -webkit-transform: translate(-100%, -70%) rotate(-50deg);
+  -ms-transform: translate(-100%, -70%) rotate(-50deg);
+  transform: translate(-100%, -70%) rotate(-50deg);
+  -webkit-text-stroke-color: white;
+}
+
+.work__process-image_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background-color: #fc653c;
+  border-radius: 50%;
+  position: relative;
+}
+.work__process-image {
+
+}
+
+.work__process-title {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  line-height: 26px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #faebd7;
+  text-decoration: none;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.work__process-description {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  margin-top: 10px;
+  color: #adadb8;
+}

@@ -1,14 +1,44 @@
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px!important;
+}
+
 .mt-50 {
   margin-top: 50px!important;
+}
+
+.mt-120 {
+  margin-top: 120px!important;
+}
+
+.mb-30 {
+  margin-bottom: 30px!important;
 }
 
 .mb-50 {
   margin-bottom: 50px!important;
 }
 
-.mt-120 {
-  margin-top: 120px!important;
+.mb_30 {
+  margin-bottom: -30px!important;
 }
+
+.mb_60 {
+  margin-bottom: -60px!important;
+}
+
+.ml-30 {
+  margin-left: 30px!important;
+}
+
+.mr-30 {
+  margin-right: 30px!important;
+}
+
+
 
 .mb-120 {
   margin-bottom: 120px!important;
@@ -36,6 +66,11 @@
 
 .z-0 {
   z-index: 0;
+}
+
+.icon-50 {
+  width: 50px;
+  height: 50px;
 }
 
 
@@ -70,6 +105,10 @@
 
 .second-color {
 
+}
+
+body {
+  background: #17171a;
 }
 
 @keyframes myFadeInUp {
