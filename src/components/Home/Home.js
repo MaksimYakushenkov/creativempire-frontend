@@ -8,6 +8,7 @@ import LatestProjects from '../LatestProjects/LatestProjects';
 import Work from '../Work/Work';
 import FastButtons from '../FastButtons/FastButtons';
 import PricePackages from '../PricePackages/PricePackages';
+import Testimonials from '../Testimonials/Testimonials';
 
 function Home(props) {
   return (
@@ -23,6 +24,7 @@ function Home(props) {
       <Work />
       <FastButtons />
       <PricePackages />
+      <Testimonials />
     </section>
   );
 }

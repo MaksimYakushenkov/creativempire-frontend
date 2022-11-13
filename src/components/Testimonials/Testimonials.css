@@ -1,0 +1,112 @@
+.testimonials {
+
+}
+
+.testimonials__slider {
+  width: 1280px;
+}
+
+.testimonial {
+  box-sizing: border-box;
+  display: flex;
+  width: 600px;
+  margin: 60px 20px;
+  gap: 40px;
+}
+
+.testimonal__avatar {
+  position: relative;
+  min-width: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: #fc653c;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.avatar-1 {
+  background-image: url('../../assets/images/team/avatar-1.webp');
+}
+
+.avatar-2 {
+  background-image: url('../../assets/images/team/avatar-2.webp');
+}
+
+.avatar-3 {
+  background-image: url('../../assets/images/team/avatar-3.webp');
+}
+
+.avatar-4 {
+  background-image: url('../../assets/images/team/avatar-4.webp');
+}
+
+.testimonal__avatar::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background-color: #fc653c;
+  background-image: url('../../assets/images/icons/quote.png');
+  background-size: 30px;
+  top: -15px;
+  right: -15px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.testimonial__container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: center;
+  gap: 20px;
+}
+
+
+.testimonial__review {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  color: #adadb8;
+}
+
+.testimonial__author-description {
+  display: flex;
+  flex-direction: column;
+  padding-left: 70px;
+  align-items: flex-start;
+}
+
+.testimonial__name {
+  position: relative;
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  line-height: 26px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #faebd7;
+  text-decoration: none;
+  text-align: center;
+}
+
+.testimonial__name::before {
+  content: '';
+  width: 30px;
+  height: 3px;
+  background-color: #fc653c;
+  position: absolute;
+  display: inline-block;
+  left: -50px;
+  top: 20px;
+}
+
+.testimonial__designation {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  color: #fc653c;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+}
