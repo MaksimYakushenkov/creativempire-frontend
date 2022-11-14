@@ -1,0 +1,39 @@
+.contactUs {
+  position: relative;
+  overflow: hidden;
+  background-color: #1e1e22;
+}
+
+.contactUs::before {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  content: '';
+  border-radius: 50%;
+  background: #fc653c;
+  animation: zoomInOut 5s infinite;
+  left: -10%;
+  top: 20%;
+  filter: blur(350px);
+  animation-delay: 2.5s;
+}
+
+.contactUs::after {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  content: '';
+  border-radius: 50%;
+  background: #fc653c;
+  animation: zoomInOut 5s infinite;
+  right: -8%;
+  top: -15%;
+  filter: blur(110px);
+}
+
+.contactUs__container {
+  width: 1280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

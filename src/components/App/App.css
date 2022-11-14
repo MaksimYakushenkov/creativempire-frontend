@@ -1,5 +1,5 @@
 .mt-20 {
-  margin-top: 20px;
+  margin-top: 20px!important;
 }
 
 .mt-30 {
@@ -61,11 +61,19 @@
 }
 
 .z-1 {
-  z-index: 1;
+  z-index: 1!important;
 }
 
 .z-0 {
-  z-index: 0;
+  z-index: 0!important;
+}
+
+.fs-30 {
+  font-size: 30px!important;
+}
+
+.fs-40 {
+  font-size: 40px!important;
 }
 
 .icon-50 {
@@ -76,6 +84,10 @@
 .section__header {
   width: 800px;
   text-align: center;
+}
+
+.text-inherit {
+  text-align: inherit;
 }
 
 .section__title {

@@ -9,6 +9,7 @@ import Work from '../Work/Work';
 import FastButtons from '../FastButtons/FastButtons';
 import PricePackages from '../PricePackages/PricePackages';
 import Testimonials from '../Testimonials/Testimonials';
+import ContactUs from '../ContactUs/ContactUs';
 
 function Home(props) {
   return (
@@ -25,6 +26,7 @@ function Home(props) {
       <FastButtons />
       <PricePackages />
       <Testimonials />
+      <ContactUs />
     </section>
   );
 }
