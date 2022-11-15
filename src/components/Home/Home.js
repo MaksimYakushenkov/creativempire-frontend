@@ -10,6 +10,7 @@ import FastButtons from '../FastButtons/FastButtons';
 import PricePackages from '../PricePackages/PricePackages';
 import Testimonials from '../Testimonials/Testimonials';
 import ContactUs from '../ContactUs/ContactUs';
+import Blog from '../Blog/Blog';
 
 function Home(props) {
   return (
@@ -27,6 +28,7 @@ function Home(props) {
       <PricePackages />
       <Testimonials />
       <ContactUs />
+      <Blog />
     </section>
   );
 }

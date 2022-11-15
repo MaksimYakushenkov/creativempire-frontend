@@ -3,7 +3,6 @@ import { Route, Switch, Link, withRouter, useHistory } from "react-router-dom";
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 import ArticleFull from '../articleFull/ArticleFull';
-import Blog from '../blog/Blog';
 import articlesApi from '../../utils/mainApi';
 import Header from '../Header/Header';
 import Home from '../Home/Home';

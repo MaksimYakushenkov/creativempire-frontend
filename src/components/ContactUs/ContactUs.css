@@ -32,8 +32,165 @@
 }
 
 .contactUs__container {
-  width: 1280px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 0 auto;
+  gap: 100px;
+}
+
+.contactUs__header {
+  width: 100%;
+}
+
+.contactUs__info-container {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.contactUs__list {
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactUs__list:hover {
+  background-color: #17171a63;
+}
+
+.contactUs__list-item {
+  display: flex;
+  align-items: center;
+}
+
+.contactUs__image-container {
+  width: 50px;
+  height: 50px;
+  background: #fc653c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactUs__image-container img {
+  width: 24px;
+  height: 24px;
+}
+
+.contactUs__link {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  line-height: 26px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #faebd7;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.contactUs__link:hover {
+  text-decoration: underline;
+}
+
+.contactUs__form-container {
+  border-radius: 12px;
+  padding: 40px 60px 50px;
+  background: #17171a;
+  width: 480px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 10px 0 60px rgb(140 140 140 / 30%);
+}
+
+.contactUs__form-header {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  line-height: 26px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.contactUs__form {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.contactUs__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactUs__textarea {
+  resize: vertical;
+  min-height: 100px;
+  max-height: 400px;
+}
+
+.contactUs__input {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  line-height: 20px;
+  font-size: 18px;
+  border: 1px solid rgb(178 178 178 / 30%);
+  border-radius: 8px;
+  background: transparent;
+  padding: 16px 20px;
+  color: #adadb8;
+}
+
+.contactUs__input:active {
+  border-color: #fc653c;
+}
+
+.contactUs__input:focus {
+  outline: 2px solid #fc653c;
+}
+
+.contactUs__submit-button {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  cursor: pointer;
+}
+
+.contactUs__submit-button:disabled {
+  cursor: not-allowed;
+  opacity: .1;
+}
+
+.contactUs__shapes {
+
+}
+
+.contactUs__dots {
+  position: absolute;
+  animation: circle_rotate 20s infinite;
+  right: 10%;
+  top: 10%;
+}
+
+.contactUs__wave-line {
+  max-width: 35%;
+  animation: down-up-one 10s infinite;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.contactUs__contactDots {
+  position: absolute;
+  animation: down-up-one 8s infinite;
+  bottom: 15%;
+  left: 10%;
 }

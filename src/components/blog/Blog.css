@@ -1,0 +1,110 @@
+.blog {
+  background-color: #0d0e0d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog__container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1280px;
+  gap: 80px;
+  margin-top: 80px;
+}
+
+.blog__item {
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.blog__preview-container {
+  border-radius: 15%;
+  overflow: hidden;
+  width: 190px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog__preview {
+  max-width: 190px;
+}
+
+.blog__description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px;
+}
+
+.blog__date {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  font-size: 18px;
+  color: #fc653c;
+  padding: 0;
+  display: flex;
+  font-weight: 700;
+  align-items: center;
+}
+
+.blog__date::before {
+  content: '';
+  width: 22px;
+  height: 22px;
+  background-image: url('../../assets/images/icons/calendar.png');
+  display: inline-block;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  margin-right: 10px;
+}
+
+.blog__title {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  line-height: 26px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  text-decoration: none;
+}
+
+.blog__title:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.blog__author {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.blog__author-avatar {
+  border-radius: 50%;
+}
+
+.blog__author-description {
+  display: flex;
+  flex-direction: column;
+}
+.blog__author-description p {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #adadb8;
+}
+.blog__link {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #adadb8;
+  font-weight: 800;
+}

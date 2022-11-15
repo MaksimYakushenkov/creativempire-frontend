@@ -97,7 +97,10 @@
   font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
   align-self: start;
   /* color: #F5325C; */
+}
 
+.section__subtitle span {
+  color: #fc653c;
 }
 
 .section__subtitle {
