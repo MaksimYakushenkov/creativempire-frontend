@@ -7,10 +7,23 @@ import articlesApi from '../../utils/mainApi';
 import Header from '../Header/Header';
 import Home from '../Home/Home';
 import Footer from '../Footer/Footer';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 function App() {
+  const [stickyHeader, setStickyHeader] = React.useState(false);
+  const [scrollToTopHidden, setScrollToTopHidden] = React.useState(true);
+
   React.useEffect(() => {
     new WOW().init();
+    window.addEventListener('scroll', () => {
+      if(window.pageYOffset <= 118){
+        setStickyHeader(false);
+        setScrollToTopHidden(true);
+      } else {
+        setStickyHeader(true);
+        setScrollToTopHidden(false);
+      }
+   });
   }, []);
   // const [articlesList, setAcrticleList] = React.useState([]);
   // const [article, setAcrticle] = React.useState([]);
@@ -44,10 +57,12 @@ return (
     <HelmetProvider><Helmet><title>My Title</title></Helmet></HelmetProvider>
     <Switch>
     <Route exact path="/">
-      <Header />
+      <Header
+      stickyHeader={stickyHeader}
+      />
       <Home />
       <Footer />
-      
+      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
     <Route path="/blog">
     <HelmetProvider><Helmet><title>Blog</title></Helmet></HelmetProvider>

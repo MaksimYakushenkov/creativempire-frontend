@@ -8,7 +8,7 @@ function Menu() {
         <li className='menu__item'>Домой</li>
         <li className='menu__item'>Услуги</li>
         <li className='menu__item'>Прайс-лист</li>
-        <li className='menu__item'><img className='menu__logo' src={logo} alt='Логотип студии креативного дизайна «Creative Empire»'/></li>
+        <li className='menu__item menu__item_logo'><img className='menu__logo' src={logo} alt='Логотип студии креативного дизайна «Creative Empire»'/></li>
         <li className='menu__item'>Портфолио</li>
         <li className='menu__item'>О нас</li>
         <li className='menu__item'>Контакты</li>

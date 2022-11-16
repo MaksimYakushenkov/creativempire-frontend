@@ -22,7 +22,9 @@ function Footer() {
 
       <div className='footer__container pt-60 pb-60'>
         <div className='footer__description pt-35 wow fadeInLeft delay-0-2s'>
+          <a href='./'>
           <img className='footer__logo' src={logo} alt="Веб-студия креативного дизайна Creative Empire" />
+          </a>
           <p className='footer__paragraph'>Веб-студия креативного дизайна Creative Empire предлагает только лучшие и современные решения по доступной цене. Мы работаем на качество и всегда готовы пойти на компромисс с клиентом, если это, конечно, не нарушает нашу основную миссию.</p>
           <div className='footer__social'>
             <a className='footer__social-link' href="ya.ru"><i className='footer__i vkontakte'></i></a>

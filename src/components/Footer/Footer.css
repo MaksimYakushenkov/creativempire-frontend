@@ -58,6 +58,11 @@
   box-shadow: 10px 0 60px rgb(140 140 140 / 30%);
 }
 
+.footer__social-link:hover {
+  cursor: pointer;
+  background: #fc653c;
+}
+
 .footer__i {
   width: 16px;
   height: 16px;

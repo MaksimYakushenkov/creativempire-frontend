@@ -156,6 +156,9 @@ body {
   background: #17171a;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 /* Animation Delay */
 .delay-1-0s {
   -webkit-animation-delay: 1s;
