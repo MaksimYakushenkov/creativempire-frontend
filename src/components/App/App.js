@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { Route, Switch, Link, withRouter, useHistory } from "react-router-dom";
 import { HelmetProvider, Helmet } from 'react-helmet-async';
-
+import 
 import ArticleFull from '../articleFull/ArticleFull';
 import articlesApi from '../../utils/mainApi';
 import Header from '../Header/Header';
 import Home from '../Home/Home';
 
 function App() {
+  React.useEffect(() => {
+    new WOW.WOW().init();
+  });
   // const [articlesList, setAcrticleList] = React.useState([]);
   // const [article, setAcrticle] = React.useState([]);
   // React.useEffect(() => {

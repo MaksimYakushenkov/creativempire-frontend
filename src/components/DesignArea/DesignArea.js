@@ -13,7 +13,7 @@ import iconGraphicDesign from '../../assets/images/icons/graphic-design.webp';
 function DesignArea() {
 
   return (
-    <section className='design-area pt-120 pb-120'>
+    <section className='design-area pt-120 pb-120 wow fadeInUp delay-0-2s'>
       <div className='design-area__container'>
         <div className='design-area__header'>
           <h3 className='section__title first-color'>••• А вы знали, что... •••</h3>

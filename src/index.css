@@ -3,6 +3,7 @@
 @import "animate.css";
 @import url(./vendor/normalize.css);
 @import url(./vendor/fonts/fonts.css);
+@import url(./assets/css/animate.min.css);
 
 @import url(./assets/css/animations.css);
 @import url(./components/App/App.css);
