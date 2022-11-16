@@ -6,11 +6,11 @@ function Blog() {
 
   return (
     <section className='blog pt-120 pb-120'>
-      <div className='section__header'>
+      <div className='section__header wow fadeInUp delay-0-2s'>
         <h3 className='section__title first-color'>••• Лучший блог •••</h3>
         <h2 className='section__subtitle'>Свежие новости, акции и спецпредложения</h2>
       </div>
-      <div className='blog__container'>
+      <div className='blog__container wow fadeInUp delay-0-4s'>
         <div className='blog__item'>
 
           <div className='blog__preview-container'>

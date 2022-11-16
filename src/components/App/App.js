@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import { Route, Switch, Link, withRouter, useHistory } from "react-router-dom";
 import { HelmetProvider, Helmet } from 'react-helmet-async';
-import 
+import WOW from 'wow.js';
 import ArticleFull from '../articleFull/ArticleFull';
 import articlesApi from '../../utils/mainApi';
 import Header from '../Header/Header';
 import Home from '../Home/Home';
+import Footer from '../Footer/Footer';
 
 function App() {
   React.useEffect(() => {
-    new WOW.WOW().init();
-  });
+    new WOW().init();
+  }, []);
   // const [articlesList, setAcrticleList] = React.useState([]);
   // const [article, setAcrticle] = React.useState([]);
   // React.useEffect(() => {
@@ -45,6 +46,7 @@ return (
     <Route exact path="/">
       <Header />
       <Home />
+      <Footer />
       
     </Route>
     <Route path="/blog">

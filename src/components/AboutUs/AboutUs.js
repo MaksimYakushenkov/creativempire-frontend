@@ -10,11 +10,11 @@ function AboutUs() {
   return (
     <section className='aboutUs'>
       <div className='aboutUs__container'>
-        <div className='aboutUs__image-area'>
+        <div className='aboutUs__image-area wow fadeInRight delay-0-4s'>
          <img className='aboutUs__image' src={aboutUsImage} alt='Студия креативного дизайна — Creative Empire' />
          <img className='aboutUs__shape' src={aboutUsShape} alt='Студия креативного дизайна — Creative Empire' />
         </div>
-        <div className='aboutUs__content'>
+        <div className='aboutUs__content wow fadeInLeft delay-0-2s'>
           <h3 className='section__title first-color'>••• Почему мы? •••</h3>
           <h2 className='section__subtitle'>Наши сильные стороны</h2>
           <div className='aboutUs__box mt-50'>

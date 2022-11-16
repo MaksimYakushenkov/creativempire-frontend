@@ -16,8 +16,4 @@
 
 .ourServices__collapse {
   max-width: 550px;
-  -webkit-animation: myFadeInUp;
-  -webkit-animation-duration: 1s;
-  animation: myFadeInUp;
-  animation-duration: 1s;
 }

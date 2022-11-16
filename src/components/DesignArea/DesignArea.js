@@ -13,14 +13,14 @@ import iconGraphicDesign from '../../assets/images/icons/graphic-design.webp';
 function DesignArea() {
 
   return (
-    <section className='design-area pt-120 pb-120 wow fadeInUp delay-0-2s'>
+    <section className='design-area pt-120 pb-120'>
       <div className='design-area__container'>
-        <div className='design-area__header'>
+        <div className='design-area__header wow fadeInUp delay-0-2s'>
           <h3 className='section__title first-color'>••• А вы знали, что... •••</h3>
           <h2 className='section__subtitle'>Нашими услугами по <br />веб-разработке являются</h2>
         </div>
         <div className='design-area__details'>
-          <div className='design-area__column'>
+          <div className='design-area__column wow fadeInLeft delay-0-2s'>
             <div className='design-area__column-item ml-30'>
               <img className='design-area__column-image' src={iconIdea} alt='Test' />
               <a className='design-area__column-link' href='https://github.com'>
@@ -36,7 +36,7 @@ function DesignArea() {
               </a>
             </div>
           </div>
-          <div className='design-area__row'>
+          <div className='design-area__row wow fadeInUp delay-0-2s'>
           <div className='design-area__middle'>
                 <img className='design-area__middle-image' src={designAreaMiddle} alt='Test' />
                 </div>
@@ -56,7 +56,7 @@ function DesignArea() {
               </a>
             </div>
           </div>
-          <div className='design-area__column'>
+          <div className='design-area__column wow fadeInRight delay-0-2s'>
             <div className='design-area__column-item'>
                 <img className='design-area__column-image' src={iconUserExperience} alt='Test' />
                 <a className='design-area__column-link' href='https://github.com'>

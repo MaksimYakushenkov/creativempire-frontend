@@ -23,13 +23,13 @@ function LatestProjects() {
 
   return (
     <section className='latestProjects'>
-      <div className='latestProjects__header'>
+      <div className='latestProjects__header wow fadeInUp delay-0-2s'>
           <h3 className='section__title first-color'>••• Последние проекты •••</h3>
           <h2 className='section__subtitle'>Посмотрите примеры наших работ</h2>
       </div>
       <Slider {...settings} className='latestProjects__slider'>
         <div>
-          <div className='latestProjects__project'>
+          <div className='latestProjects__project wow fadeInUp delay-0-2s'>
             <img className='latestProjects__image' src={project1} />
             <div className='latestProjects__description'>
               <a className='latestProjects__title' target='_blank' href='ya.ru'>Разработка дизайна интернет-магазина</a>
@@ -41,7 +41,7 @@ function LatestProjects() {
           </div>
         </div>
         <div>
-          <div className='latestProjects__project'>
+          <div className='latestProjects__project wow fadeInUp delay-0-4s'>
             <img className='latestProjects__image' src={project2} />
             <div className='latestProjects__description'>
               <a className='latestProjects__title' target='_blank' href='ya.ru'>Посадочная страница таролога</a>
@@ -53,7 +53,7 @@ function LatestProjects() {
           </div>
         </div>
         <div>
-          <div className='latestProjects__project'>
+          <div className='latestProjects__project wow fadeInUp delay-0-6s'>
             <img className='latestProjects__image' src={project3} />
             <div className='latestProjects__description'>
               <a className='latestProjects__title' target='_blank' href='ya.ru'>Логотип бренда "Coffee House"</a>
@@ -65,7 +65,7 @@ function LatestProjects() {
           </div>
         </div>
         <div>
-          <div className='latestProjects__project'>
+          <div className='latestProjects__project wow fadeInUp delay-0-2s'>
             <img className='latestProjects__image' src={project4} />
             <div className='latestProjects__description'>
               <a className='latestProjects__title' target='_blank' href='ya.ru'>Оформление соцсетей для блогера</a>
@@ -77,7 +77,7 @@ function LatestProjects() {
           </div>
         </div>
         <div>
-          <div className='latestProjects__project'>
+          <div className='latestProjects__project wow fadeInUp delay-0-4s'>
             <img className='latestProjects__image' src={project5} />
             <div className='latestProjects__description'>
               <a className='latestProjects__title' target='_blank' href='ya.ru'>Разработка дизайна мобильного приложения</a>
@@ -89,7 +89,7 @@ function LatestProjects() {
           </div>
         </div>
         <div>
-          <div className='latestProjects__project'>
+          <div className='latestProjects__project wow fadeInUp delay-0-6s'>
             <img className='latestProjects__image' src={project6} />
             <div className='latestProjects__description'>
               <a className='latestProjects__title' target='_blank' href='ya.ru'>Брендирование интернет-магазина</a>

@@ -5,13 +5,15 @@ function PricePackages() {
 
   return (
     <section className='pricePackages'>
-      <div className='section__header'>
+
+      <div className='section__header wow fadeInUp delay-0-2s'>
         <h3 className='section__title first-color'>••• Ценовая политика •••</h3>
         <h2 className='section__subtitle'>Премиальное качество по лучшей цене</h2>
       </div>
+
       <div className='pricePackages__container'>
         <div className='pricePackages__items'>
-          <div className='pricePackages__item'>
+          <div className='pricePackages__item wow fadeInDown delay-0-2s'>
             <h2 className='pricePackages__header'>Веб-сайт с нуля</h2>
             <span className='pricePackages__badge'>Выбор пользователей</span>
             <div className='pricePackages__footer'>
@@ -30,7 +32,7 @@ function PricePackages() {
               </div>
             </div>
           </div>
-          <div className='pricePackages__item'>
+          <div className='pricePackages__item wow fadeInDown delay-0-2s'>
             <h2 className='pricePackages__header'>Веб-сайт с нуля</h2>
             <span className='pricePackages__badge'>Выбор пользователей</span>
             <div className='pricePackages__footer'>
@@ -49,7 +51,7 @@ function PricePackages() {
               </div>
             </div>
           </div>
-          <div className='pricePackages__item'>
+          <div className='pricePackages__item wow fadeInUp delay-0-4s'>
             <h2 className='pricePackages__header'>Веб-сайт с нуля</h2>
             <span className='pricePackages__badge'>Выбор пользователей</span>
             <div className='pricePackages__footer'>
@@ -68,7 +70,7 @@ function PricePackages() {
               </div>
             </div>
           </div>
-          <div className='pricePackages__item'>
+          <div className='pricePackages__item wow fadeInUp delay-0-4s'>
             <h2 className='pricePackages__header'>Веб-сайт с нуля</h2>
             <span className='pricePackages__badge'>Выбор пользователей</span>
             <div className='pricePackages__footer'>
@@ -89,6 +91,7 @@ function PricePackages() {
           </div>
         </div>
       </div>
+      
       <div className='section__shapes'>
         <div className='section__wave' />
       </div>

@@ -70,6 +70,8 @@
   align-items: stretch;
   align-content: center;
   gap: 20px;
+  min-height: 200px;
+  justify-content: space-between;
 }
 
 

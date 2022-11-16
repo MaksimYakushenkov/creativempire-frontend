@@ -12,10 +12,6 @@
   margin: 0 auto;
   gap: 100px;
   align-items: center;
-  -webkit-animation: myFadeInUp;
-  -webkit-animation-duration: 0.75s;
-  animation: myFadeInUp;
-  animation-duration: 0.75s;
 }
 
 .aboutUs__content {

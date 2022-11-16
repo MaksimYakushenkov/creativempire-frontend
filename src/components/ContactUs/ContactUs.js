@@ -13,7 +13,7 @@ function ContactUs() {
   return (
     <section className='contactUs pb-120 pt-120'>
       <div className='contactUs__container'>
-        <div className='contactUs__info-container z-1'>
+        <div className='contactUs__info-container z-1 wow fadeInRight delay-0-2s'>
 
           <div className='section__header text-inherit contactUs__header'>
             <h2 className='section__subtitle fs-40'>Воплотите любую задумку в <span>прибыльный</span> шедевр!</h2>
@@ -49,7 +49,7 @@ function ContactUs() {
 
         </div>
 
-        <div className='contactUs__form-container z-1'>
+        <div className='contactUs__form-container z-1 wow fadeInLeft delay-0-4s'>
           <h2 className='contactUs__form-header'>Я хочу заказать...</h2>
           <form className="contactUs__form" noValidate>
 
