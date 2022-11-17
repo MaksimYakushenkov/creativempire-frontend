@@ -23,6 +23,11 @@
   margin-top: 15px;
 }
 
+.cooperation__header p {
+  font-size: 20px;
+  line-height: 26px;
+}
+
 .cooperation__header a {
   color: inherit;
   text-decoration: none;

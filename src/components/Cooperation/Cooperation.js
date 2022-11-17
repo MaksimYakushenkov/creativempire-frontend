@@ -12,13 +12,12 @@ function Cooperation() {
           <h2 className='section__subtitle'>Откройте для себя экстраординарный дизайн вместе с <a href='./'>Creative Empire</a></h2>
           <p className='section__paragraph'>Начнем создавать для Вас лучший проект в ближайшее время — оставьте заявку онлайн.</p>
           <button className="slider__button">
-                    Связаться
-                    <img src={iconDoubleRight} />
-                  </button>
+            Связаться
+            <img src={iconDoubleRight} />
+          </button>
         </div>
         <img className='cooperation__image wow fadeInRight delay-0-4s' src={cooperationImage} alt="Контентная картинка" />
       </div>
-
     </section>
   );
 }

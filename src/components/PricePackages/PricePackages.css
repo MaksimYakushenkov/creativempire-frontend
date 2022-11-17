@@ -5,6 +5,9 @@
   align-items: center;
   align-content: center;
   padding-bottom: 100px;
+  padding-top: 232px;
+  background: #0d0e0d;
+  z-index: 0;
 }
 
 .pricePackages__container {

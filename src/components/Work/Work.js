@@ -8,7 +8,7 @@ import workImageShape from '../../assets/images/shapes/worp-process-step.png';
 function Work() {
 
   return (
-    <section id="work" className='work'>
+    <section id="work" className='work pt-60 pb-100'>
       <div className='work__container z-1'>
         <div className='work__header wow fadeInUp delay-0-2s'>
             <h3 className='section__title first-color'>••• План работы •••</h3>
