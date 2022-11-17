@@ -9,11 +9,16 @@
 }
 
 .menu__item {
-  padding: 35px 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
+  font-weight: 800;
   text-decoration: none;
   color: #fff;
+}
+
+.menu__item a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .menu__logo {

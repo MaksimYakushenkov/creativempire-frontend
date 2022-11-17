@@ -1,0 +1,123 @@
+.page-banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #17171a;
+  padding: 219px 0 120px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.page-banner__header {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  font-size: 60px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.breadcumps {
+  margin-top: 30px;
+}
+
+.breadcumps-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.breadcumps-item {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.breadcumps-item a {
+  text-decoration: none;
+  color: #faebd7;
+}
+
+.breadcumps-item_active {
+  color: #fc653c;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.breadcumps-item_active::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin-right: 10px;
+  background: url('../../assets/images/icons/double-right.png');
+  background-size: cover;
+}
+
+
+.page-banner__shapes {
+  
+}
+
+.page-banner__circle {
+  width: 700px;
+  height: 700px;
+  z-index: -2;
+  top: -300px;
+  left: -239px;
+  background: #fc653c;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0.1;
+}
+
+.page-banner__img {
+  position: absolute;
+}
+
+.left-shape {
+  left: 6%;
+  top: 35%;
+  -webkit-animation: down-up-one 15s infinite;
+  animation: down-up-one 15s infinite;
+}
+
+.right-shape {
+  bottom: 15%;
+  right: 6%;
+  -webkit-animation: upDownLeft 20s infinite;
+  animation: upDownLeft 20s infinite;
+}
+
+.page-banner__shapes::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border: 2px solid #dc002c;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  -webkit-animation: shapeAnimationTwo 30s infinite;
+  animation: shapeAnimationTwo 30s infinite;
+  left: 20%;
+  top: 55%;
+}
+
+.page-banner__shapes::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  -webkit-animation: shapeAnimationTwo 30s infinite;
+  animation: shapeAnimationTwo 30s infinite;
+  right: 10%;
+  top: 20%;
+}

@@ -1,10 +1,25 @@
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  .header {
+  . {
 
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .header {
+  . {
   }
+}
+
+
+
+@keyframes cooperationTextChangeColor {
+  0% {
+     }
+  25% {
+     }
+  50% {
+    }
+  75% {
+     }
+  100% {
+     } 
 }

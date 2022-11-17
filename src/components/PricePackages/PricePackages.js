@@ -4,7 +4,7 @@ import iconDoubleRight from '../../assets/images/icons/double-right.png';
 function PricePackages() {
 
   return (
-    <section className='pricePackages'>
+    <section id="pricePackages" className='pricePackages'>
 
       <div className='section__header wow fadeInUp delay-0-2s'>
         <h3 className='section__title first-color'>••• Ценовая политика •••</h3>

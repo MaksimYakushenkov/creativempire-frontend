@@ -1,5 +1,4 @@
 import React from 'react';
-import SimpleSlider from '../Slider/Slider';
 import OurServices from '../ourServices/OurServices';
 import AboutUs from '../AboutUs/AboutUs';
 import Statistics from '../Statistics/Statistics';
@@ -11,13 +10,12 @@ import PricePackages from '../PricePackages/PricePackages';
 import Testimonials from '../Testimonials/Testimonials';
 import ContactUs from '../ContactUs/ContactUs';
 import Blog from '../Blog/Blog';
+import HeaderSlider from '../Slider/Slider';
 
 function Home(props) {
   return (
     <section className='home'>
-      <div className='slider'>
-      <SimpleSlider />
-      </div>
+      <HeaderSlider />
       <OurServices />
       <AboutUs />
       <Statistics />

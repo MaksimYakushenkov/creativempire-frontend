@@ -5,7 +5,16 @@ function Header(props) {
   
   return (
     <header className={`header ${props.stickyHeader ? 'header__sticky' : ''}`}>
-      <Menu />
+      <div className='header__container'>
+        <Menu />
+        <button className="order__button">
+          <span className="contact-form__span"></span>
+          <span className="contact-form__span"></span>
+          <span className="contact-form__span"></span>
+          <span className="contact-form__span"></span>
+          Расчет проекта
+        </button>
+      </div>
     </header> 
   );
 }

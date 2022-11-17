@@ -8,6 +8,10 @@ import Header from '../Header/Header';
 import Home from '../Home/Home';
 import Footer from '../Footer/Footer';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
+import Services from '../Services/Services';
+import PageBanner from '../PageBanner/PageBanner';
+import Cooperation from '../Cooperation/Cooperation';
+import Work from '../Work/Work';
 
 function App() {
   const [stickyHeader, setStickyHeader] = React.useState(false);
@@ -52,31 +56,40 @@ function App() {
   
 
 return (
-    <div className="App">
-    <div className="page">
-    <HelmetProvider><Helmet><title>My Title</title></Helmet></HelmetProvider>
-    <Switch>
+
+    <>
+    <HelmetProvider><Helmet><title>My Title</title></Helmet></HelmetProvider><Switch>
     <Route exact path="/">
       <Header
-      stickyHeader={stickyHeader}
-      />
+        stickyHeader={stickyHeader} />
       <Home />
       <Footer />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
+    <Route path="/services">
+      <Header
+        stickyHeader={stickyHeader}
+      />
+      <PageBanner
+        header="Услуги и цены"
+      />
+      <Cooperation />
+      <Work />
+      <Services />
+    </Route>
     <Route path="/blog">
-    <HelmetProvider><Helmet><title>Blog</title></Helmet></HelmetProvider>
-{/* 
-    <Blog
-    articlesList={articlesList} />
+      <HelmetProvider><Helmet><title>Blog</title></Helmet></HelmetProvider>
+      {/*
+        <Blog
+        articlesList={articlesList} />
+        </Route>
+        <Route path="/articles/:url">
+    
+        <ArticleFull article={article} getArticle={getArticle} /> */}
     </Route>
-    <Route path="/articles/:url">
+  </Switch>
+  </>
 
-    <ArticleFull article={article} getArticle={getArticle} /> */}
-    </Route>
-    </Switch>
-    </div>
-    </div>
 );
 }
 

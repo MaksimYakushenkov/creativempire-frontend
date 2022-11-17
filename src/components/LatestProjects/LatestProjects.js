@@ -22,7 +22,7 @@ function LatestProjects() {
   };
 
   return (
-    <section className='latestProjects'>
+    <section id="latestProjects" className='latestProjects'>
       <div className='latestProjects__header wow fadeInUp delay-0-2s'>
           <h3 className='section__title first-color'>••• Последние проекты •••</h3>
           <h2 className='section__subtitle'>Посмотрите примеры наших работ</h2>

@@ -7,8 +7,9 @@ import imgageCaption from '../../assets/images/slider/design_slider.png';
 import sliderDots from '../../assets/images/slider/slider-dots.png';
 import sliderWaveLine from '../../assets/images/slider/slider-wave-line.png';
 import sliderCircle from '../../assets/images/slider/slider-circle.png';
+import iconDoubleRight from '../../assets/images/icons/double-right.png';
 
-export default class SimpleSlider extends Component {
+export default class HeaderSlider extends Component {
   render() {
     const settings = {
     infinite: true,
@@ -24,22 +25,23 @@ export default class SimpleSlider extends Component {
     lazyLoad: true,
     };
     return (
-      <><div>
+      <section className="slider">
+<div>
         <Slider {...settings}>
           <div>
             <div className="slide__container">
               <div className="slide__description">
-                <h1 className="slider__header">Студия дизайна</h1>
+                <h1 className="slider__header">Digital-студия</h1>
                 <h2 className="slider__title text-bottom-line">Creative Empire</h2>
-                <p className="slider__paragraph">Лучшие креативные решения для вашего бизнеса или хобби! <br />Оставьте заявку и мы вам перезвоним.</p>
+                <p className="slider__paragraph">Лучшие креативные решения для вашего бизнеса или хобби! Оставьте заявку и мы вам перезвоним.</p>
                 <div className="slide__buttons">
-                  <a href="#contact" className="page-scroll"><button className="slider__button slider__button_transparent">Контакты</button></a>
-                  <button className="slider__button order__button">
-                    <span className="contact-form__span"></span>
-                    <span className="contact-form__span"></span>
-                    <span className="contact-form__span"></span>
-                    <span className="contact-form__span"></span>
+                  <button className='slider__button slider__button_transparent' href='ya.ru' target='_blank'>
+                    Контакты
+                    <img src={iconDoubleRight} />
+                  </button>
+                  <button className="slider__button">
                     Быстрый заказ
+                    <img src={iconDoubleRight} />
                   </button>
                 </div>
               </div>
@@ -52,17 +54,17 @@ export default class SimpleSlider extends Component {
           <div>
             <div className="slide__container">
               <div className="slide__description">
-                <h1 className="slider__header">Мы — креатив</h1>
+                <h1 className="slider__header">Мы — Креатив</h1>
                 <h2 className="slider__title text-bottom-line">Creative Empire</h2>
-                <p className="slider__paragraph">Современный креатив продвигает.Поэтому наши лучшие решения <br />гарантированно поднимут вас на голову выше конкурентов.</p>
-                <div>
-                  <a href="#contact" className="page-scroll"><button className="slider__button slider__button_transparent">Контакты</button></a>
-                  <button className="slider__button order__button">
-                    <span className="contact-form__span"></span>
-                    <span className="contact-form__span"></span>
-                    <span className="contact-form__span"></span>
-                    <span className="contact-form__span"></span>
+                <p className="slider__paragraph">Современный креатив продвигает. Поэтому наши лучшие решения <br />гарантированно поднимут вас на голову выше конкурентов.</p>
+                <div className="slide__buttons">
+                  <button className='slider__button slider__button_transparent' href='ya.ru' target='_blank'>
+                    Контакты
+                    <img src={iconDoubleRight} />
+                  </button>
+                  <button className="slider__button">
                     Быстрый заказ
+                    <img src={iconDoubleRight} />
                   </button>
                 </div>
               </div>
@@ -77,17 +79,17 @@ export default class SimpleSlider extends Component {
               <div className="slide__description">
 
 
-                <h1 className="slider__header">Мы — Design</h1>
+                <h1 className="slider__header">Мы — Дизайн</h1>
                 <h2 className="slider__title text-bottom-line">Creative Empire</h2>
-                <p className="slider__paragraph">Уникальный дизайн каждому клиенту.Заставьте свой бизнес <br />работать на вас — а мы в этом поможем!</p>
-                <div>
-                  <a href="#contact" className="page-scroll"><button className="slider__button slider__button_transparent">Контакты</button></a>
-                  <button className="slider__button order__button">
-                    <span className="contact-form__span"></span>
-                    <span className="contact-form__span"></span>
-                    <span className="contact-form__span"></span>
-                    <span className="contact-form__span"></span>
+                <p className="slider__paragraph">Уникальный дизайн каждому клиенту. Заставьте свой бизнес <br />работать на вас — а мы в этом поможем!</p>
+                <div className="slide__buttons">
+                  <button className='slider__button slider__button_transparent' href='ya.ru' target='_blank'>
+                    Контакты
+                    <img src={iconDoubleRight} />
+                  </button>
+                  <button className="slider__button">
                     Быстрый заказ
+                    <img src={iconDoubleRight} />
                   </button>
                 </div>
               </div>
@@ -98,12 +100,14 @@ export default class SimpleSlider extends Component {
             </div>
           </div>
         </Slider>
-      </div><div className='slider__details'>
+      </div>
+      <div className='slider__details'>
           <img className='slider__dots first' alt="Студия креативного дизайна — Creative Empire" src={sliderDots} />
           <img className='slider__dots second' alt="Студия креативного дизайна — Creative Empire" src={sliderDots} />
           <img className='slider__wave-line' alt="Студия креативного дизайна — Creative Empire" src={sliderWaveLine} />
           <img className='slider_circle' alt="Студия креативного дизайна — Creative Empire" src={sliderCircle} />
-        </div></>
+      </div>
+      </section>
     );
   }
 }

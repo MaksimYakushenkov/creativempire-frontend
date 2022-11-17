@@ -3,17 +3,18 @@ import iconCheckout from '../../assets/images/icons/checkout.png';
 import iconFlexible from '../../assets/images/icons/flexible.png';
 import iconTesting from '../../assets/images/icons/testing.png';
 import iconDeployment from '../../assets/images/icons/deployment.png';
+import workImageShape from '../../assets/images/shapes/worp-process-step.png';
 
 function Work() {
 
   return (
-    <section className='work'>
-      <div className='work__container'>
+    <section id="work" className='work'>
+      <div className='work__container z-1'>
         <div className='work__header wow fadeInUp delay-0-2s'>
             <h3 className='section__title first-color'>••• План работы •••</h3>
             <h2 className='section__subtitle'>Всего 4 шага до вашего успеха</h2>
         </div>
-        <div className='work__process-container'>
+        <div className='work__process-container z-1'>
           <div className='work__process wow fadeInUp delay-0-2s'>
             <div className='work__process-header'>
               <span className='work__process-number'>01</span>
@@ -54,6 +55,9 @@ function Work() {
             <h2 className='work__process-title'>Деплой проекта</h2>
             <p className='work__process-description'>Поправляем недочеты, подготавливаем проект к релизу. Получаем оставшуюся оплату и передаем вам все права на владение продуктом</p>
           </div>
+        </div>
+        <div className='work__shape wow fadeInUp delay-0-8s'>
+          {/* <img className='work__image-shape' src={workImageShape} alt="Фигура" /> */}
         </div>
       </div>
     </section>

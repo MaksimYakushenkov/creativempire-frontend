@@ -8,7 +8,7 @@ import iconStartUp from '../../assets/images/icons/icon-startup.webp';
 
 function AboutUs() {
   return (
-    <section className='aboutUs'>
+    <section id="aboutUs" className='aboutUs'>
       <div className='aboutUs__container'>
         <div className='aboutUs__image-area wow fadeInRight delay-0-4s'>
          <img className='aboutUs__image' src={aboutUsImage} alt='Студия креативного дизайна — Creative Empire' />
