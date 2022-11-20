@@ -9,7 +9,7 @@ function Cooperation() {
       <div className='cooperation__container'>
         <div className='cooperation__header wow fadeInLeft delay-0-2s'>
           <h3 className='section__title first-color'>••• Давайте сотрудничать! •••</h3>
-          <h2 className='section__subtitle'>Откройте для себя экстраординарный дизайн вместе с <a href='./'>Creative Empire</a></h2>
+          <h2 className='section__subtitle'>Откройте для себя экстраординарный дизайн вместе с <a className='text-color-animation' href='./'>Creative Empire</a></h2>
           <p className='section__paragraph'>Начнем создавать для Вас лучший проект в ближайшее время — оставьте заявку онлайн.</p>
           <button className="slider__button">
             Связаться

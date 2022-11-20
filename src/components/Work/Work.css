@@ -24,6 +24,9 @@
   width: 300px;
   padding: 30px;
   box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .work__process:nth-child(2), .work__process:nth-child(4) {
@@ -34,9 +37,6 @@
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .work__process:hover .work__process-image_container::before {

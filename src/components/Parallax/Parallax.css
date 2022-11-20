@@ -1,0 +1,15 @@
+.parallax {
+  width: 100%;
+  height: 980px;
+  transition: transform 0ms ease 0s;
+  position: absolute;
+  transform: translateX(0);
+  top: -50%;
+  background-size: cover;
+  z-index: -1;
+}
+
+.parallax img {
+  width: 100%;
+  z-index: 0;
+}

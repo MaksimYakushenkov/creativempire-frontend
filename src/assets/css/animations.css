@@ -145,3 +145,21 @@
   50% {
     -webkit-transform: translate(-50px, 50px);
     transform: translate(-50px, 50px); } }
+
+@keyframes cooperationTextChangeColor {
+  0% {
+    color: #FE9930;
+      }
+  25% {
+    color: #E66F2C;
+      }
+  50% {
+    color: #FC653C;
+    }
+  75% {
+    color: #E6392C;
+      }
+  100% {
+    color: #FE9930;
+      } 
+}

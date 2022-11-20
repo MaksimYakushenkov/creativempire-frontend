@@ -28,12 +28,6 @@
   line-height: 26px;
 }
 
-.cooperation__header a {
-  color: inherit;
-  text-decoration: none;
-  animation: cooperationTextChangeColor 2s infinite;
-}
-
 .cooperation__image {
   max-width: 730px;
   width: 650px;
@@ -48,22 +42,4 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .cooperation {
   }
-}
-
-@keyframes cooperationTextChangeColor {
-  0% {
-    color: #FE9930;
-     }
-  25% {
-    color: #E66F2C;
-     }
-  50% {
-    color: #FC653C;
-    }
-  75% {
-    color: #E6392C;
-     }
-  100% {
-    color: #FE9930;
-     } 
 }
