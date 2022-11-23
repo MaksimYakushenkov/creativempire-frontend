@@ -1,0 +1,145 @@
+.work-plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work-plan__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1280px;
+}
+
+.work-plan__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.work-plan__list-item {
+  width: 1000px;
+  height: 300px;
+  background-color: #0d0e0d;
+  border-radius: 8px;
+  box-shadow: 10px 0 60px rgb(252 101 60 / 10%);
+  padding: 20px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+}
+
+.work-plan__number {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background: #1e1e22;
+  border-radius: 50%;
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  font-size: 70px;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: #fc653c;
+}
+
+.work-plan__number_left {
+  right: -25px;
+  top: -25px;
+}
+
+.work-plan__number_right {
+  left: -50px;
+  top: -50px;
+}
+
+.work-plan__list-item_left::after {
+  content: '';
+  width: 280px;
+  height: 350px;
+  position: absolute;
+  border-right: 5px dashed white;
+  border-top: 5px dashed white;
+  right: -140px;
+  top: 140px;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.work-plan__list-item_right {
+  align-self: end;
+  flex-direction: row-reverse;
+}
+
+
+.work-plan__list-item_right::after {
+  content: '';
+  width: 280px;
+  height: 350px;
+  position: absolute;
+  border-left: 5px dashed white;
+  border-top: 5px dashed white;
+  left: -140px;
+  top: 140px;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.work-plan__image {
+  min-width: 300px;
+  width: 300px;
+  height: 240px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.work-plan__image.first {
+ background-image: url('../../assets/images/work-plan/1.jpg');
+}
+
+.work-plan__image.second {
+  background-image: url('../../assets/images/work-plan/2.jpg');
+ }
+
+.work-plan__description {
+
+}
+
+.work-plan__title {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  line-height: 26px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #faebd7;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 0 30px;
+}
+
+.work-plan__item-description {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  margin-top: 10px;
+  color: #adadb8;
+}
+
+.work-plan__dotted {
+
+}
+
+.work-plan__dotted_right {
+
+}
+
+.no-after::after {
+  display: none;
+}

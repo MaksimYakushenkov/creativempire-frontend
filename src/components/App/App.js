@@ -14,6 +14,7 @@ import Cooperation from '../Cooperation/Cooperation';
 import Work from '../Work/Work';
 import PlaceMagic from '../PlaceMagic/PlaceMagic';
 import Portfolio from '../Portfolio/Portfolio';
+import WorkPlan from '../WorkPlan/WorkPlan';
 
 function App() {
   const [stickyHeader, setStickyHeader] = React.useState(false);
@@ -82,8 +83,13 @@ return (
       <Footer />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
-    <Route exact path="/portfolio">
-      <Portfolio />
+    <Route path="/portfolio"
+    >
+      <Portfolio stickyHeader={stickyHeader} />
+      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
+    </Route>
+    <Route path="/work-plan">
+      <WorkPlan stickyHeader={stickyHeader}/>
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
     <Route path="/blog">
