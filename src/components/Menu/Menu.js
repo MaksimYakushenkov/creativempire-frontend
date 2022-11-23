@@ -10,8 +10,8 @@ function Menu() {
         <li className='menu__item'><a href="./portfolio">Портфолио</a></li>
         <li className='menu__item menu__item_logo'><img className='menu__logo' src={logo} alt='Логотип студии креативного дизайна «Creative Empire»'/></li>
         <li className='menu__item'><a href="./work-plan">План работы</a></li>
-        <li className='menu__item'><a href="#contact">Контакты</a></li>
-        <li className='menu__item'><a href="#aboutUs">О нас</a></li>
+        <li className='menu__item'><a href="./contact">Контакты</a></li>
+        <li className='menu__item'><a href="./calculator">Калькулятор</a></li>
       </ul>
     </nav>
   );

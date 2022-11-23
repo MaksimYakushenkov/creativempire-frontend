@@ -82,9 +82,7 @@ function ContactUs() {
           </form>
         </div>
       </div>
-      <div className='contactUs__contact-form'>
-        
-      </div>
+
       <div className='contactUs__shapes'>
         <img className='contactUs__dots' alt="Студия креативного дизайна — Creative Empire" src={sliderDots} />
         <img className='contactUs__wave-line' alt="Студия креативного дизайна — Creative Empire" src={contactWaveLine} />

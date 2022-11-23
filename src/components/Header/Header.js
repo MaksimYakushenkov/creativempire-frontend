@@ -12,7 +12,7 @@ function Header(props) {
           <span className="contact-form__span"></span>
           <span className="contact-form__span"></span>
           <span className="contact-form__span"></span>
-          Расчет проекта
+          Заказать звонок
         </button>
       </div>
     </header> 
