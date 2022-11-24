@@ -16,6 +16,7 @@ import PlaceMagic from '../PlaceMagic/PlaceMagic';
 import Portfolio from '../Portfolio/Portfolio';
 import WorkPlan from '../WorkPlan/WorkPlan';
 import Contact from '../Contact/Contact';
+import Calculator from '../Calculator/Calculator';
 
 function App() {
   const [stickyHeader, setStickyHeader] = React.useState(false);
@@ -97,9 +98,10 @@ return (
       <Contact stickyHeader={stickyHeader}/>
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
-    {/* <Route path="/calculator">
-      
-    </Route> */}
+    <Route path="/calculator">
+      <Calculator stickyHeader={stickyHeader}/>
+      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
+    </Route>
     <Route path="/blog">
       <HelmetProvider><Helmet><title>Blog</title></Helmet></HelmetProvider>
       {/*

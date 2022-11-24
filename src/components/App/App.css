@@ -126,7 +126,10 @@
   display: inline-block;
   background-size: cover;
 }
-
+* {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  color: #fff;
+}
 .icon-vkontakte {
   background-image: url('../../assets/images/icons/vk_orange.png');
 }
