@@ -11,6 +11,7 @@ function Calculator(props) {
   const [price, setPrice] = React.useState(0);
   const [productPrice, setProductPrice] = React.useState(0);
   const [choosedProduct, setChoosedProduct] = React.useState('website');
+  const [premiumDesign, setPremiumDesign] = React.useState(true);
 
   React.useEffect(() => {
     const orderPrice = 0 + Number(productPrice);
@@ -25,8 +26,8 @@ function Calculator(props) {
     console.log(choosedProduct)
   }, [choosedProduct]);
 
-  function changeRadioActive() {
-    const radioList =  Array.from(document.querySelectorAll('.calculator__radio'));
+  function changeRadioActive(e) {
+    const radioList =  Array.from(e.parentElement.querySelectorAll('.calculator__radio'));
     radioList.map((input) => {
       if(input.classList.contains('calculator__radio_active')) {
         input.classList.remove('calculator__radio_active');
@@ -35,11 +36,12 @@ function Calculator(props) {
   }
 
   function radioChecked(e) {
-    changeRadioActive();
+    changeRadioActive(e.currentTarget);
     const input = e.currentTarget.querySelector('.calculator__input');
     input.checked = true;
     e.currentTarget.classList.add("calculator__radio_active");
-    const inputWebsite = document.querySelector('input[name=product]:checked');
+    console.log(input.name)
+    const inputWebsite = document.querySelector(`input[name=${input.name}]:checked`);
     setChoosedProduct(inputWebsite.value);
     setProductPrice(inputWebsite.dataset.price);
   }
@@ -48,7 +50,8 @@ function Calculator(props) {
     <section className='calculator'>
 
       <div className='calculator__container'>
-        <div className='calculator__container-slide'>
+
+        <div className='calculator__container-slide 1'>
 
           <div className='calculator__header'>
             <h2>Посчитайте индивидуальную стоимость вашего сайта</h2>
@@ -125,6 +128,45 @@ function Calculator(props) {
           </div>
 
         </div>
+
+
+        <div className='calculator__container-slide 2'>
+          <div className='calculator__header'>
+              <h2>Нужен ли премиальный дизайн?</h2>
+          </div>
+          <div className='calculator__block'>
+            <div className='calculator__radio calculator__radio_active' onClick={radioChecked}>
+              <input className="calculator__input" name="premium-design" type="radio"  value="yes" data-price={3000}/>
+                <div className='calculator__radio-container'>
+                  <div className='calculator__input-image'>
+                    <img src={iconWebsite} alt="Заказать разработку сайта под ключ в Москве в студии Creative Empire" />
+                  </div>
+                  <h3 className='calculator__radio-header'>Да</h3>
+                </div>
+            </div>
+            <div className='calculator__radio' onClick={radioChecked}>
+              <input className="calculator__input" name="premium-design" type="radio"  value="no" data-price={0}/>
+                <div className='calculator__radio-container'>
+                  <div className='calculator__input-image'>
+                    <img src={iconWebsite} alt="Заказать разработку сайта под ключ в Москве в студии Creative Empire" />
+                  </div>
+                  <h3 className='calculator__radio-header'>Нет</h3>
+                </div>
+            </div>
+            
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
 
         <div className='calculator__price'>
 
