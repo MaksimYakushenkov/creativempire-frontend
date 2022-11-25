@@ -15,6 +15,11 @@ import iconWordpress from '../../assets/images/icons/wordpress.png';
 import iconSite from '../../assets/images/icons/site.png';
 import iconApp from '../../assets/images/icons/app.png';
 import iconSiteApp from '../../assets/images/icons/site-app.png';
+import iconVideo from '../../assets/images/icons/video.png';
+import iconMarketplace from '../../assets/images/icons/marketplace.png';
+import iconSoc from '../../assets/images/icons/soc.png';
+import iconYoutube from '../../assets/images/icons/youtube.png';
+import iconBannerSoc from '../../assets/images/icons/bannerSoc.png';
 
 function Calculator(props) {
   const [price, setPrice] = React.useState(0);
@@ -58,10 +63,6 @@ function Calculator(props) {
     ]
   };
   const [steps, setSteps] = React.useState(blockList.website.length);
-
-  React.useEffect(() => {
-    console.log(price)
-  }, [price]);
 
   React.useEffect(() => {
   const slideList = Array.from(document.querySelectorAll('.calculator__slide'));
@@ -218,7 +219,7 @@ function Calculator(props) {
                 <div className='calculator__slide'>
 
                   <div className='calculator__header'>
-                    <h2>Посчитайте индивидуальную стоимость вашего сайта</h2>
+                    <h2>Какой тип сайта вам необходим?</h2>
                   </div>
 
                   <div className='calculator__block website-product'>
@@ -229,7 +230,7 @@ function Calculator(props) {
                           <div className='calculator__input-image'>
                             <img src={iconWebsite} alt="Заказать разработку сайта под ключ в Москве в студии Creative Empire" />
                           </div>
-                          <h3 className='calculator__radio-header'>Одностраничный (лендинг)</h3>
+                          <h3 className='calculator__radio-header'>Одностраничный</h3>
                         </div>
                         {/* <p className='calculator__radio-description'>Нужно ли краткое описание</p> */}
                     </div>
@@ -433,7 +434,7 @@ function Calculator(props) {
       <input className="calculator__input" name="creative-product" type="radio" defaultChecked value="yes" data-price={1000}/>
         <div className='calculator__radio-container'>
           <div className='calculator__input-image'>
-            <img src={iconWebsite} alt="Заказать разработку сайта под ключ в Москве в студии Creative Empire" />
+            <img src={iconSite} alt="Заказать разработку сайта под ключ в Москве в студии Creative Empire" />
           </div>
           <h3 className='calculator__radio-header'>Баннер на сайт</h3>
         </div>
@@ -442,7 +443,7 @@ function Calculator(props) {
       <input className="calculator__input" name="creative-product" type="radio"  value="no" data-price={500}/>
         <div className='calculator__radio-container'>
           <div className='calculator__input-image'>
-            <img src={iconWebsite} alt="Заказать разработку сайта под ключ в Москве в студии Creative Empire" />
+            <img src={iconBannerSoc} alt="Заказать разработку сайта под ключ в Москве в студии Creative Empire" />
           </div>
           <h3 className='calculator__radio-header'>Баннер в соцсетях</h3>
         </div>
@@ -451,25 +452,25 @@ function Calculator(props) {
       <input className="calculator__input" name="creative-product" type="radio"  value="no" data-price={2500}/>
         <div className='calculator__radio-container'>
           <div className='calculator__input-image'>
-            <img src={iconWebsite} alt="Заказать разработку сайта под ключ в Москве в студии Creative Empire" />
+            <img src={iconYoutube} alt="Заказать разработку сайта под ключ в Москве в студии Creative Empire" />
           </div>
-          <h3 className='calculator__radio-header'>Оформление YouTube</h3>
+          <h3 className='calculator__radio-header'>Видеохостинги</h3>
         </div>
     </div>
     <div className='calculator__radio' onClick={radioChecked}>
       <input className="calculator__input" name="creative-product" type="radio"  value="no" data-price={12500}/>
         <div className='calculator__radio-container'>
           <div className='calculator__input-image'>
-            <img src={iconWebsite} alt="Заказать разработку сайта под ключ в Москве в студии Creative Empire" />
+            <img src={iconSoc} alt="Заказать разработку сайта под ключ в Москве в студии Creative Empire" />
           </div>
-          <h3 className='calculator__radio-header'>Оформление соцсетей</h3>
+          <h3 className='calculator__radio-header'>Соцсети</h3>
         </div>
     </div>
     <div className='calculator__radio' onClick={radioChecked}>
       <input className="calculator__input" name="creative-product" type="radio"  value="no" data-price={2500}/>
         <div className='calculator__radio-container'>
           <div className='calculator__input-image'>
-            <img src={iconWebsite} alt="Заказать разработку сайта под ключ в Москве в студии Creative Empire" />
+            <img src={iconMarketplace} alt="Заказать разработку сайта под ключ в Москве в студии Creative Empire" />
           </div>
           <h3 className='calculator__radio-header'>Маркетплейсы</h3>
         </div>
@@ -478,7 +479,7 @@ function Calculator(props) {
       <input className="calculator__input" name="creative-product" type="radio"  value="no" data-price={5000}/>
         <div className='calculator__radio-container'>
           <div className='calculator__input-image'>
-            <img src={iconWebsite} alt="Заказать разработку сайта под ключ в Москве в студии Creative Empire" />
+            <img src={iconVideo} alt="Заказать разработку сайта под ключ в Москве в студии Creative Empire" />
           </div>
           <h3 className='calculator__radio-header'>Видео и анимация</h3>
         </div>
@@ -504,8 +505,11 @@ function Calculator(props) {
             </div>
           </div>
 
-        <button className='calculator__button prev' onClick={slidePrev} disabled={numStep <= 0} >PREV</button>
-        {!(numStep >= steps) && <button className='calculator__button next' onClick={slideNext} disabled={numStep >= steps + 1}>NEXT</button>}
+        <div className='calculator__button-container'>
+          <button className='calculator__button calculator__button_prev' onClick={slidePrev} disabled={numStep <= 0} >Назад</button>
+          {!(numStep >= steps) && <button className='calculator__button' onClick={slideNext} disabled={numStep >= steps + 1}>Далее</button>}
+        </div>
+        
 
         </div>
 
@@ -517,12 +521,12 @@ function Calculator(props) {
 
 
 
-        <div className='calculator__price'>
+        <div className='calculator__price-area'>
           <div className='price__area'>
             <h3 className='price__header'>Ориентировочная стоимость:</h3>
-            <span className='price__value'>{price}</span>
+            <span className='calculator__price'>{price}</span>
           </div>
-          <form>
+          <form className='calculator__form'>
           <div className="contactUs__field">
               <input id="calculator-recall" className="contactUs__input" required name="recal-phone" type="text" placeholder="Ваш номер*" />
               <span className="name-error error-message"></span>
