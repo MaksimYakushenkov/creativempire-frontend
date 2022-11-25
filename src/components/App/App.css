@@ -121,9 +121,16 @@
 }
 
 .jc-c {
-  justify-content: center;
+  justify-content: center!important;
 }
 
+.ai-c {
+  align-items: center!important;
+}
+
+.fd-r {
+  flex-direction: column!important;
+}
 .icon {
   width: 24px;
   height: 24px;
