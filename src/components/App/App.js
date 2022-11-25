@@ -99,7 +99,8 @@ return (
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
     <Route path="/calculator">
-      <Calculator stickyHeader={stickyHeader}/>
+      <Calculator stickyHeader={stickyHeader}
+      />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
     <Route path="/blog">
