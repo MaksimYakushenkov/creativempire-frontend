@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import bannerShapeLeft from '../../assets/images/shapes/banner-shape1.webp';
 import bannerShapeRight from '../../assets/images/shapes/banner-shape2.webp';
 
@@ -11,8 +12,14 @@ function PageBanner(props) {
         <nav className='breadcumps'>
           <ol className='breadcumps-list'>
             <li className='breadcumps-item'>
-              <a href='./'>Домой</a>
+            <Link to='./'>Домой</Link>
             </li>
+            {
+              props.breadcump && 
+              <li className='breadcumps-item'>
+                <Link to={`./${props.breadcump.link}`}>{props.breadcump.linkTitle}</Link>
+              </li>
+            }
             <li className='breadcumps-item breadcumps-item_active'>
               {props.header}
             </li>

@@ -17,6 +17,7 @@ import Portfolio from '../Portfolio/Portfolio';
 import WorkPlan from '../WorkPlan/WorkPlan';
 import Contact from '../Contact/Contact';
 import Calculator from '../Calculator/Calculator';
+import ServiceDetails from '../ServiceDetails/ServiceDetails';
 
 function App() {
   const [stickyHeader, setStickyHeader] = React.useState(false);
@@ -71,6 +72,11 @@ return (
       <Footer />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
+    <Route path="/services/create-website">
+      <ServiceDetails stickyHeader={stickyHeader}
+      />
+      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
+    </Route>
     <Route path="/services">
       <Header
         stickyHeader={stickyHeader}
@@ -103,6 +109,7 @@ return (
       />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
+
     <Route path="/blog">
       <HelmetProvider><Helmet><title>Blog</title></Helmet></HelmetProvider>
       {/*

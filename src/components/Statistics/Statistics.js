@@ -19,19 +19,19 @@ function Statistics() {
               <img className='counter__image' src={iconSuccess} alt='Студия креативного дизайна — Creative Empire'/>
               <CountUp  start={0} end={113} className={'counter__value'} />
               <h4 className='counter__title'>Проектов выполнено</h4>
-              <p className='counter__paragraph'>Какой то короткий текст.</p>
+              <p className='counter__paragraph'>И это далеко не предел!</p>
             </div>
             <div className='counter-item'>
               <img className='counter__image' src={iconGlobalNetwork} alt='Студия креативного дизайна — Creative Empire' />
               <CountUp  start={0} end={85} className={'counter__value'} />
-              <h4 className='counter__title'>Мировых заказчиков</h4>
-              <p className='counter__paragraph'>Какой то короткий текст.</p>
+              <h4 className='counter__title'>Заказов со всего мира</h4>
+              <p className='counter__paragraph'>Клиентооориентированы.</p>
             </div>
             <div className='counter-item'>
               <img className='counter__image' src={iconReview} alt='Студия креативного дизайна — Creative Empire'/>
               <CountUp  start={0} end={132} className={'counter__value'} />
               <h4 className='counter__title'>Счастливых клиентов</h4>
-              <p className='counter__paragraph'>Какой то короткий текст.</p>
+              <p className='counter__paragraph'>Дальше - больше.</p>
             </div>
           </div>
         </div>
