@@ -139,6 +139,10 @@
   letter-spacing: 1px;
 }
 
+.calculator__button:hover {
+  box-shadow: 0px 5px 10px 2px rgb(252 101 60 / 20%);
+}
+
 .calculator__button:disabled {
   opacity: 0.1;
   cursor: not-allowed;

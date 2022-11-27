@@ -72,7 +72,7 @@ return (
       <Footer />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
-    <Route path="/services/create-website">
+    <Route path="/services/:service">
       <ServiceDetails stickyHeader={stickyHeader}
       />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
