@@ -15,7 +15,8 @@ import switchImage1 from '../../assets/images/services/switchImage1.png';
 import switchImage2 from '../../assets/images/services/switchImage2.png';
 import switchImage3 from '../../assets/images/services/switchImage3.png';
 import switchImage4 from '../../assets/images/services/switchImage4.png';
-import iconDoubleRight from '../../assets/images/icons/double-right.png';
+import LatestProjects from '../LatestProjects/LatestProjects';
+
 
 
 function ServiceDetails(props) {
@@ -68,6 +69,7 @@ function ServiceDetails(props) {
                   <p className='detail__paragraph check-mark-before'>SEO оптимизация уже включена в стоимость</p>
                   <p className='detail__paragraph check-mark-before'>Делаем разработку проектов любой сложности!</p>
                 </div>
+                <button className='service-details__button mt-30'>Заказать веб-сайт</button>
               </div>
               <div className='detail__image-container wow fadeInRight delay-0-4s'>
                 <img className='detail__image' src={createWebsite1} alt="Создание сайтов в Москве - заказать разработку под ключ в веб студии" />
@@ -183,7 +185,7 @@ function ServiceDetails(props) {
               </div>
             </div>
         </div>
-        <div id='whichSites' className='detail__container'>
+        <div id='whichSites' className='detail__container bg-2 pb-60'>
             <div className='detail__with-image'>
               <div className='detail__info wow fadeInLeft delay-0-2s'>
                 <h2 className='detail__title'>Какие сайты <span className='text-color-animation'>мы разрабатываем</span>?</h2>
@@ -241,6 +243,7 @@ function ServiceDetails(props) {
               </div>
         </div>
         <div id='prices' className='detail__container'>
+
             <div className='detail__with-image fd-rr'>
               <div className='detail__info wow fadeInLeft delay-0-2s'>
                 <h2 className='detail__title'>Сколько стоит разработка <span className='text-color-animation'>сайта под ключ</span> в Creative Empire?</h2>
@@ -254,72 +257,75 @@ function ServiceDetails(props) {
 
             </div>
             <div className='detail__decription'>
-            <div className='pricePackages__container'>
-        <div className='pricePackages__items'>
-          <div className='pricePackages__item wow fadeInDown delay-0-2s'>
-            <h2 className='pricePackages__header'>Одностраничный сайт (Landing Page)</h2>
-            <div className='pricePackages__footer'>
-              <ul className='pricePackages__list'>
-                <li className='pricePackages__list-item'>Подходит для малого бизнеса</li>
-                <li className='pricePackages__list-item'>Уникальный дизайн</li>
-                <li className='pricePackages__list-item'>Точки захвата внимания</li>
-                <li className='pricePackages__list-item'>Прием заявок</li>
-                <li className='pricePackages__list-item'>Возможность онлайн-оплаты</li>
-              </ul>
-              <div className='pricePackages__price-area mt-30'>
-                <span className='pricePackages__price'>20 000</span>
+              <div className='pricePackages__container'>
+                <div className='pricePackages__items'>
+                  <div className='pricePackages__item wow fadeInDown delay-0-2s'>
+                    <h2 className='pricePackages__header'>Одностраничный сайт (Landing Page)</h2>
+                    <div className='pricePackages__footer'>
+                      <ul className='pricePackages__list'>
+                        <li className='pricePackages__list-item'>Подходит для малого бизнеса</li>
+                        <li className='pricePackages__list-item'>Уникальный дизайн</li>
+                        <li className='pricePackages__list-item'>Точки захвата внимания</li>
+                        <li className='pricePackages__list-item'>Прием заявок</li>
+                        <li className='pricePackages__list-item'>Возможность онлайн-оплаты</li>
+                      </ul>
+                      <div className='pricePackages__price-area mt-30'>
+                        <span className='pricePackages__price'>20 000</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='pricePackages__item wow fadeInDown delay-0-2s'>
+                    <h2 className='pricePackages__header'>Интернет-магазин</h2>
+                    <div className='pricePackages__footer'>
+                      <ul className='pricePackages__list'>
+                        <li className='pricePackages__list-item'>Отражение стиля компании</li>
+                        <li className='pricePackages__list-item'>Продажи любых товаров</li>
+                        <li className='pricePackages__list-item'>Премиальный дизайн</li>
+                        <li className='pricePackages__list-item'>Базовый E-commerce функционал</li>
+                        <li className='pricePackages__list-item'>Лучшие CMS и защита</li>
+                      </ul>
+                      <div className='pricePackages__price-area mt-30'>
+                        <span className='pricePackages__price'>55 000</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='pricePackages__item wow fadeInUp delay-0-4s'>
+                    <h2 className='pricePackages__header'>Корпоративный сайт</h2>
+                    <div className='pricePackages__footer'>
+                      <ul className='pricePackages__list'>
+                        <li className='pricePackages__list-item'>Собственный бренд</li>
+                        <li className='pricePackages__list-item'>Улучшенное SEO</li>
+                        <li className='pricePackages__list-item'>Повышает авторитет компании</li>
+                        <li className='pricePackages__list-item'>Быстро продвигается</li>
+                        <li className='pricePackages__list-item'>Приносит хороший доход</li>
+                      </ul>
+                      <div className='pricePackages__price-area mt-30'>
+                        <span className='pricePackages__price'>150 000</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='pricePackages__item wow fadeInUp delay-0-4s'>
+                    <h2 className='pricePackages__header'>Индвидуальный проект</h2>
+                    <div className='pricePackages__footer'>
+                      <ul className='pricePackages__list'>
+                        <li className='pricePackages__list-item'>Подходит для стартапов</li>
+                        <li className='pricePackages__list-item'>Собственная CMS</li>
+                        <li className='pricePackages__list-item'>Индвидуальный расчет</li>
+                        <li className='pricePackages__list-item'>Премиальный дизайн</li>
+                        <li className='pricePackages__list-item'>Наполнение контентом</li>
+                      </ul>
+                      <div className='pricePackages__price-area mt-30'>
+                        <span className='pricePackages__price'>250 000</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className='pricePackages__item wow fadeInDown delay-0-2s'>
-            <h2 className='pricePackages__header'>Интернет-магазин</h2>
-            <div className='pricePackages__footer'>
-              <ul className='pricePackages__list'>
-                <li className='pricePackages__list-item'>Отражение стиля компании</li>
-                <li className='pricePackages__list-item'>Продажи любых товаров</li>
-                <li className='pricePackages__list-item'>Премиальный дизайн</li>
-                <li className='pricePackages__list-item'>Базовый E-commerce функционал</li>
-                <li className='pricePackages__list-item'>Лучшие CMS и защита</li>
-              </ul>
-              <div className='pricePackages__price-area mt-30'>
-                <span className='pricePackages__price'>55 000</span>
-              </div>
-            </div>
-          </div>
-          <div className='pricePackages__item wow fadeInUp delay-0-4s'>
-            <h2 className='pricePackages__header'>Корпоративный сайт</h2>
-            <div className='pricePackages__footer'>
-              <ul className='pricePackages__list'>
-                <li className='pricePackages__list-item'>Собственный бренд</li>
-                <li className='pricePackages__list-item'>Улучшенное SEO</li>
-                <li className='pricePackages__list-item'>Повышает авторитет компании</li>
-                <li className='pricePackages__list-item'>Быстро продвигается</li>
-                <li className='pricePackages__list-item'>Приносит хороший доход</li>
-              </ul>
-              <div className='pricePackages__price-area mt-30'>
-                <span className='pricePackages__price'>150 000</span>
-              </div>
-            </div>
-          </div>
-          <div className='pricePackages__item wow fadeInUp delay-0-4s'>
-            <h2 className='pricePackages__header'>Индвидуальный проект</h2>
-            <div className='pricePackages__footer'>
-              <ul className='pricePackages__list'>
-                <li className='pricePackages__list-item'>Подходит для стартапов</li>
-                <li className='pricePackages__list-item'>Собственная CMS</li>
-                <li className='pricePackages__list-item'>Индвидуальный расчет</li>
-                <li className='pricePackages__list-item'>Премиальный дизайн</li>
-                <li className='pricePackages__list-item'>Наполнение контентом</li>
-              </ul>
-              <div className='pricePackages__price-area mt-30'>
-                <span className='pricePackages__price'>250 000</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
             </div>
 
+        </div>
+        <div id='lastProjects' className=''>
+          <LatestProjects />
         </div>
         </>
       }
