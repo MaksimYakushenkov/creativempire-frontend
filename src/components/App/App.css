@@ -145,7 +145,15 @@
 /* TEXT */
 
 .ta-c {
-  text-align: center;
+  text-align: center!important;
+}
+
+.lh-20 {
+  line-height: 20px!important;
+}
+
+.lh-25 {
+  line-height: 25px!important;
 }
 
 /* DISPLAY:FLEX */
@@ -263,6 +271,15 @@
 .first-color {
   color: #fc653c;
 }
+
+.subtitle-text-color {
+  color: #faebd7;
+}
+
+.paragraph-grey-color {
+  color: #adadb8;
+}
+
 
 .second-color {
   

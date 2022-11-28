@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import serviceWeb from '../../assets/images/services/web_develope_creative_empire.webp';
 import serviceUXUI from '../../assets/images/services/ux_ui_design_creative_empire.webp';
 import serviceBanners from '../../assets/images/services/design_creative_empire.webp';
@@ -32,8 +33,8 @@ function Services(props) {
                 <li className='services__list-item'>Онлайн поддержка 24/7</li>
               </ul>
               <div className='services__price-area'>
-              <span className='services__price'>20 000</span>
-              <a className='services__button' href="./">Узнать подробнее</a>
+                <span className='services__price'>20 000</span>
+                <Link className='services__button' to="/services/create-website">Узнать подробнее</Link>
             </div>
             </div>
             
@@ -53,8 +54,8 @@ function Services(props) {
                 <li className='services__list-item'>Можно вносить правки</li>
               </ul>
               <div className='services__price-area'>
-              <span className='services__price'>15 000</span>
-              <a className='services__button' href="./">Узнать подробнее</a>
+                <span className='services__price'>15 000</span>
+                <Link className='services__button' to="/services/create-website">Узнать подробнее</Link>
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Route, Switch, Link, withRouter, useHistory } from "react-router-dom";
+import React, { Component, useEffect } from 'react';
+import { Route, Switch, Link, withRouter, useHistory, } from "react-router-dom";
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import WOW from 'wow.js';
 import ArticleFull from '../articleFull/ArticleFull';
@@ -22,6 +22,11 @@ import ServiceDetails from '../ServiceDetails/ServiceDetails';
 function App() {
   const [stickyHeader, setStickyHeader] = React.useState(false);
   const [scrollToTopHidden, setScrollToTopHidden] = React.useState(true);
+  const history = useHistory();
+
+  history.listen((location, action) => {
+    window.scrollTo(0, 0)
+  });
 
   React.useEffect(() => {
     new WOW().init();
@@ -35,6 +40,7 @@ function App() {
       }
    });
   }, []);
+
   // const [articlesList, setAcrticleList] = React.useState([]);
   // const [article, setAcrticle] = React.useState([]);
   // React.useEffect(() => {
