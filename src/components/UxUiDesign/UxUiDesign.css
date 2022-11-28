@@ -1,0 +1,12 @@
+.ux-ui-design .pricePackages__footer{
+  align-items: center;
+  min-height: 180px;
+}
+
+.ux-ui-design .pricePackages__list {
+  align-self: flex-start;
+}
+
+.ux-ui-design  a {
+  text-decoration: none;
+}

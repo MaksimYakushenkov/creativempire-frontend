@@ -55,7 +55,7 @@ function Services(props) {
               </ul>
               <div className='services__price-area'>
                 <span className='services__price'>15 000</span>
-                <Link className='services__button' to="/services/create-website">Узнать подробнее</Link>
+                <Link className='services__button' to="/services/ux-ui-design">Узнать подробнее</Link>
               </div>
             </div>
           </div>

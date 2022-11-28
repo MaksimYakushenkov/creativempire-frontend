@@ -15,9 +15,9 @@ function PageBanner(props) {
             <Link to='./'>Домой</Link>
             </li>
             {
-              props.breadcump && 
+              props.breadcumps && 
               <li className='breadcumps-item'>
-                <Link to={`/${props.breadcump.link}`}>{props.breadcump.linkTitle}</Link>
+                <Link to={`/${props.breadcumps.link}`}>{props.breadcumps.linkTitle}</Link>
               </li>
             }
             <li className='breadcumps-item breadcumps-item_active'>
