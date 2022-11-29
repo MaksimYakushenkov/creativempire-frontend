@@ -56,7 +56,7 @@ export default class HeaderSlider extends Component {
               <div className="slide__description">
                 <h1 className="slider__header">Мы — Креатив</h1>
                 <h2 className="slider__title text-bottom-line">Creative Empire</h2>
-                <p className="slider__paragraph">Современный креатив продвигает. Поэтому наши лучшие решения <br />гарантированно поднимут вас на голову выше конкурентов.</p>
+                <p className="slider__paragraph">Современный креатив продвигает. Поэтому наши лучшие решения гарантированно поднимут вас на голову выше конкурентов.</p>
                 <div className="slide__buttons">
                   <button className='slider__button slider__button_transparent' href='ya.ru' target='_blank'>
                     Контакты
@@ -81,7 +81,7 @@ export default class HeaderSlider extends Component {
 
                 <h1 className="slider__header">Мы — Дизайн</h1>
                 <h2 className="slider__title text-bottom-line">Creative Empire</h2>
-                <p className="slider__paragraph">Уникальный дизайн каждому клиенту. Заставьте свой бизнес <br />работать на вас — а мы в этом поможем!</p>
+                <p className="slider__paragraph">Уникальный дизайн каждому клиенту. Заставьте свой бизнес работать на вас — а мы в этом поможем!</p>
                 <div className="slide__buttons">
                   <button className='slider__button slider__button_transparent' href='ya.ru' target='_blank'>
                     Контакты

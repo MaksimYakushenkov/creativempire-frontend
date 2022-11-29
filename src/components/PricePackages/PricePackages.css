@@ -11,7 +11,7 @@
 }
 
 .pricePackages__container {
-margin-top: 50px;
+  margin-top: 50px;
 }
 
 .pricePackages__items {
@@ -24,12 +24,15 @@ margin-top: 50px;
 .pricePackages__item {
   width: 600px;
   background-color: #17171a;
-  -webkit-box-shadow: 10px 0 60px rgb(252 101 60 / 10%);
-  box-shadow: 10px 0 60px rgb(252 101 60 / 10%);
   padding: 20px 40px 40px;
   overflow: hidden;
   position: relative;
   border-radius: 25px;
+}
+
+.pricePackages__item:hover {
+  -webkit-box-shadow: 10px 0 60px rgb(252 101 60 / 10%);
+  box-shadow: 10px 0 60px rgb(252 101 60 / 10%);
 }
 
 .pricePackages__header {
@@ -129,7 +132,7 @@ margin-top: 50px;
 
 .pricePackages__price {
   font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 800;
   color: #fc653c;
   position: relative;
@@ -141,7 +144,7 @@ margin-top: 50px;
   font-size: 30px;
   color: #faebd7;
   position: absolute;
-  top: -25px;
+  top: -30px;
   left: -20px;
 }
 

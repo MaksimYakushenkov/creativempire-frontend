@@ -1,23 +1,11 @@
 import React, { useEffect } from 'react';
 import { Link, useState, useParams } from 'react-router-dom';
 import Header from '../Header/Header';
-import PageBanner from '../PageBanner/PageBanner';
-import PlaceMagic from '../PlaceMagic/PlaceMagic';
 import Footer from '../Footer/Footer';
 import './ServiceDetails.css';
-import createWebsite1 from '../../assets/images/services/create-website1.png';
-import createWebsite2 from '../../assets/images/services/create-website2.png';
-import createWebsite3 from '../../assets/images/services/create-website3.png';
-import iconWebsite from '../../assets/images/icons/website.png';
-import iconUi from '../../assets/images/icons/ui.png';
-import iconWordpress from '../../assets/images/icons/wordpress.png';
-import switchImage1 from '../../assets/images/services/switchImage1.png';
-import switchImage2 from '../../assets/images/services/switchImage2.png';
-import switchImage3 from '../../assets/images/services/switchImage3.png';
-import switchImage4 from '../../assets/images/services/switchImage4.png';
-import LatestProjects from '../LatestProjects/LatestProjects';
 import CreateWebsite from '../CreateWebsite/CreateWebsite';
 import UxUiDesign from '../UxUiDesign/UxUiDesign';
+import CreativeDesign from '../CreativeDesign/CreativeDesign';
 
 
 function ServiceDetails(props) {
@@ -25,15 +13,6 @@ function ServiceDetails(props) {
 
   const switchDescriptionList = Array.from(document.querySelectorAll('.switch__description-item'));
   const switchHeaderList = Array.from(document.querySelectorAll('.switch__header-item'));
-  const createWebsites = {
-    header:"Разработка веб-сайтов",
-        breadcump: {
-          link:'services',
-          linkTitle: 'Услуги',
-        }
-  }
-  
-
 
   function switchDesciption(e) {
     switchHeaderList.map((header) => {
@@ -72,6 +51,18 @@ function ServiceDetails(props) {
         }}
         switchDesciption={switchDesciption}/> 
       }
+
+      { params.service === 'creative-design' && 
+        <CreativeDesign 
+        service={params.service}
+        header="Креативный дизайн"
+        breadcumps={{
+          link:'services',
+          linkTitle: 'Услуги',
+        }}
+        switchDesciption={switchDesciption}/> 
+      }
+      
       { params.service === '' && <CreateWebsite switchDesciption={switchDesciption}/> }
 
 

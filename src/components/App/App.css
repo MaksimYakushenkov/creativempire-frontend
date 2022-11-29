@@ -372,6 +372,13 @@
   animation-delay: .5s
 }
 
+@media screen and (min-width: 1280px) and (max-width: 1599px) {
+
+  .order__button {
+    font-size: 12px;
+  }
+}
+
 @keyframes btn-anim3 {
   0% {
     right: -100%;

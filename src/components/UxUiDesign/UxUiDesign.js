@@ -153,7 +153,7 @@ function UxUiDesign(props) {
                   <div className='sites__header'>
                     <img src={iconWebsite} alt="Разработка UX/UI-дизайна в Москве - заказать разработку под ключ в веб студии Creative Empire"/>
                   </div>
-                  <h3 className='sites__title mt-30 subtitle-text-color'>UX/UI-дизайн</h3>
+                  <h3 className='sites__title mt-30 subtitle-text-color'>Сайты</h3>
                   <ul className='sites__list'>
                     <li className='paragraph-grey-color lh-20'>Одностраничного сайта (Landing Page)</li>
                     <li className='paragraph-grey-color lh-20'>Интернет-магазина</li>

@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.detail__container a {
+  text-decoration: none;
+}
+
 .service-details__button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;

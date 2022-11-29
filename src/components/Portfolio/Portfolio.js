@@ -86,7 +86,7 @@ function Portfolio(props) {
               >
                 Креативный дизайн
               </li>
-              <li
+              {/* <li
                 data-filter=".branding"
                 className={`portfolio__filter-item ${activeBtn("branding")}`}
                 onClick={handleFilterKeyChange("branding")}
@@ -99,7 +99,7 @@ function Portfolio(props) {
                 onClick={handleFilterKeyChange("logos")}
               >
                 Логотипы
-              </li>
+              </li> */}
             </ul>
           </div>
 

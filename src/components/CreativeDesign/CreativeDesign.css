@@ -1,0 +1,40 @@
+.price-list__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.price-list-item {
+  width: 600px;
+  border-radius: 8px;
+  background-color: #0d0e0d;
+  box-sizing: border-box;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-list__title {
+  color: #faebd7;
+}
+
+.price-list__price {
+  font-size: 30px;
+  min-width: auto;
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+  font-weight: 800;
+  color: #fc653c;
+  position: relative;
+  min-width: auto;
+  opacity: 0.9;
+}
+
+.price-list__price::after {
+  content: '₽';
+  font-size: 18px;
+  color: #fc653c;
+}

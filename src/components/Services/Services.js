@@ -74,13 +74,13 @@ function Services(props) {
                 <li className='services__list-item'>Набор шрифтов бесплатно</li>
               </ul>
               <div className='services__price-area'>
-              <span className='services__price'> 2 500</span>
-              <a className='services__button' href="./">Узнать подробнее</a>
+                <span className='services__price'> 2 500</span>
+                <Link className='services__button' to="/services/creative-design">Узнать подробнее</Link>
               </div>
             </div>
           </div>
 
-          <div className='services__item wow fadeInRight delay-0-4s'>
+          {/* <div className='services__item wow fadeInRight delay-0-4s'>
             <div className='services__image-container'>
               <img className='services__image' src={serviceBanners} alt='Рекламные баннеры недорого заказать онлайн' />
             </div>
@@ -94,9 +94,9 @@ function Services(props) {
                 <li className='services__list-item'>Набор шрифтов бесплатно</li>
               </ul>
               <div className='services__price-area'>
-              <span className='services__price'> 3 000</span>
-              <a className='services__button' href="./">Узнать подробнее</a>
-            </div>
+                <span className='services__price'> 3 000</span>
+                <Link className='services__button' to="/services/ads-banners">Узнать подробнее</Link>
+              </div>
             </div>
           </div>
 
@@ -114,8 +114,8 @@ function Services(props) {
                 <li className='services__list-item'>Присылаем исходники</li>
               </ul>
               <div className='services__price-area'>
-              <span className='services__price'>20 000</span>
-              <a className='services__button' href="./">Узнать подробнее</a>
+                <span className='services__price'>20 000</span>
+                <Link className='services__button' to="/services/create-brand">Узнать подробнее</Link>
               </div>
             </div>
           </div>
@@ -134,11 +134,11 @@ function Services(props) {
                 <li className='services__list-item'>Присылаем исходники</li>
               </ul>
               <div className='services__price-area'>
-              <span className='services__price'>4 000</span>
-              <a className='services__button' href="./">Узнать подробнее</a>
+                <span className='services__price'>4 000</span>
+                <Link className='services__button' to="/services/create-logos">Узнать подробнее</Link>
               </div>
             </div>
-          </div>
+          </div> */}
 
         </div>
       </div>

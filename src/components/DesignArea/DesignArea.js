@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import sliderDots from '../../assets/images/slider/slider-dots.png';
 import sliderWaveLine from '../../assets/images/slider/slider-wave-line.png';
 import designAreaMiddle from '../../assets/images/design-area/design-middle.png';
@@ -23,17 +24,17 @@ function DesignArea() {
           <div className='design-area__column wow fadeInLeft delay-0-2s'>
             <div className='design-area__column-item ml-30'>
               <img className='design-area__column-image' src={iconIdea} alt='Test' />
-              <a className='design-area__column-link' href='https://github.com'>
+              <Link className='design-area__column-link' to='/services/create-website'>
               Создание <br/>веб-сайта с 0
                 <img className='design-area__arrow' src={iconRightArrow} alt='Test' />
-              </a>
+              </Link>
             </div>
             <div className='design-area__column-item'>
             <img className='design-area__column-image' src={iconWebPage} alt='Test' />
-              <a className='design-area__column-link' href='https://github.com'>
+              <Link className='design-area__column-link' to='/services/create-website'>
               Обслуживание вашего сайта
                 <img className='design-area__arrow' src={iconRightArrow} alt='Test' />
-              </a>
+              </Link>
             </div>
           </div>
           <div className='design-area__row wow fadeInUp delay-0-2s'>
@@ -43,33 +44,33 @@ function DesignArea() {
             <div className='design-area__column-item'>
                
                 <img className='design-area__column-image' src={iconShopping} alt='Test' />
-                <a className='design-area__column-link' href='https://github.com'>
+                <Link className='design-area__column-link' to='/services/create-website'>
                   Интернет-магазины <br/>и eCommerce
                   <img className='design-area__arrow' src={iconRightArrow} alt='Test' />
-                </a>
+                </Link>
             </div>
             <div className='design-area__column-item mb_60'>
             <img className='design-area__column-image' src={iconSeo} alt='Test' />
-              <a className='design-area__column-link' href='https://github.com'>
+              <Link className='design-area__column-link' to='/services/create-website'>
                 Проведение SEO оптимизации
                 <img className='design-area__arrow' src={iconRightArrow} alt='Test' />
-              </a>
+              </Link>
             </div>
           </div>
           <div className='design-area__column wow fadeInRight delay-0-2s'>
             <div className='design-area__column-item'>
                 <img className='design-area__column-image' src={iconUserExperience} alt='Test' />
-                <a className='design-area__column-link' href='https://github.com'>
+                <Link className='design-area__column-link' to='/services/ux-ui-design'>
                 Исследование пользовательского опыта
                   <img className='design-area__arrow' src={iconRightArrow} alt='Test' />
-                </a>
+                </Link>
             </div>
             <div className='design-area__column-item ml-30'>
             <img className='design-area__column-image' src={iconGraphicDesign} alt='Test' />
-              <a className='design-area__column-link' href='https://github.com'>
+              <Link className='design-area__column-link' to='/services/ux-ui-design'>
               Разработка UX/UI дизайна
                 <img className='design-area__arrow' src={iconRightArrow} alt='Test' />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

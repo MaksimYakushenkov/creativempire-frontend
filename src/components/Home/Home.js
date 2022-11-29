@@ -14,7 +14,7 @@ import HeaderSlider from '../Slider/Slider';
 
 function Home(props) {
   return (
-    <section className='home'>
+    <main className='home'>
       <HeaderSlider />
       <OurServices />
       <AboutUs />
@@ -27,7 +27,7 @@ function Home(props) {
       <Testimonials />
       <ContactUs />
       <Blog />
-    </section>
+    </main>
   );
 }
 
