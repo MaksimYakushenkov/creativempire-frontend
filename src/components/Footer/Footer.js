@@ -20,7 +20,7 @@ function Footer() {
   return (
     <footer className='footer'>
 
-      <div className='footer__container pt-60 pb-60'>
+      <div className='footer__container'>
         <div className='footer__description pt-35 wow fadeInLeft delay-0-2s'>
           <a href='./'>
           <img className='footer__logo' src={logo} alt="Веб-студия креативного дизайна Creative Empire" />

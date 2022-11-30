@@ -134,7 +134,7 @@ function Calculator(props) {
 
   return (
     <>
-   <Header stickyHeader={props.stickyHeader}/>
+   <Header stickyHeader={props.stickyHeader} innerWidth={props.innerWidth}/>
     <PageBanner
         header="Калькулятор"
     />
@@ -151,7 +151,7 @@ function Calculator(props) {
 {/* first */}
         <div className='calculator__slide'>
 
-          <div className='calculator__header wow fadeInUp delay-0-2s'>
+          <div className='calculator__header fadeInUp delay-0-2s'>
             <h2>Какую услугу хотите заказать?</h2>
           </div>
 
@@ -231,7 +231,7 @@ function Calculator(props) {
                 {choosedProduct === "website" && 
                 <div className='calculator__slide'>
 
-                  <div className='calculator__header wow fadeInUp delay-0-2s'>
+                  <div className='calculator__header  fadeInUp delay-0-2s'>
                     <h2>Какой тип сайта вам необходим?</h2>
                   </div>
 
@@ -289,7 +289,7 @@ function Calculator(props) {
 {/* premium-design */}
 
                 <div className='calculator__slide'>
-                  <div className='calculator__header wow fadeInUp delay-0-2s'>
+                  <div className='calculator__header  fadeInUp delay-0-2s'>
                       <h2>Нужен ли премиальный дизайн?</h2>
                   </div>
                   <div className='calculator__block wow fadeInUp delay-0-4s jc-c premium-design'>
@@ -319,7 +319,7 @@ function Calculator(props) {
 {/* Need-logo */}
 {choosedProduct === "website" && 
                 <div className='calculator__slide '>
-                <div className='calculator__header wow fadeInUp delay-0-2s'>
+                <div className='calculator__header  fadeInUp delay-0-2s'>
                     <h2>Нужен ли логотип?</h2>
                 </div>
                 <div className='calculator__block wow fadeInUp delay-0-4s need-logo'>
@@ -358,7 +358,7 @@ function Calculator(props) {
 {/* Need-CMS */}
 {choosedProduct === "website" && 
                 <div className='calculator__slide '>
-                <div className='calculator__header wow fadeInUp delay-0-2s'>
+                <div className='calculator__header  fadeInUp delay-0-2s'>
                     <h2>Будет ли CMS?</h2>
                     <p>CMS - это система для удобного управления сайтом, другими словами - личный кабинет владельца.</p>
                 </div>
@@ -399,7 +399,7 @@ function Calculator(props) {
 {/* UX-place */}
 {choosedProduct === "ux" && 
   <div className='calculator__slide '>
-  <div className='calculator__header wow fadeInUp delay-0-2s'>
+  <div className='calculator__header  fadeInUp delay-0-2s'>
       <h2>Для чего нужен UX/UI дизайн?</h2>
   </div>
   <div className='calculator__block wow fadeInUp delay-0-4s ux-place'>
@@ -439,7 +439,7 @@ function Calculator(props) {
 {/* Creative-product */}
 {choosedProduct === "creative" && 
   <div className='calculator__slide '>
-  <div className='calculator__header wow fadeInUp delay-0-2s'>
+  <div className='calculator__header  fadeInUp delay-0-2s'>
       <h2>Какую услугу хотите?</h2>
   </div>
   <div className='calculator__block wow fadeInUp delay-0-4s creative-product'>
@@ -508,7 +508,7 @@ function Calculator(props) {
 
 
           <div className='calculator__slide'>
-            <div className='calculator__header wow fadeInUp delay-0-2s'>
+            <div className='calculator__header  fadeInUp delay-0-2s'>
               <h2>Поздравляем! Расчет окончен.</h2>
               <div className='answer__image' ></div>
             </div>

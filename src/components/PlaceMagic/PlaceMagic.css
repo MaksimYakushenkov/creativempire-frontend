@@ -66,10 +66,29 @@
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  . {
 
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .place-magic__container {
+    width: 90%;
   }
+
+  .place-magic__header {
+    width: 80%;
+    max-width: 800px;
+  }
+
+  .place-magic__header .section__paragraph {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .place-magic__button {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 7px 20px;
+  }
+  
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {

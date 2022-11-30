@@ -23,6 +23,15 @@ function App() {
   const [stickyHeader, setStickyHeader] = React.useState(false);
   const [scrollToTopHidden, setScrollToTopHidden] = React.useState(true);
   const history = useHistory();
+  const [innerWidth, setInnerWidth] = React.useState(window.innerWidth);
+
+  React.useEffect(() => {
+    window.addEventListener('resize', detectSize);
+
+    return () => {
+      window.removeEventListener('resize', detectSize)
+    }
+  }, [innerWidth]);
 
   history.listen((location, action) => {
     window.scrollTo(0, 0)
@@ -40,6 +49,10 @@ function App() {
       }
    });
   }, []);
+
+  function detectSize() {
+    setInnerWidth(window.innerWidth);
+  }
 
   // const [articlesList, setAcrticleList] = React.useState([]);
   // const [article, setAcrticle] = React.useState([]);
@@ -72,14 +85,14 @@ return (
     <>
     <HelmetProvider><Helmet><title>My Title</title></Helmet></HelmetProvider><Switch>
     <Route exact path="/">
-      <Header
+      <Header innerWidth={innerWidth}
         stickyHeader={stickyHeader} />
       <Home />
       <Footer />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
     <Route path="/services/:service">
-      <ServiceDetails stickyHeader={stickyHeader}
+      <ServiceDetails stickyHeader={stickyHeader} innerWidth={innerWidth}
       />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
@@ -111,9 +124,9 @@ return (
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
     <Route path="/calculator">
-      <Calculator stickyHeader={stickyHeader}
+      <Calculator stickyHeader={stickyHeader} innerWidth={innerWidth}
       />
-      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
+      <ScrollToTop scrollToTopHidden={scrollToTopHidden} innerWidth={innerWidth}/>
     </Route>
 
     <Route path="/blog">

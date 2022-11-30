@@ -20,7 +20,8 @@
   margin: 0 auto;
   align-items: center;
   gap: 60px;
-  
+  justify-content: center;
+  padding-top: 80px!important;
 }
 
 .calculator__slide {
@@ -63,7 +64,7 @@
 
 .calculator__radio {
   width: 270px;
-  height: 150px;
+  min-height: 150px;
   border-radius: 8px;
   background-color: #17171a;
   box-sizing: border-box;
@@ -322,10 +323,98 @@
   color: #faebd7;
 }
 
-
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  . {
+  .calculator .section__header {
+    width: 700px;
+  }
 
+  .calculator__slide {
+    width: 480px;
+    min-height: 420px;
+  }
+
+  .calculator__container {
+    width: 760px;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .calculator__block {
+    gap: 15px;
+  }
+
+  .calculator__radio {
+    width: 150px;
+    min-height: 134px;
+  }
+
+  .calculator__radio-header, .price__header {
+    line-height: 18px;
+    font-size: 14px;
+  }
+
+  .calculator__input-image {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+  }
+
+  .calculator__input-image img {
+    width: 30px;
+  }
+
+  .calculator__price {
+    min-width: auto;
+    font-size: 30px;
+  }
+
+  .calculator__price::before {
+    font-size: 20px;
+    top: -15px;
+  }
+  
+  .calculator__price-area {
+    width: 220px;
+    height: 283px;
+    margin-bottom: -15px;
+  }
+
+  .calculator__form {
+    width: 100%;
+  }
+
+  .contactUs__input {
+    line-height: 12px;
+    font-size: 12px;
+    padding: 12px;
+  }
+
+  .calculator__recall-button {
+    padding: 12px 3px;
+    font-size: 10px;
+  }
+
+  .calculator__block.answer h3 {
+    width: auto;
+    font-size: 14px;
+  }
+
+  .answer__image {
+    width: 200px;
+    height: 100px;
+    margin: 30px auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .calculator__header p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .calculator__button {
+    font-size: 12px;
   }
 }
 

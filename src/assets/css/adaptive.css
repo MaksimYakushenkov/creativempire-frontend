@@ -1,0 +1,85 @@
+@media screen and (min-width: 1280px) and (max-width: 1599px) {
+  .page-banner {
+    padding: 189px 0 120px;
+  }
+
+  .menu__logo {
+    width: 100px;
+  }
+  
+  .menu__list {
+    gap: 20px;
+  }
+
+  .menu__item {
+    font-size: 14px;
+  }
+  
+  .page-banner__header {
+    font-size: 40px;
+  }
+
+  .breadcumps {
+    margin-top: 20px;
+  }
+
+  .breadcumps-item {
+    font-size: 16px;
+  }
+
+  .section__title {
+    font-size: 30px;
+  }
+
+  .section__subtitle {
+    font-size: 50px;
+  }
+
+  .calculator__container {
+    gap: 30px;
+  }
+
+  .footer__container {
+    width: 1220px;
+    gap: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .page-banner {
+    padding: 130px 0 70px;
+  }
+
+  
+  .page-banner__header {
+    font-size: 40px;
+  }
+
+  .breadcumps {
+    margin-top: 20px;
+  }
+
+  .breadcumps-item {
+    font-size: 16px;
+  }
+
+  .page-banner__circle {
+    width: 600px;
+    height: 600px;
+  }
+
+  .section__title {
+    font-size: 26px;
+  }
+
+  .section__subtitle {
+    font-size: 36px;
+  }
+
+  
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  . {
+  }
+}
