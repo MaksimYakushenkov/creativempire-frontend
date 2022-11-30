@@ -170,6 +170,7 @@
     padding-bottom: 30px;
   }
   
+
   .footer__description, .footer__links {
     padding-top: 0!important;
   }
@@ -212,15 +213,61 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
 
   .footer__container {
-    width: 700px;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
+    width: 300px;
     padding-top: 30px;
     padding-bottom: 30px;
+    display: flex;
+    gap: 0px;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  .footer__description {
+    width: 300px;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .footer__paragraph {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .footer__links {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__subscribe {
+    width: 300px;
+    padding: 25px 30px 35px;
+    margin-top: 35px
   }
   
-  .footer__subscribe {
-    grid-column-start: 1;
-    grid-column-end: -1;
+  .footer__header {
+    line-height: 20px;
+    font-size: 18px;
+  }
+
+  .footer .pricePackages__link {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .footer .contactUs__input {
+    line-height: 14px;
+    font-size: 12px;
+  }
+
+  .footer .pricePackages__link img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .footer__copyright {
+    padding-bottom: 90px;
   }
 }

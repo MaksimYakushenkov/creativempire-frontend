@@ -144,7 +144,7 @@ function Calculator(props) {
           <h2 className='section__subtitle'>Посчитайте <span className="text-color-animation">индивидуальную стоимость</span> вашего проекта</h2>
         </div>
 
-      <div className='calculator__container pt-120 pb-60'>
+      <div className='calculator__container pt-120'>
 
         <div className='calculator__slide-container'>
 

@@ -10,6 +10,12 @@
   z-index: 1;
 }
 
+.page-banner__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .page-banner__header {
   font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
   font-size: 60px;
@@ -43,20 +49,16 @@
 
 .breadcumps-item_active {
   color: #fc653c;
-  text-decoration: underline;
   display: flex;
   align-items: center;
   flex-direction: row;
 }
 
 .breadcumps-item_active::before {
-  content: '';
-  width: 24px;
-  height: 24px;
+  content: '>';
   display: inline-block;
   margin-right: 10px;
-  background: url('../../assets/images/icons/double-right.png');
-  background-size: cover;
+  color: #faebd7;
 }
 
 
@@ -120,4 +122,64 @@
   animation: shapeAnimationTwo 30s infinite;
   right: 10%;
   top: 20%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .left-shape {
+    left: 0;
+    top: -5%;
+  }
+
+  .right-shape {
+    bottom: 50px;
+    right: -40px;
+    animation: upDownLeftMobile 30s infinite;  
+  }
+
+  .page-banner {
+    padding: 130px 0 50px;
+  }
+
+  .page-banner__img {
+    width: 50px;
+  }
+
+  .page-banner__circle {
+    width: 200px;
+    height: 200px;
+    top: -75px;
+    left: -75px;
+  }
+
+  .page-banner__header {
+    font-size: 30px;
+  }
+
+  .breadcumps {
+    margin-top: 10px;
+  }
+
+  .breadcumps-item {
+    font-size: 14px;
+  }
+
+  .breadcumps-list {
+    gap: 10px;
+  }
+
+  .page-banner__shapes::after {
+    width: 10px;
+    height: 10px;
+    right: 5%;
+    top: 5%;
+    animation: shapeAnimationTwoMobile 30s infinite;
+  }
+
+  .page-banner__shapes::before {
+    width: 10px;
+    height: 10px;
+    bottom: 5%;
+    left: 5%;
+    animation: shapeAnimationTwoMobile 30s infinite;
+  }
 }

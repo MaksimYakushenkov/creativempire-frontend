@@ -92,6 +92,16 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  . {
+  .place-magic__container {
+    width: 100%;
+  }
+
+  .place-magic__header {
+    width: 300px;
+  }
+
+  .place-magic__button {
+    font-size: 12px;
+    line-height: 16px;
   }
 }

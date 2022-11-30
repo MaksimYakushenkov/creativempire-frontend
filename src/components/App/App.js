@@ -40,7 +40,7 @@ function App() {
   React.useEffect(() => {
     new WOW().init();
     window.addEventListener('scroll', () => {
-      if(window.pageYOffset <= 118){
+      if(window.pageYOffset <= 50){
         setStickyHeader(false);
         setScrollToTopHidden(true);
       } else {

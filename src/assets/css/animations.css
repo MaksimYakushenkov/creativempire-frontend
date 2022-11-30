@@ -87,6 +87,39 @@
     -webkit-transform: translate(0px, 0px) rotate(360deg);
     transform: translate(0px, 0px) rotate(360deg); } }
 
+@keyframes shapeAnimationTwoMobile {
+  0% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg); }
+  25% {
+    -webkit-transform: translate(-50px, 0px) rotate(270deg);
+    transform: translate(-50px, 0px) rotate(270deg); }
+  50% {
+    -webkit-transform: translate(-50px, 75px) rotate(180deg);
+    transform: translate(-50x, 75px) rotate(180deg); }
+  75% {
+    -webkit-transform: translate(0px, 75px) rotate(90deg);
+    transform: translate(0px, 75px) rotate(90deg); }
+  100% {
+    -webkit-transform: translate(0px, 0px) rotate(360deg);
+    transform: translate(0px, 0px) rotate(360deg); } }
+@-webkit-keyframes shapeAnimationTwoMobile {
+0% {
+  -webkit-transform: translate(0px, 0px) rotate(0deg);
+  transform: translate(0px, 0px) rotate(0deg); }
+25% {
+  -webkit-transform: translate(-50px, 0px) rotate(270deg);
+  transform: translate(-50px, 0px) rotate(270deg); }
+50% {
+  -webkit-transform: translate(-50px, 75px) rotate(180deg);
+  transform: translate(-50x, 75px) rotate(180deg); }
+75% {
+  -webkit-transform: translate(0px, 75px) rotate(90deg);
+  transform: translate(0px, 75px) rotate(90deg); }
+100% {
+  -webkit-transform: translate(0px, 0px) rotate(360deg);
+  transform: translate(0px, 0px) rotate(360deg); } }
+
 @-webkit-keyframes shapeAnimationOne {
   0% {
     -webkit-transform: translate(0px, 0px) rotate(0deg);
@@ -145,6 +178,32 @@
   50% {
     -webkit-transform: translate(-50px, 50px);
     transform: translate(-50px, 50px); } }
+
+@keyframes upDownLeftMobile {
+  0%,
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); }
+  25%,
+  75% {
+    -webkit-transform: translate(-25px, 0px);
+    transform: translate(-25px, 0px); }
+  50% {
+    -webkit-transform: translate(-25px, 50px);
+    transform: translate(-25px, 50px); } }
+
+@-webkit-keyframes upDownLeftMobile {
+  0%,
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); }
+  25%,
+  75% {
+    -webkit-transform: translate(-25px, 0px);
+    transform: translate(-25px, 0px); }
+  50% {
+    -webkit-transform: translate(-25px, 50px);
+    transform: translate(-25px, 50px); } }
 
 @keyframes cooperationTextChangeColor {
   0% {

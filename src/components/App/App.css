@@ -413,6 +413,28 @@
 
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+  .section__header {
+    width: 300px;
+  }
+
+  .section__title {
+    font-size: 12px;
+  }
+
+  .section__subtitle {
+    font-size: 24px;
+  }
+
+  .section__paragraph {
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 15px;
+  }
+}
+
+
 @keyframes btn-anim3 {
   0% {
     right: -100%;
