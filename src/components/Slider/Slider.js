@@ -48,7 +48,6 @@ export default class HeaderSlider extends Component {
               <div className="slide__image-container">
                 <img className="slide__image" alt="Студия креативного дизайна — Creative Empire" src={slide1} />
               </div>
-              <img className="image__caption" alt="Студия креативного дизайна — Creative Empire" src={imgageCaption} />
             </div>
           </div>
           <div>
@@ -71,7 +70,6 @@ export default class HeaderSlider extends Component {
               <div className="slide__image-container">
                 <img className="slide__image" alt="Студия креативного дизайна — Creative Empire" src={slide2} />
               </div>
-              <img className="image__caption" alt="Студия креативного дизайна — Creative Empire" src={imgageCaption} />
             </div>
           </div>
           <div>
@@ -96,7 +94,7 @@ export default class HeaderSlider extends Component {
               <div className="slide__image-container">
                 <img className="slide__image" alt="Студия креативного дизайна — Creative Empire" src={slide3} />
               </div>
-              <img className="image__caption" alt="Студия креативного дизайна — Creative Empire" src={imgageCaption} />
+             
             </div>
           </div>
         </Slider>

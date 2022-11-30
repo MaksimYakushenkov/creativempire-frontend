@@ -379,15 +379,28 @@
   }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1279.99px) {
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
   .order__button {
     padding: 10px 14px;
     font-size: 11px;
     right: 10px;
   }
+
+  .section__title {
+    font-size: 26px;
+  }
+  
+  .section__subtitle {
+    font-size: 36px;
+  }
+  
+  .section__paragraph {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023.99px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 
   .order__button_small {
     width: 50px;
@@ -409,6 +422,25 @@
     color: #fff;
     border-radius: 21px;
     box-shadow: 0 0 5px #fc653c, 0 0 5px #fc653c, 0 0 5px #fc653c, 0 0 30px #fc653c;
+}
+
+.section__header {
+  width: 300px;
+}
+
+.section__title {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.section__subtitle {
+  font-size: 30px;
+}
+
+.section__paragraph {
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 15px;
 }
 
 }

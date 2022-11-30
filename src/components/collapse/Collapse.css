@@ -44,3 +44,51 @@
   line-height: 24px;
   color: #ccc3c3;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .collapse__li {
+    margin: 12px 0;
+  }
+  .collapse__text p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .collapse__header {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .collapse__text_visible {
+    height: 100px;
+  }
+
+  .collapse__li div {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .collapse__li {
+    margin: 5px 0;
+  }
+  .collapse__text p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .collapse__header {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .collapse__text_visible {
+    height: 100px;
+  }
+}

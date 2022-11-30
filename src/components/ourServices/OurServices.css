@@ -17,3 +17,67 @@
 .ourServices__collapse {
   max-width: 550px;
 }
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .ourServices {
+    padding: 60px 0;
+  }
+
+  .ourServices__container {
+    max-width: 400px;
+  }
+
+  .ourServices__collapse {
+    max-width: 500px;
+  }
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .ourServices {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 60px 0;
+  }
+
+  .ourServices__container {
+    max-width: 550px;
+    text-align: center;
+  }
+
+  .ourServices__collapse {
+    padding: 0 60px;
+    max-width: 100%;
+  }
+
+  
+
+  
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .ourServices {
+    padding: 50px 0 30px;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ourServices__container {
+    max-width: 300px;
+  }
+
+  .ourServices__collapse {
+    max-width: 300px;
+  }
+}
