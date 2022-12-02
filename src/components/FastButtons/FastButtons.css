@@ -78,6 +78,7 @@
 
   .fastButtons {
     width: 1000px;
+    
   }
 
   .fastButtons__container {
@@ -115,6 +116,7 @@
 
   .fastButtons {
     width: 700px;
+    margin-bottom: -60px;
   }
 
   .fastButtons__container {

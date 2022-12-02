@@ -24,7 +24,7 @@ function Home(props) {
       <Work />
       <FastButtons />
       <PricePackages />
-      <Testimonials />
+      <Testimonials innerWidth={props.innerWidth} />
       <ContactUs />
       <Blog />
     </main>

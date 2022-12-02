@@ -16,13 +16,31 @@ export default class Testimonials extends Component {
   
   render() {
 
-  const settings = {
+  const settings = this.props.innerWidth > 1023 ? { 
     dots: false,
     infinite: true,
     arrows: false,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 2,
+    initialSlide: 0,
+  } : this.props.innerWidth > 767 ?
+  { 
+    ddots: false,
+    infinite: true,
+    arrows: false,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    initialSlide: 0,
+  } : 
+  { 
+    dots: false,
+    infinite: true,
+    arrows: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     initialSlide: 0,
   };
 
