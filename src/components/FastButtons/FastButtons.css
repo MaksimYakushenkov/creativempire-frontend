@@ -2,9 +2,6 @@
   width: 1350px;
   display: flex;
   margin: 0 auto;
-  width: 1350px;
-  display: flex;
-  margin: 0 auto;
   z-index: 2;
   margin-bottom: -110px;
 }
@@ -75,4 +72,114 @@
 .fastButtons__image-link {
   width: 80px;
   height: 80px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+
+  .fastButtons {
+    width: 1000px;
+  }
+
+  .fastButtons__container {
+    width: 100%;
+  }
+
+  .fastButtons__column {
+    width: 50%;
+    padding: 50px;
+  }
+
+  .fastButtons__image-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .fastButtons__link {
+    line-height: 20px;
+    font-size: 18px;
+    width: 300px;
+  }
+
+  .fastButtons__image-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .fastButtons__image {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .fastButtons {
+    width: 700px;
+  }
+
+  .fastButtons__container {
+    width: 100%;
+  }
+
+  .fastButtons__column {
+    width: 50%;
+    padding: 30px 15px;
+  }
+
+  .fastButtons__image-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .fastButtons__link {
+    line-height: 18px;
+    font-size: 16px;
+    width: 250px;
+    margin-left: 15px;
+  }
+
+  .fastButtons__image-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .fastButtons__image {
+    width: 40px;
+    height: 40px;
+  }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .fastButtons {
+    width: 300px;
+  }
+
+  .fastButtons__container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .fastButtons__column {
+    width: 100%;
+    padding: 30px 15px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .fastButtons__image-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .fastButtons__link {
+    line-height: 20px;
+    font-size: 18px;
+    width: 250px;
+    margin: 0;
+  }
+
+  .fastButtons__image-container {
+    display: none;
+  }
 }

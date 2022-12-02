@@ -19,8 +19,8 @@ function Home(props) {
       <OurServices />
       <AboutUs />
       <Statistics />
-      <DesignArea />
-      <LatestProjects />
+      <DesignArea innerWidth={props.innerWidth}/>
+      <LatestProjects innerWidth={props.innerWidth} />
       <Work />
       <FastButtons />
       <PricePackages />

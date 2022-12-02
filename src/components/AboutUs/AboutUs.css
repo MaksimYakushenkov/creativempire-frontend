@@ -190,7 +190,7 @@
   
   .aboutUs__container {
     flex-direction: column;
-    gap: 30px;
+    gap: 60px;
   }
 
   .aboutUs__image-area {
@@ -208,6 +208,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   .aboutUs__box {
@@ -224,6 +225,16 @@
   .aboutUs__box-description {
     font-size: 12px;
     line-height: 16px;
+  }
+
+  .aboutUs__box-icon::before {
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    left: -10px;
+  }
+  .aboutUs__box-image {
+    width: 50px;
   }
 
 }

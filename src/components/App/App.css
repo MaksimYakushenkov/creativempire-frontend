@@ -453,16 +453,26 @@
 
   .section__title {
     font-size: 12px;
+    text-align: center;
   }
 
   .section__subtitle {
     font-size: 24px;
+    text-align: center;
   }
 
   .section__paragraph {
     font-size: 12px;
     line-height: 14px;
     margin-top: 15px;
+  }
+
+  .ta-c__m {
+    text-align: center;
+  }
+
+  .as-c__m {
+    align-self: center;
   }
 }
 

@@ -15,7 +15,7 @@ function AboutUs() {
          <img className='aboutUs__shape' src={aboutUsShape} alt='Студия креативного дизайна — Creative Empire' />
         </div>
         <div className='aboutUs__content wow fadeInLeft delay-0-2s'>
-          <h3 className='section__title first-color'>••• Почему мы? •••</h3>
+          <h3 className='section__title first-color as-c__m'>••• Почему мы? •••</h3>
           <h2 className='section__subtitle'>Наши сильные стороны</h2>
           <div className='aboutUs__box mt-50'>
             <div className='aboutUs__box-icon'>

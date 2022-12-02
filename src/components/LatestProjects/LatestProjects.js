@@ -8,9 +8,10 @@ import project4 from '../../assets/images/projects/project4.jpg';
 import project5 from '../../assets/images/projects/project5.jpg';
 import project6 from '../../assets/images/projects/project6.jpg';
 
-function LatestProjects() {
+function LatestProjects(props) {
   
-  const settings = {
+  
+  const settings = props.innerWidth > 1023 ? { 
     dots: true,
     infinite: true,
     arrows: false,
@@ -18,7 +19,24 @@ function LatestProjects() {
     slidesToShow: 3,
     slidesToScroll: 3,
     initialSlide: 0,
-
+  } : props.innerWidth > 767 ?
+  { 
+    dots: true,
+    infinite: true,
+    arrows: false,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    initialSlide: 0,
+  } : 
+  { 
+    dots: true,
+    infinite: true,
+    arrows: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
   };
 
   return (

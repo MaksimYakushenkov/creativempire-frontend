@@ -11,10 +11,10 @@ import iconSeo from '../../assets/images/icons/seo.webp';
 import iconUserExperience from '../../assets/images/icons/user-experience.webp';
 import iconGraphicDesign from '../../assets/images/icons/graphic-design.webp';
 
-function DesignArea() {
+function DesignArea(props) {
 
   return (
-    <section className='design-area pt-120 pb-120'>
+    <section className='design-area'>
       <div className='design-area__container'>
         <div className='design-area__header wow fadeInUp delay-0-2s'>
           <h3 className='section__title first-color'>••• А вы знали, что... •••</h3>
@@ -22,7 +22,7 @@ function DesignArea() {
         </div>
         <div className='design-area__details'>
           <div className='design-area__column wow fadeInLeft delay-0-2s'>
-            <div className='design-area__column-item ml-30'>
+            <div className={`design-area__column-item ${props.innerWidth > 767 && 'ml-30'}`}>
               <img className='design-area__column-image' src={iconIdea} alt='Test' />
               <Link className='design-area__column-link' to='/services/create-website'>
               Создание <br/>веб-сайта с 0
@@ -49,7 +49,7 @@ function DesignArea() {
                   <img className='design-area__arrow' src={iconRightArrow} alt='Test' />
                 </Link>
             </div>
-            <div className='design-area__column-item mb_60'>
+            <div className={`design-area__column-item ${props.innerWidth > 767 && 'mb_60'}`}>
             <img className='design-area__column-image' src={iconSeo} alt='Test' />
               <Link className='design-area__column-link' to='/services/create-website'>
                 Проведение SEO оптимизации
@@ -65,7 +65,7 @@ function DesignArea() {
                   <img className='design-area__arrow' src={iconRightArrow} alt='Test' />
                 </Link>
             </div>
-            <div className='design-area__column-item ml-30'>
+            <div className={`design-area__column-item ${props.innerWidth > 767 && 'ml-30'}`}>
             <img className='design-area__column-image' src={iconGraphicDesign} alt='Test' />
               <Link className='design-area__column-link' to='/services/ux-ui-design'>
               Разработка UX/UI дизайна

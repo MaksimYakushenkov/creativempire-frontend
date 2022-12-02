@@ -87,7 +87,7 @@ return (
     <Route exact path="/">
       <Header innerWidth={innerWidth}
         stickyHeader={stickyHeader} />
-      <Home />
+      <Home innerWidth={innerWidth} />
       <Footer />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>

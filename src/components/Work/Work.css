@@ -4,6 +4,8 @@
   flex-direction: column;
   align-items: center;
   align-content: center;
+  padding-top: 60px;
+  padding-bottom: 100px;
 }
 
 .work__container {
@@ -132,4 +134,140 @@
   position: absolute;
   top: 178px;
   z-index: -1;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+
+  .work__container {
+    max-width: 1000px;
+  }
+
+  .work__process-number {
+    font-size: 65px;
+    transform: translate(-100%, -70%) rotate(-50deg);
+  }
+
+  .work__process-image_container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .work__process-image {
+    width: 56px;
+  }
+
+  .work__process-title {
+    line-height: 20px;
+    font-size: 18px;
+    margin: 15px 0;
+  }
+
+  .work__process {
+    padding: 15px;
+  }
+
+  .work__process-description {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .work__container {
+    max-width: 900px;
+    width: 95%;
+  }
+
+  .work__process-number {
+    font-size: 65px;
+    transform: translate(-100%, -70%) rotate(-50deg);
+  }
+
+  .work__process-image_container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .work__process-image {
+    width: 56px;
+  }
+
+  .work__process-title {
+    line-height: 18px;
+    font-size: 16px;
+    margin: 15px 0;
+  }
+
+  .work__process {
+    padding: 15px;
+  }
+
+  .work__process-description {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+  .work {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+
+  .work__container {
+    max-width: 300px;
+  }
+
+  .work__header {
+    text-align: center;
+  }
+
+  .work__process:nth-child(2), .work__process:nth-child(4) {
+    margin-top: 0;
+  }
+
+  .work__process-container {
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 60px;
+    align-items: center;
+  }
+
+  .work__process {
+    width: 250px;
+  }
+
+  .work__process-number {
+    font-size: 45px;
+    transform: translate(-90%, -70%) rotate(-50deg);
+  }
+
+  .work__process-image_container {
+    width: 70px;
+    height: 70px;
+  }
+
+  .work__process-image {
+    width: 46px;
+  }
+
+  .work__process-title {
+    line-height: 18px;
+    font-size: 16px;
+    margin: 15px 0;
+  }
+
+  .work__process {
+    padding: 15px;
+  }
+
+  .work__process-description {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  
 }
