@@ -286,6 +286,7 @@
     flex-direction: row;
     justify-content: flex-start;
     gap: 10px;
+    border-radius: 8px;
   }
 
   .design-area__column-link {

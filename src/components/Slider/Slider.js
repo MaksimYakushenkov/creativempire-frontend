@@ -35,9 +35,8 @@ export default class HeaderSlider extends Component {
                 <h2 className="slider__title text-bottom-line">Creative Empire</h2>
                 <p className="slider__paragraph">Лучшие креативные решения для вашего бизнеса или хобби! Оставьте заявку и мы вам перезвоним.</p>
                 <div className="slide__buttons">
-                  <button className='slider__button slider__button_transparent' href='ya.ru' target='_blank'>
+                  <button className='calculator__recall-button' href='ya.ru' target='_blank'>
                     Контакты
-                    <img src={iconDoubleRight} />
                   </button>
                   <button className="slider__button">
                     Быстрый заказ

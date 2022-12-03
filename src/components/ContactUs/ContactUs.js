@@ -11,7 +11,7 @@ import contactDots from '../../assets/images/shapes/contact-dots.png';
 function ContactUs() {
 
   return (
-    <section id="contact" className='contactUs pb-120 pt-120'>
+    <section id="contact" className='contactUs'>
       <div className='contactUs__container'>
         <div className='contactUs__info-container z-1 wow fadeInRight delay-0-2s'>
 

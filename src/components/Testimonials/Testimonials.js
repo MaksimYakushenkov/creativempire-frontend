@@ -45,7 +45,7 @@ export default class Testimonials extends Component {
   };
 
   return (
-    <section className='testimonials pt-60 pb-60'>
+    <section className='testimonials'>
       <div className='section__header text-inherit wow fadeInUp delay-0-2s'>
         <h3 className='section__title first-color'>••• Что о нас говорят? •••</h3>
         <h2 className='section__subtitle'>Отзывы клиентов</h2>

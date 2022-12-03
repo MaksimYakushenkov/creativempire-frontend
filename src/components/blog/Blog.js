@@ -5,7 +5,7 @@ import testPreview from '../../assets/images/shop/thumb2.jpg';
 function Blog() {
 
   return (
-    <section className='blog pt-120 pb-120'>
+    <section className='blog'>
       <div className='section__header wow fadeInUp delay-0-2s'>
         <h3 className='section__title first-color'>••• Лучший блог •••</h3>
         <h2 className='section__subtitle'>Свежие новости, акции и спецпредложения</h2>
