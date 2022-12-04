@@ -5,7 +5,7 @@ import cooperationImage from '../../assets/images/about/statistics-five.png';
 function Cooperation() {
 
   return (
-    <section className='cooperation pb-120 pt-120'>
+    <section className='cooperation'>
       <div className='cooperation__container'>
         <div className='cooperation__header wow fadeInLeft delay-0-2s'>
           <h3 className='section__title first-color'>••• Давайте сотрудничать! •••</h3>

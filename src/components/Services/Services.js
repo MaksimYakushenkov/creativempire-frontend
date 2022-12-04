@@ -10,21 +10,21 @@ import serviceCreativeDesign from '../../assets/images/services/creative_design_
 function Services(props) {
 
   return (
-    <section className='services pt-60 pb-100'>
+    <section className='services'>
       <div className='services__container'>
         <div className='latestProjects__header wow fadeInUp delay-0-2s'>
           <h3 className='section__title first-color'>••• Что мы умеем? •••</h3>
           <h2 className='section__subtitle'>Полный перечень наших услуг</h2>
         </div>
         
-        <div className='services__grid mt-120'>
+        <div className='services__grid'>
 
           <div className='services__item wow fadeInLeft delay-0-2s'>
             <div className='services__image-container'>
               <img className='services__image' src={serviceWeb} alt='Создание сайтов под ключ в Москве и по всей России' />
             </div>
             <div className='services__description'>
-              <h2 className='services__title mb-30'>Создание сайтов под ключ</h2>
+              <h2 className='services__title'>Создание сайтов под ключ</h2>
               <ul className='services__list'>
                 <li className='services__list-item'>Премиальный дизайн</li>
                 <li className='services__list-item'>SEO оптимизация</li>
@@ -45,7 +45,7 @@ function Services(props) {
               <img className='services__image' src={serviceUXUI} alt='Разработка UX/UI дизайна под ключ заказать онлайн в Москве и по всей России' />
             </div>
             <div className='services__description'>
-              <h2 className='services__title mb-30'>Разработка UX/UI дизайна</h2>
+              <h2 className='services__title'>Разработка UX/UI дизайна</h2>
               <ul className='services__list'>
                 <li className='services__list-item'>Веб-сайт и мобильные приложения</li>
                 <li className='services__list-item'>Только цепляющий дизайн</li>
@@ -65,7 +65,7 @@ function Services(props) {
               <img className='services__image' src={serviceCreativeDesign} alt='Креативный дизайн недорого заказать онлайн' />
             </div>
             <div className='services__description'>
-              <h2 className='services__title mb-30'>Креативный дизайн</h2>
+              <h2 className='services__title'>Креативный дизайн</h2>
               <ul className='services__list'>
                 <li className='services__list-item'>Можно заказать почти что угодно</li>
                 <li className='services__list-item'>Обсуждаем тонкости</li>
@@ -85,7 +85,7 @@ function Services(props) {
               <img className='services__image' src={serviceBanners} alt='Рекламные баннеры недорого заказать онлайн' />
             </div>
             <div className='services__description'>
-              <h2 className='services__title mb-30'>Рекламные баннеры</h2>
+              <h2 className='services__title'>Рекламные баннеры</h2>
               <ul className='services__list'>
                 <li className='services__list-item'>Изучаем конкурентов ниши</li>
                 <li className='services__list-item'>Делаем продающий креатив</li>
@@ -105,7 +105,7 @@ function Services(props) {
               <img className='services__image' src={serviceBrand} alt='Разработка бренда под ключ заказать онлайн в Москве и по всей России' />
             </div>
             <div className='services__description'>
-              <h2 className='services__title mb-30'>Создание собственного бренда</h2>
+              <h2 className='services__title'>Создание собственного бренда</h2>
               <ul className='services__list'>
                 <li className='services__list-item'>Продумаем каждую мелочь</li>
                 <li className='services__list-item'>Дружим со всеми соцсетями</li>
@@ -125,7 +125,7 @@ function Services(props) {
               <img className='services__image' src={serviceLogo} alt='Разработка логотипа под ключ онлайн заказать в Москве и по всей России' />
             </div>
             <div className='services__description'>
-              <h2 className='services__title mb-30'>Разработка логотипа</h2>
+              <h2 className='services__title'>Разработка логотипа</h2>
               <ul className='services__list'>
                 <li className='services__list-item'>Геймерский логотип</li>
                 <li className='services__list-item'>Винтажный логотип</li>

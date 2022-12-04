@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 90px;
+  padding-bottom: 90px;
 }
 
 .work-plan__container {
@@ -17,11 +19,12 @@
   width: 100%;
   align-items: flex-start;
   gap: 60px;
+  margin-top: 120px;
 }
 
 .work-plan__list-item {
   width: 1000px;
-  height: 300px;
+  min-height: 300px;
   background-color: #0d0e0d;
   border-radius: 8px;
   box-shadow: 10px 0 60px rgb(252 101 60 / 10%);
@@ -142,4 +145,167 @@
 
 .no-after::after {
   display: none;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+
+  .work-plan {
+    padding-top: 60px;
+  }
+  
+  .work-plan__container {
+    width: 1000px;
+  }
+
+  .work-plan__list {
+    margin-top: 90px;
+  }
+
+  .work-plan__list-item {
+    width: 80%;
+  }
+
+  .work-plan__title {
+    line-height: 24px;
+    font-size: 22px;
+    padding: 10px 0 20px;
+  }
+
+  .work-plan__item-description {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .work-plan {
+    padding-top: 60px;
+  }
+  
+  .work-plan__container {
+    width: 700px;
+  }
+
+  .work-plan__container .section__header {
+    width: 100%;
+  }
+
+  .work-plan__list {
+    margin-top: 90px;
+  }
+
+  .work-plan__list-item {
+    width: 80%;
+    flex-direction: column;
+    gap: 30px;
+    min-height: 480px;
+  }
+
+  .work-plan__list-item_left::after {
+    width: 140px;
+    height: 300px;
+    right: -70px;
+    top: 240px;
+  }
+
+  .work-plan__list-item_right::after {
+    width: 140px;
+    height: 300px;
+    left: -70px;
+    top: 240px;
+  }
+
+  .work-plan__title {
+    line-height: 24px;
+    font-size: 22px;
+    padding: 10px 0 20px;
+  }
+
+  .work-plan__item-description {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+  .work-plan {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+  
+  .work-plan__container {
+    width: 300px;
+  }
+
+  .work-plan__container .section__header {
+    width: 100%;
+  }
+
+  .work-plan__list {
+    margin-top: 90px;
+    gap: 120px;
+  }
+
+  .work-plan__list-item {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    min-height: 500px;
+    padding: 20px 30px;
+  }
+
+  .work-plan__list-item_left::after {
+    width: 5px;
+    height: 90px;
+    right: auto;
+    bottom: -90px;
+    left: 145px;
+    top: auto;
+    box-sizing: border-box;
+  }
+
+  .work-plan__list-item_right::after {
+    width: 5px;
+    height: 90px;
+    right: auto;
+    bottom: -90px;
+    left: 145px;
+    top: auto;
+    box-sizing: border-box;
+  }
+
+  .work-plan__image {
+    min-width: 240px;
+    width: 240px;
+    height: 192px;
+  }
+
+  .work-plan__title {
+    line-height: 18px;
+    font-size: 16px;
+    padding: 10px 0 20px;
+  }
+
+  .work-plan__item-description {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .work-plan__number {
+    width: 100px;
+    height: 100px;
+    font-size: 60px;
+  }
+
+  .work-plan__number_left, .work-plan__number_right {
+    left: 100px;
+    right: auto;
+    top: -65px;
+  }
+  
+
 }

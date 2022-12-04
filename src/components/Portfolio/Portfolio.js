@@ -43,12 +43,12 @@ function Portfolio(props) {
 
   return (
     <>
-    <Header stickyHeader={props.stickyHeader} />
+    <Header innerWidth={props.innerWidth} stickyHeader={props.stickyHeader} />
     <PageBanner
         header="Портфолио"
     />
     <Cooperation />
-    <main className='portfolio pt-60 pb-60'>
+    <main className='portfolio'>
       <div className='portfolio__container'>
         <div className='portfolio__header mb-15'>
           <div className='section__header'>

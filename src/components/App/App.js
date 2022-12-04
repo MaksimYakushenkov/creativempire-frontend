@@ -98,6 +98,7 @@ return (
     </Route>
     <Route path="/services">
       <Header
+        innerWidth={innerWidth}
         stickyHeader={stickyHeader}
       />
       <PageBanner
@@ -112,15 +113,15 @@ return (
     </Route>
     <Route path="/portfolio"
     >
-      <Portfolio stickyHeader={stickyHeader} />
+      <Portfolio innerWidth={innerWidth} stickyHeader={stickyHeader} />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
     <Route path="/work-plan">
-      <WorkPlan stickyHeader={stickyHeader}/>
+      <WorkPlan innerWidth={innerWidth} stickyHeader={stickyHeader}/>
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
     <Route path="/contact">
-      <Contact stickyHeader={stickyHeader}/>
+      <Contact innerWidth={innerWidth} stickyHeader={stickyHeader}/>
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
     <Route path="/calculator">

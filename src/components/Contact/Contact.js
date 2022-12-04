@@ -10,11 +10,13 @@ function Contact(props) {
 
   return (
     <>
-    <Header stickyHeader={props.stickyHeader}/>
+    <Header 
+    innerWidth={props.innerWidth}
+    stickyHeader={props.stickyHeader}/>
     <PageBanner
         header="Контакты"
     />
-    <main className='contact pt-120 pb-120'>
+    <main className='contact'>
       <div className='contact__container'>
         <div className='contact__description'>
           <div className='contact__header wow fadeInLeft delay-0-2s'>
@@ -23,7 +25,7 @@ function Contact(props) {
             <p className='section__paragraph'>Начнем создавать для Вас лучший проект в ближайшее время — оставьте заявку онлайн.</p>
           </div>
 
-          <form className='contact__form mt-60 wow fadeInUp delay-0-4s' noValidate>
+          <form className='contact__form wow fadeInUp delay-0-4s' noValidate>
 
             <div className="contactUs__field">
               <input id="product" className="contactUs__input" required name="product" type="text" placeholder="Что хотите заказать*"  />
@@ -84,7 +86,7 @@ function Contact(props) {
 
           </div>
 
-          <div className='contact__social mt-60 wow fadeInUp delay-0-8s'>
+          <div className='contact__social wow fadeInUp delay-0-8s'>
             <h3 className='contact__social-header'>Подписывайтесь на нас</h3>
             <ul className='contact__social-list'>
               <li className='contact__social-list-item'><a className='' href="ya.ru"><i className='icon icon-vkontakte'></i></a></li>

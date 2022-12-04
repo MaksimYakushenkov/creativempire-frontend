@@ -1,5 +1,6 @@
 .portfolio {
-
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .portfolio__container {
@@ -142,4 +143,136 @@
   -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
   -o-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+
+  .portfolio__header {
+    gap: 40px;
+  }
+
+  .portfolio__filter {
+    align-self: center;
+  }
+
+  .portfolio__grid {
+    width: 1000px;
+  }
+
+  .portfolio__list {
+    width: 860px;
+    margin: 0 auto;
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .portfolio__header {
+    gap: 40px;
+  }
+
+  .portfolio__header .section__header {
+    width: 100%;
+  }
+
+  .portfolio__filter {
+    align-self: center;
+  }
+
+  .portfolio__filter-item {
+    line-height: 20px;
+    font-size: 18px;
+  }
+
+  .portfolio__grid {
+    width: 730px;
+  }
+
+  .portfolio__list {
+    margin: 0 auto;
+  }
+
+  .portfolio__item {
+    width: 350px;
+  }
+  
+  .portfolio__title {
+    line-height: 20px;
+    font-size: 18px;
+  }
+
+  .portfolio__subtitle {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .portfolio__image {
+    height: 235px;
+  }
+
+  .portfolio__hover-container {
+    width: 350px;
+    height: 235px;
+  }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .portfolio {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .portfolio__header {
+    gap: 40px;
+  }
+
+  .portfolio__filter {
+    align-self: center;
+  }
+
+  .portfolio__filter-list {
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .portfolio__filter-item {
+    line-height: 18px;
+    font-size: 16px;
+  }
+
+  .portfolio__grid {
+    width: 300px;
+  }
+
+  .portfolio__list {
+    margin: 0 auto;
+  }
+
+  .portfolio__item {
+    width: 100%
+  }
+  
+  .portfolio__title {
+    line-height: 20px;
+    font-size: 18px;
+  }
+
+  .portfolio__subtitle {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .portfolio__image {
+    height: 202px;
+  }
+
+  .portfolio__hover-container {
+    width: 300px;
+    height: 100%;
+  }
+
 }

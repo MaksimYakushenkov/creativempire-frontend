@@ -124,6 +124,32 @@
   top: 20%;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+
+  .page-banner {
+    padding: 130px 0 70px;
+  }
+
+  
+  .page-banner__header {
+    font-size: 40px;
+  }
+
+  .breadcumps {
+    margin-top: 20px;
+  }
+
+  .breadcumps-item {
+    font-size: 16px;
+  }
+
+  .page-banner__circle {
+    width: 500px;
+    height: 500px;
+  }
+
+}
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .left-shape {
     left: 0;

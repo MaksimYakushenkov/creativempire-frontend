@@ -10,19 +10,21 @@ function WorkPlan(props) {
 
   return (
     <>
-    <Header stickyHeader={props.stickyHeader}/>
+    <Header 
+      innerWidth={props.innerWidth}
+      stickyHeader={props.stickyHeader}/>
     <PageBanner
-        header="План работы"
+      header="План работы"
     />
     <Cooperation />
-    <main className='work-plan pt-90 pb-90'>
+    <main className='work-plan'>
       <div className='work-plan__container'>
         <div className='section__header wow fadeInUp delay-0-2s'>
           <h3 className='section__title first-color'>••• Легкое сотрудничество •••</h3>
           <h2 className='section__subtitle'>Этапы от знакомства до результата</h2>
         </div>
         
-        <div className='work-plan__list mt-120'>
+        <div className='work-plan__list'>
 
           <div className='work-plan__list-item work-plan__list-item_left wow fadeInLeft delay-0-2s'>
             <div className='work-plan__image first'></div>
