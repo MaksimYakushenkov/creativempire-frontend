@@ -266,6 +266,14 @@
   z-index: -1;
 }
 
+.submit__processing {
+  width: 1000px;
+}
+
+.submit__loading {
+  animation: rotated_circle 3s infinite;
+}
+
 .bg-1 {
   background-color: #17171a;
 }

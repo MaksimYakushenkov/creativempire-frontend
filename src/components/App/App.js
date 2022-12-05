@@ -21,9 +21,16 @@ import ServiceDetails from '../ServiceDetails/ServiceDetails';
 
 function App() {
   const [stickyHeader, setStickyHeader] = React.useState(false);
+  const [isPopupOpened, setIsPopupOpened] = React.useState(false);
   const [scrollToTopHidden, setScrollToTopHidden] = React.useState(true);
   const history = useHistory();
   const [innerWidth, setInnerWidth] = React.useState(window.innerWidth);
+  const [isProcessing, setIsProcessing] = React.useState(false);
+  const [infoData, setInfoData] = React.useState({
+    path: "",
+    img: "",
+    text: ""
+  });
 
   React.useEffect(() => {
     window.addEventListener('resize', detectSize);
@@ -85,8 +92,16 @@ return (
     <>
     <HelmetProvider><Helmet><title>My Title</title></Helmet></HelmetProvider><Switch>
     <Route exact path="/">
-      <Header innerWidth={innerWidth}
-        stickyHeader={stickyHeader} />
+      <Header 
+        innerWidth={innerWidth}
+        stickyHeader={stickyHeader}
+        isProcessing={isProcessing}
+        setIsProcessing={setIsProcessing}
+        isPopupOpened={isPopupOpened}
+        setIsPopupOpened={setIsPopupOpened}
+        infoData={infoData}
+        setInfoData={setInfoData}
+      />
       <Home innerWidth={innerWidth} />
       <Footer />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
@@ -121,7 +136,16 @@ return (
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
     <Route path="/contact">
-      <Contact innerWidth={innerWidth} stickyHeader={stickyHeader}/>
+      <Contact
+      innerWidth={innerWidth}
+      stickyHeader={stickyHeader}
+      isProcessing={isProcessing}
+      setIsProcessing={setIsProcessing}
+      isPopupOpened={isPopupOpened}
+      setIsPopupOpened={setIsPopupOpened}
+      infoData={infoData}
+      setInfoData={setInfoData}
+      />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
     <Route path="/calculator">

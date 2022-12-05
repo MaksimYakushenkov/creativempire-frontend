@@ -1,0 +1,38 @@
+.popup {
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background-color: #000000f2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  display: none;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+
+.popup__container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup_opened {
+  display: flex;
+  opacity: 1;
+  animation: fadeInUp 0.25s ease-in;
+}
+
+.popup__close-button {
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}

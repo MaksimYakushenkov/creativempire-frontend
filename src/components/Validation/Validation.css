@@ -1,0 +1,24 @@
+.error-message {
+  font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: left;
+  vertical-align: top;
+  color: #ff3b3b;
+  display: none;
+  margin-top: 10px;
+}
+
+.error_visible {
+  display: block;
+}
+
+.error__field {
+  color: #ff3b3b;
+}
+
+.error__field:focus {
+  outline: 2px solid #ff0000;
+}
