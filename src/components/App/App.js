@@ -18,6 +18,7 @@ import WorkPlan from '../WorkPlan/WorkPlan';
 import Contact from '../Contact/Contact';
 import Calculator from '../Calculator/Calculator';
 import ServiceDetails from '../ServiceDetails/ServiceDetails';
+import PortfolioDetails from '../PortfolioDetails/PortfolioDetails';
 
 function App() {
   const [stickyHeader, setStickyHeader] = React.useState(false);
@@ -130,6 +131,8 @@ return (
       setIsProcessing={setIsProcessing}
       isPopupWithFormOpened={isPopupWithFormOpened}
       setIsPopupWithFormOpened={setIsPopupWithFormOpened}
+      isPopupOpened={isPopupOpened}
+      setIsPopupOpened={setIsPopupOpened}
       infoData={infoData}
       setInfoData={setInfoData}
       />
@@ -158,6 +161,21 @@ return (
       setIsProcessing={setIsProcessing}
       isPopupWithFormOpened={isPopupWithFormOpened}
       setIsPopupWithFormOpened={setIsPopupWithFormOpened}
+      infoData={infoData}
+      setInfoData={setInfoData}
+      />
+      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
+    </Route>
+    <Route path="/portfolio/:name">
+      <PortfolioDetails
+      stickyHeader={stickyHeader}
+      innerWidth={innerWidth}
+      isProcessing={isProcessing}
+      setIsProcessing={setIsProcessing}
+      isPopupWithFormOpened={isPopupWithFormOpened}
+      setIsPopupWithFormOpened={setIsPopupWithFormOpened}
+      isPopupOpened={isPopupOpened}
+      setIsPopupOpened={setIsPopupOpened}
       infoData={infoData}
       setInfoData={setInfoData}
       />

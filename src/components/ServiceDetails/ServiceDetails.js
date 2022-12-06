@@ -34,6 +34,7 @@ function ServiceDetails(props) {
     stickyHeader={props.stickyHeader}
     innerWidth={props.innerWidth} 
     isProcessing={props.isProcessing}
+    setIsProcessing={props.setIsProcessing}
     isPopupWithFormOpened={props.isPopupWithFormOpened}
     setIsPopupWithFormOpened={props.setIsPopupWithFormOpened}
     infoData={props.infoData}
@@ -82,8 +83,8 @@ function ServiceDetails(props) {
     <Footer
     isProcessing={props.isProcessing}
     setIsProcessing={props.setIsProcessing}
-    isPopupWithFormOpened={props.isPopupWithFormOpened}
-    setIsPopupWithFormOpened={props.setIsPopupWithFormOpened}
+    isPopupOpened={props.isPopupOpened}
+    setIsPopupOpened={props.setIsPopupOpened}
     infoData={props.infoData}
     setInfoData={props.setInfoData}
     />

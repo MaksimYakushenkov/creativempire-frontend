@@ -52,6 +52,11 @@
   gap: 5px;
   font-weight: 700;
   color: #fff;
+  text-decoration: none;
+}
+
+.menu__mobile-item:nth-child(3) {
+  width: 50px;
 }
 
 .menu__mobile-item::before {
@@ -70,12 +75,12 @@
   background-image: url(../../assets/images/icons/menu__mobile_services.png);
 }
 
-.mobile-portfolio.menu__mobile-item::before {
+.mobile-portfolio::before {
   background-image: url(../../assets/images/icons/menu__mobile_portolio.png);
 }
 
-.mobile-calculator::before {
-  background-image: url(../../assets/images/icons/menu__mobile_calculator.png);
+.mobile-home::before {
+  background-image: url(../../assets/images/icons/menu__mobile_home.png);
 }
 
 .mobile-contacts::before {
@@ -86,33 +91,31 @@
   text-decoration: none;
 }
 
-.mobile__order-button {
-  width: 50px;
-  height: 50px;
-  border: none;
-  color: transparent;
-  background: transparent;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.mobile__order-button::after {
-  content:  url(../../assets/images/icons/contact-mail.png);
+.mobile__link-button {
   width: 70px;
   height: 70px;
-  position: absolute;
   background: #fc653c;
   border-radius: 50%;
   bottom: 5px;
-  box-shadow: 0px 0px 30px 0px #521200;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  box-shadow: 0px 0px 30px 0px #521200;
+}
+
+.mobile__link-button::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  position: absolute;
+  background-image:  url(../../assets/images/icons/menu__mobile_calculator.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
 }
 
 @keyframes header_sticky {
@@ -130,6 +133,15 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+
   .header {
+    box-sizing: border-box;
+    padding: 15px 20px;
+  }
+
+  .header__container {
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
   }
 }

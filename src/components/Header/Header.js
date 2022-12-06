@@ -95,14 +95,15 @@ function Header(props) {
         <header className={`header ${props.stickyHeader ? 'header__sticky' : ''}`}>
           <div className='header__container'>
             <Menu innerWidth={props.innerWidth} />
+            <button onClick={fastOrder} className='order__button order__button_small'><img className='order__button-image' src={contactMail} alt='Заказать вебсайт онлайн' /></button>
           </div>
         </header>
         <ul className='menu__mobile-list'>
-          <li className='menu__mobile-item mobile-services'><Link to='/services'>Услуги</Link></li>
-          <li className='menu__mobile-item mobile-portfolio'><Link to='/portfolio'>Портфолио</Link></li>
-          <button className='mobile__order-button'></button>
-          <li className='menu__mobile-item mobile-calculator'><Link to='/calculator'>Калькулятор</Link></li>
-          <li className='menu__mobile-item mobile-contacts'><Link to='/contact'>Контакты</Link></li>
+          <li className=''><Link className='menu__mobile-item mobile-home' to='/calculator'>Главная</Link></li>
+          <li className=''><Link className='menu__mobile-item mobile-services' to='/services'>Услуги</Link></li>
+          <li className='menu__mobile-item'><Link className='mobile__link-button' to='/calculator'></Link></li>
+          <li className=''><Link className='menu__mobile-item mobile-portfolio' to='/portfolio'>Портфолио</Link></li>
+          <li className=''><Link className='menu__mobile-item mobile-contacts' to='/contact'>Контакты</Link></li>
         </ul>
         </>
       }
