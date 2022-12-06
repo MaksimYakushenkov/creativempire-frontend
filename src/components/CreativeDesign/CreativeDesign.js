@@ -312,7 +312,7 @@ function CreativeDesign(props) {
               </table> */}
       </div>
       <div id='lastProjects' className=''>
-        <LatestProjects />
+        <LatestProjects innerWidth={props.innerWidth} />
       </div>
       <Cooperation />
     </main>

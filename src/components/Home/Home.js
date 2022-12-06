@@ -15,7 +15,14 @@ import HeaderSlider from '../Slider/Slider';
 function Home(props) {
   return (
     <main className='home'>
-      <HeaderSlider />
+      <HeaderSlider 
+        isProcessing={props.isProcessing}
+        setIsProcessing={props.setIsProcessing}
+        isPopupSliderOpened={props.isPopupSliderOpened}
+        setIsPopupSliderOpened={props.setIsPopupSliderOpened}
+        infoData={props.infoData}
+        setInfoData={props.setInfoData}
+       />
       <OurServices />
       <AboutUs />
       <Statistics />

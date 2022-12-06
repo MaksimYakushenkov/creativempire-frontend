@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Header from '../Header/Header';
 import PageBanner from '../PageBanner/PageBanner';
 import PlaceMagic from '../PlaceMagic/PlaceMagic';
 import Footer from '../Footer/Footer';
 import './Calculator.css';
+
 import iconWebsite from '../../assets/images/icons/website.png';
 import iconUi from '../../assets/images/icons/ui.png';
 import iconCreat from '../../assets/images/icons/creat.png';
@@ -25,6 +26,14 @@ import iconSoc from '../../assets/images/icons/soc.png';
 import iconYoutube from '../../assets/images/icons/youtube.png';
 import iconBannerSoc from '../../assets/images/icons/bannerSoc.png';
 
+import iconLoading from '../../assets/images/icons/loading.png';
+import validation from '../Validation/Validation';
+import Popup from '../Popup/Popup';
+import InfoToolTip from '../InfoToolTip/InfoToolTip';
+import publicKey from '../../utils/emailJS/emailJS-config';
+import emailjs from '@emailjs/browser';
+import Form from '../Form/Form';
+
 function Calculator(props) {
   const [price, setPrice] = React.useState(0);
   const [numStep, setNumStep] = React.useState(0);
@@ -34,6 +43,8 @@ function Calculator(props) {
   const [premiumDesign, setPremiumDesign] = React.useState(0);
   const [slideVisibleList, setSlideVisibleList] = React.useState([]);
   const [choosedProductText, setChoosedProductText] = React.useState('Одностраничный сайт (лендинг)');
+
+  const [isCalculatorPopupOpened, setIsCalculatorPopupOpened] = React.useState(false);
 
   const blockList = {
     website: [
@@ -134,7 +145,16 @@ function Calculator(props) {
 
   return (
     <>
-   <Header stickyHeader={props.stickyHeader} innerWidth={props.innerWidth}/>
+   <Header
+    innerWidth={props.innerWidth}
+    stickyHeader={props.stickyHeader}
+    isProcessing={props.isProcessing}
+    setIsProcessing={props.setIsProcessing}
+    isPopupWithFormOpened={props.isPopupWithFormOpened}
+    setIsPopupWithFormOpened={props.setIsPopupWithFormOpened}
+    infoData={props.infoData}
+    setInfoData={props.setInfoData}
+    />
     <PageBanner
         header="Калькулятор"
     />
@@ -539,22 +559,30 @@ function Calculator(props) {
             <h3 className='price__header'>Ориентировочная стоимость:</h3>
             <span className='calculator__price'>{price}</span>
           </div>
-          <form className='calculator__form'>
-          <div className="contactUs__field">
-              <input id="calculator-recall" className="contactUs__input" required name="recal-phone" type="text" placeholder="Ваш номер*" />
-              <span className="name-error error-message"></span>
-            </div>
-            <button className='calculator__recall-button'>Обсудить проект</button>
-          </form>
+          <Form
+            isProcessing={props.isProcessing}
+            setIsProcessing={props.setIsProcessing}
+            isPopupOpened={isCalculatorPopupOpened}
+            setIsPopupOpened={setIsCalculatorPopupOpened}
+            infoData={props.infoData}
+            setInfoData={props.setInfoData}
+          />
             
         </div>
 
       </div>
-
+      
 
     </main>
     <PlaceMagic />
-    <Footer />
+    <Footer
+    isProcessing={props.isProcessing}
+    setIsProcessing={props.setIsProcessing}
+    isPopupOpened={props.isPopupOpened}
+    setIsPopupOpened={props.setIsPopupOpened}
+    infoData={props.infoData}
+    setInfoData={props.setInfoData}
+    />
     </>
   );
 }

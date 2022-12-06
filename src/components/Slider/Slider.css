@@ -170,6 +170,10 @@
   text-transform: uppercase;
 }
 
+.slider__button a {
+  text-decoration: none;
+}
+
 .slider__button::after {
   content: '';
   display: inline-block;
@@ -283,6 +287,11 @@
   .slider__title {
     font-size: 50px;
     line-height: 60px;
+  }
+
+  .text-bottom-line::after {
+    height: 10px;
+    bottom: 12px;
   }
 
   .slider__paragraph {
@@ -426,6 +435,7 @@
 
   .text-bottom-line::after {
     height: 5px;
+    bottom: 10px;
   }
 
   .slider__title {

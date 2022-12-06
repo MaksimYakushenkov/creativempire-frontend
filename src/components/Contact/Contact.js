@@ -24,6 +24,10 @@ function Contact(props) {
   const [descriptionVaild, setDescriptionVaild] = React.useState(false);
   const [formValid, setFormValid] = React.useState(false);
 
+  function closePopup() {
+    props.setIsPopupOpened(false);
+  }
+
   
   function sendEmail(e) {
     e.preventDefault();
@@ -59,7 +63,7 @@ function Contact(props) {
   }
 
   function isFormValid() {
-    setFormValid(productVaild && nameVaild && emailValid && emailValid && descriptionVaild);
+    setFormValid(emailValid && nameVaild && productVaild && descriptionVaild);
   }
 
   function handleChange(e) {
@@ -85,9 +89,16 @@ function Contact(props) {
 
   return (
     <>
-    <Header 
+    <Header
     innerWidth={props.innerWidth}
-    stickyHeader={props.stickyHeader}/>
+    stickyHeader={props.stickyHeader}
+    isProcessing={props.isProcessing}
+    setIsProcessing={props.setIsProcessing}
+    isPopupWithFormOpened={props.isPopupWithFormOpened}
+    setIsPopupWithFormOpened={props.setIsPopupWithFormOpened}
+    infoData={props.infoData}
+    setInfoData={props.setInfoData}
+    />
     <PageBanner
         header="Контакты"
     />
@@ -176,12 +187,20 @@ function Contact(props) {
     <Popup 
     isPopupOpened={props.isPopupOpened}
     setIsPopupOpened={props.setIsPopupOpened}
+    closePopup={closePopup}
     >
       <InfoToolTip 
       data={props.infoData}
       />
     </Popup>
-    <Footer />
+    <Footer
+    isProcessing={props.isProcessing}
+    setIsProcessing={props.setIsProcessing}
+    isPopupOpened={props.isPopupOpened}
+    setIsPopupOpened={props.setIsPopupOpened}
+    infoData={props.infoData}
+    setInfoData={props.setInfoData}
+    />
     </>
   );
 }

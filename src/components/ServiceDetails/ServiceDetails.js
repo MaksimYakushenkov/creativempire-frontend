@@ -30,7 +30,15 @@ function ServiceDetails(props) {
 
   return (
     <>
-    <Header stickyHeader={props.stickyHeader} />
+    <Header 
+    stickyHeader={props.stickyHeader}
+    innerWidth={props.innerWidth} 
+    isProcessing={props.isProcessing}
+    isPopupWithFormOpened={props.isPopupWithFormOpened}
+    setIsPopupWithFormOpened={props.setIsPopupWithFormOpened}
+    infoData={props.infoData}
+    setInfoData={props.setInfoData}
+    />
       { params.service === 'create-website' && 
         <CreateWebsite 
         service={params.service}
@@ -39,6 +47,7 @@ function ServiceDetails(props) {
           link:'services',
           linkTitle: 'Услуги',
         }}
+        innerWidth={props.innerWidth}
         switchDesciption={switchDesciption}/> 
       }
       { params.service === 'ux-ui-design' && 
@@ -49,6 +58,7 @@ function ServiceDetails(props) {
           link:'services',
           linkTitle: 'Услуги',
         }}
+        innerWidth={props.innerWidth}
         switchDesciption={switchDesciption}/> 
       }
 
@@ -60,6 +70,7 @@ function ServiceDetails(props) {
           link:'services',
           linkTitle: 'Услуги',
         }}
+        innerWidth={props.innerWidth}
         switchDesciption={switchDesciption}/> 
       }
       
@@ -68,7 +79,14 @@ function ServiceDetails(props) {
 
 
 
-    <Footer />
+    <Footer
+    isProcessing={props.isProcessing}
+    setIsProcessing={props.setIsProcessing}
+    isPopupWithFormOpened={props.isPopupWithFormOpened}
+    setIsPopupWithFormOpened={props.setIsPopupWithFormOpened}
+    infoData={props.infoData}
+    setInfoData={props.setInfoData}
+    />
     </>
   );
 }

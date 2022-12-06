@@ -10,9 +10,16 @@ function WorkPlan(props) {
 
   return (
     <>
-    <Header 
-      innerWidth={props.innerWidth}
-      stickyHeader={props.stickyHeader}/>
+    <Header
+    innerWidth={props.innerWidth}
+    stickyHeader={props.stickyHeader}
+    isProcessing={props.isProcessing}
+    setIsProcessing={props.setIsProcessing}
+    isPopupWithFormOpened={props.isPopupWithFormOpened}
+    setIsPopupWithFormOpened={props.setIsPopupWithFormOpened}
+    infoData={props.infoData}
+    setInfoData={props.setInfoData}
+    />
     <PageBanner
       header="План работы"
     />
@@ -94,7 +101,14 @@ function WorkPlan(props) {
       </div>
     </main>
     <PlaceMagic />
-    <Footer />
+    <Footer
+    isProcessing={props.isProcessing}
+    setIsProcessing={props.setIsProcessing}
+    isPopupOpened={props.isPopupOpened}
+    setIsPopupOpened={props.setIsPopupOpened}
+    infoData={props.infoData}
+    setInfoData={props.setInfoData}
+    />
     </>
   );
 }

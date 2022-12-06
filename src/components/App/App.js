@@ -22,12 +22,13 @@ import ServiceDetails from '../ServiceDetails/ServiceDetails';
 function App() {
   const [stickyHeader, setStickyHeader] = React.useState(false);
   const [isPopupOpened, setIsPopupOpened] = React.useState(false);
+  const [isPopupWithFormOpened, setIsPopupWithFormOpened] = React.useState(false);
+  const [isPopupSliderOpened, setIsPopupSliderOpened] = React.useState(false);
   const [scrollToTopHidden, setScrollToTopHidden] = React.useState(true);
   const history = useHistory();
   const [innerWidth, setInnerWidth] = React.useState(window.innerWidth);
   const [isProcessing, setIsProcessing] = React.useState(false);
   const [infoData, setInfoData] = React.useState({
-    path: "",
     img: "",
     text: ""
   });
@@ -90,55 +91,28 @@ function App() {
 return (
 
     <>
-    <HelmetProvider><Helmet><title>My Title</title></Helmet></HelmetProvider><Switch>
+    <HelmetProvider><Helmet><title>My Title</title></Helmet></HelmetProvider>
+    <Switch>
     <Route exact path="/">
       <Header 
         innerWidth={innerWidth}
         stickyHeader={stickyHeader}
         isProcessing={isProcessing}
         setIsProcessing={setIsProcessing}
-        isPopupOpened={isPopupOpened}
-        setIsPopupOpened={setIsPopupOpened}
+        isPopupWithFormOpened={isPopupWithFormOpened}
+        setIsPopupWithFormOpened={setIsPopupWithFormOpened}
         infoData={infoData}
         setInfoData={setInfoData}
       />
-      <Home innerWidth={innerWidth} />
-      <Footer />
-      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
-    </Route>
-    <Route path="/services/:service">
-      <ServiceDetails stickyHeader={stickyHeader} innerWidth={innerWidth}
-      />
-      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
-    </Route>
-    <Route path="/services">
-      <Header
-        innerWidth={innerWidth}
-        stickyHeader={stickyHeader}
-      />
-      <PageBanner
-        header="Услуги и цены"
-      />
-      <Cooperation />
-      <Work />
-      <Services />
-      <PlaceMagic />
-      <Footer />
-      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
-    </Route>
-    <Route path="/portfolio"
-    >
-      <Portfolio innerWidth={innerWidth} stickyHeader={stickyHeader} />
-      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
-    </Route>
-    <Route path="/work-plan">
-      <WorkPlan innerWidth={innerWidth} stickyHeader={stickyHeader}/>
-      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
-    </Route>
-    <Route path="/contact">
-      <Contact
-      innerWidth={innerWidth}
-      stickyHeader={stickyHeader}
+      <Home
+        innerWidth={innerWidth} 
+        isProcessing={isProcessing}
+        setIsProcessing={setIsProcessing}
+        isPopupSliderOpened={isPopupSliderOpened}
+        setIsPopupSliderOpened={setIsPopupSliderOpened}
+        infoData={infoData}
+        setInfoData={setInfoData}/>
+      <Footer 
       isProcessing={isProcessing}
       setIsProcessing={setIsProcessing}
       isPopupOpened={isPopupOpened}
@@ -148,8 +122,105 @@ return (
       />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
+    <Route path="/services/:service">
+      <ServiceDetails
+      stickyHeader={stickyHeader}
+      innerWidth={innerWidth}
+      isProcessing={isProcessing}
+      setIsProcessing={setIsProcessing}
+      isPopupWithFormOpened={isPopupWithFormOpened}
+      setIsPopupWithFormOpened={setIsPopupWithFormOpened}
+      infoData={infoData}
+      setInfoData={setInfoData}
+      />
+      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
+    </Route>
+    <Route path="/services">
+      <Header
+        innerWidth={innerWidth}
+        stickyHeader={stickyHeader}
+        isProcessing={isProcessing}
+        setIsProcessing={setIsProcessing}
+        isPopupWithFormOpened={isPopupWithFormOpened}
+        setIsPopupWithFormOpened={setIsPopupWithFormOpened}
+        infoData={infoData}
+        setInfoData={setInfoData}
+      />
+      <PageBanner
+        header="Услуги и цены"
+      />
+      <Cooperation />
+      <Work />
+      <Services />
+      <PlaceMagic />
+      <Footer 
+      isProcessing={isProcessing}
+      setIsProcessing={setIsProcessing}
+      isPopupWithFormOpened={isPopupWithFormOpened}
+      setIsPopupWithFormOpened={setIsPopupWithFormOpened}
+      infoData={infoData}
+      setInfoData={setInfoData}
+      />
+      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
+    </Route>
+    <Route path="/portfolio"
+    >
+      <Portfolio 
+      innerWidth={innerWidth} 
+      stickyHeader={stickyHeader}
+      isProcessing={isProcessing}
+      setIsProcessing={setIsProcessing}
+      isPopupWithFormOpened={isPopupWithFormOpened}
+      setIsPopupWithFormOpened={setIsPopupWithFormOpened}
+      infoData={infoData}
+      setInfoData={setInfoData}
+      isPopupOpened={isPopupOpened}
+      setIsPopupOpened={setIsPopupOpened}
+      />
+      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
+    </Route>
+    <Route path="/work-plan">
+      <WorkPlan 
+      innerWidth={innerWidth} 
+      stickyHeader={stickyHeader}
+      isProcessing={isProcessing}
+      setIsProcessing={setIsProcessing}
+      isPopupWithFormOpened={isPopupWithFormOpened}
+      setIsPopupWithFormOpened={setIsPopupWithFormOpened}
+      infoData={infoData}
+      setInfoData={setInfoData}
+      isPopupOpened={isPopupOpened}
+      setIsPopupOpened={setIsPopupOpened}
+      />
+      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
+    </Route>
+    <Route path="/contact">
+      <Contact
+      innerWidth={innerWidth}
+      stickyHeader={stickyHeader}
+      isProcessing={isProcessing}
+      setIsProcessing={setIsProcessing}
+      isPopupWithFormOpened={isPopupWithFormOpened}
+      setIsPopupWithFormOpened={setIsPopupWithFormOpened}
+      isPopupOpened={isPopupOpened}
+      setIsPopupOpened={setIsPopupOpened}
+      infoData={infoData}
+      setInfoData={setInfoData}
+      />
+      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
+    </Route>
     <Route path="/calculator">
-      <Calculator stickyHeader={stickyHeader} innerWidth={innerWidth}
+      <Calculator
+      stickyHeader={stickyHeader}
+      innerWidth={innerWidth}
+      isProcessing={isProcessing}
+      setIsProcessing={setIsProcessing}
+      isPopupWithFormOpened={isPopupWithFormOpened}
+      setIsPopupWithFormOpened={setIsPopupWithFormOpened}
+      isPopupOpened={isPopupOpened}
+      setIsPopupOpened={setIsPopupOpened}
+      infoData={infoData}
+      setInfoData={setInfoData}
       />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} innerWidth={innerWidth}/>
     </Route>

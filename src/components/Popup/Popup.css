@@ -36,3 +36,21 @@
   top: 25px;
   right: 25px;
 }
+
+
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .popup-slider .contactUs__form-header {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .popup-slider .contactUs__form-header {
+    font-size: 20px;
+  }
+}

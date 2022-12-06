@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import logo from '../../assets/images/logos/logo-white.png';
 import iconDoubleRight from '../../assets/images/icons/double-right.png';
+import iconLoading from '../../assets/images/icons/loading.png';
+import validation from '../Validation/Validation';
+import Popup from '../Popup/Popup';
+import InfoToolTip from '../InfoToolTip/InfoToolTip';
+import publicKey from '../../utils/emailJS/emailJS-config';
+import emailjs from '@emailjs/browser';
 
-function Footer() {
+function Footer(props) {
+  const form = useRef();
+  const [email, setEmail] = React.useState('');
+  const [emailValid, setEmailValid] = React.useState(false);
+  const [formValid, setFormValid] = React.useState(false);
+
   React.useEffect(() => {
     const formContainer = document.querySelector('.footer__subscribe');
     const inputElement = document.getElementById('footerEmail');
@@ -15,6 +26,50 @@ function Footer() {
       formContainer.classList.remove('footer__subscribe-shadow');
     });
   }, []);
+
+  function closePopup() {
+    props.setIsPopupOpened(false);
+  }
+
+  function isFormValid() {
+    setFormValid(emailValid);
+  }
+
+  function resetForm() {
+    setEmail('');
+    setFormValid(false);
+  }
+
+  function sendEmail(e) {
+    e.preventDefault();
+    props.setIsProcessing(true);
+    emailjs.sendForm('creativempire', e.currentTarget.dataset.templateId, form.current, publicKey)
+    .then((result) => {
+        props.setIsProcessing(false);
+        props.setInfoData({
+          img: "ok",
+          text: "Благодарим за подписку! Совсем скоро вы начнете получать полезные предложения! :)",
+        })
+        props.setIsPopupOpened(true);
+        resetForm();
+    }, (error) => {
+        props.setIsProcessing(false);
+        props.setInfoData({
+          img: "error",
+          text: "Произошла ошибка. Попробуйте повторить позднее или свяжитесь с нами в соцсетях.",
+        })
+        props.setIsPopupOpened(true);
+        console.log(error.text);
+        return false
+    });
+  }
+
+  function handleChange(e) {
+    const {value} = e.target;
+    setEmail(value)
+    setEmailValid(validation.validateInput(e.target));
+    isFormValid();
+  }
  
 
   return (
@@ -44,13 +99,14 @@ function Footer() {
         <div className='footer__subscribe wow fadeInRight delay-0-6s'>
           <h2 className='footer__header'>Подпишись на рассылку!</h2>
           <p className='footer__paragraph'>Будем присылать только нужные письма, обещаем.</p>
-        <form id="subscribe" className="footer__form" noValidate>
+        
+        <form ref={form} id="subscribe" onSubmit={sendEmail} className='footer__form' data-template-id='order_online' noValidate>
           <div className="contactUs__field">
-            <input id="footerEmail" className="contactUs__input" required name="footerEmail" type="email"  placeholder="Ваш Email*"  />
-            <span className="email-error error-message"></span>
+            <input id="footerEmail" onChange={handleChange} className="contactUs__input" required value={email} name="user_email" type="email"  placeholder="Ваш Email*"  />
+            <span className="user_email-error error-message"></span>
           </div>
 
-          <button type="submit" className="contactUs__submit-button pricePackages__link" disabled>Отправить<img src={iconDoubleRight} /></button>
+          <button type="submit" className="contactUs__submit-button pricePackages__link" disabled={!formValid}>{props.isProcessing ? <><img className='submit__loading' src={iconLoading} /></> : <>Отправить<img src={iconDoubleRight} /></>}</button>
 
           </form>
         </div>
@@ -59,7 +115,15 @@ function Footer() {
       <div className='footer__copyright'>
         <p className='footer__paragraph'>© Copyright 2022 Creative Empire. Все права защищены.</p>
       </div>
-
+      <Popup 
+      isPopupOpened={props.isPopupOpened}
+      setIsPopupOpened={props.setIsPopupOpened}
+      closePopup={closePopup}
+      >
+        <InfoToolTip 
+        data={props.infoData}
+      />
+      </Popup>
     </footer>
   );
 }

@@ -2,15 +2,16 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Menu from '../Menu/Menu';
 import contactMail from '../../assets/images/icons/contact-mail.png';
-import Popup from '../Popup/Popup';
 import validation from '../Validation/Validation';
-import SendEmailJS from '../../utils/emailJS/emailJS-config';
 import iconLoading from '../../assets/images/icons/loading.png';
 import publicKey from '../../utils/emailJS/emailJS-config';
 import emailjs from '@emailjs/browser';
+import InfoToolTip from '../InfoToolTip/InfoToolTip';
+import PopupWithForm from '../PopupWithForm/PopupWithForm';
 
 function Header(props) {
   const form = useRef();
+  const [isFormSend, setIsFormSend] = React.useState(false);
   const [email, setEmail] = React.useState('');
   const [name, setName] = React.useState('');
   const [product, setProduct] = React.useState('');
@@ -21,29 +22,31 @@ function Header(props) {
   const [descriptionVaild, setDescriptionVaild] = React.useState(false);
   const [formValid, setFormValid] = React.useState(false);
 
+  function closePopup() {
+    props.setIsPopupWithFormOpened(false);
+    setIsFormSend(false);
+  }
+
   function sendEmail(e) {
     e.preventDefault();
     props.setIsProcessing(true);
     emailjs.sendForm('creativempire', e.currentTarget.dataset.templateId, form.current, publicKey)
     .then((result) => {
-        props.setIsPopupOpened(false);
         props.setIsProcessing(false);
+        setIsFormSend(true);
         props.setInfoData({
           img: "ok",
           text: "Сообщение отправлено! Ждите скорого ответа",
         })
-        props.setIsPopupOpened(true);
         resetForm();
     }, (error) => {
-        props.setIsPopupOpened(false);
         props.setIsProcessing(false);
         props.setInfoData({
           img: "error",
           text: "Произошла ошибка. Попробуйте повторить позднее или свяжитесь с нами в соцсетях.",
         })
-        props.setIsPopupOpened(true);
         console.log(error.text);
-        return false
+        setIsFormSend(true);
     });
   }
   
@@ -57,7 +60,7 @@ function Header(props) {
   }
 
   function isFormValid() {
-    setFormValid(productVaild && nameVaild && emailValid && emailValid && descriptionVaild);
+    setFormValid(emailValid && nameVaild && productVaild && descriptionVaild);
   }
 
   function handleChange(e) {
@@ -82,7 +85,7 @@ function Header(props) {
   }
 
   function fastOrder() {
-    props.setIsPopupOpened(true);
+    props.setIsPopupWithFormOpened(true);
   }
   
   return (
@@ -113,15 +116,22 @@ function Header(props) {
               { props.innerWidth <= 1023 && props.innerWidth > 767 && 
                 <img className='order__button-image' src={contactMail} alt='Заказать вебсайт онлайн' />
               }
-              { props.innerWidth > 1023 && 'Заказать звонок'}
+              { props.innerWidth > 1023 && 'Быстрый заказ'}
             </button>
           </div>
         </header> 
       }
-      <Popup
-      isPopupOpened={props.isPopupOpened}
-      setIsPopupOpened={props.setIsPopupOpened}
+      <PopupWithForm
+      popupName="popup-header"
+      isPopupWithFormOpened={props.isPopupWithFormOpened}
+      setIsPopupWithFormOpened={props.setIsPopupWithFormOpened}
+      closePopup={closePopup}
       >
+        {isFormSend ?
+        <InfoToolTip 
+        data={props.infoData}
+        />
+        :
         <div className='contactUs__form-container'>
           <h2 className='contactUs__form-header'>Я хочу заказать...</h2>
           <form ref={form} onSubmit={sendEmail} data-template-id='order_online' className="contactUs__form" noValidate>
@@ -153,7 +163,8 @@ function Header(props) {
             <button type="submit" className='contactUs__submit-button pricePackages__link' disabled={!formValid}>{props.isProcessing ? <><img className='submit__loading' src={iconLoading} /></> : <>Отправить</>}</button>
           </form>
         </div>
-      </Popup>
+        }
+      </PopupWithForm>
       </>
   );
 }

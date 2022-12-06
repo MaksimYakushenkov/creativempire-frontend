@@ -240,7 +240,7 @@ function UxUiDesign(props) {
 
       </div>
       <div id='lastProjects' className=''>
-        <LatestProjects />
+        <LatestProjects innerWidth={props.innerWidth} />
       </div>
       <Cooperation />
     </main>

@@ -1,15 +1,15 @@
 import React from 'react';
-import './Popup.css';
+import './PopupWithForm.css';
 import iconPopupClose from '../../assets/images/icons/popup_close.svg';
 
-function Popup(props) {
+function PopupWithForm(props) {
 
   function closePopup() {
     props.closePopup();
   }
 
   return (
-    <div className={`popup ${props.isPopupOpened && 'popup_opened'}`}>
+    <div className={`popup ${props.popupName} ${props.isPopupWithFormOpened && 'popup_opened'}`}>
       <div className='popup__container'>
         {props.children}
       </div>
@@ -18,4 +18,4 @@ function Popup(props) {
   );
 }
 
-export default Popup;
+export default PopupWithForm;
