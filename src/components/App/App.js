@@ -19,6 +19,7 @@ import Contact from '../Contact/Contact';
 import Calculator from '../Calculator/Calculator';
 import ServiceDetails from '../ServiceDetails/ServiceDetails';
 import PortfolioDetails from '../PortfolioDetails/PortfolioDetails';
+import BlogDetails from '../BlogDetails/BlogDetails';
 
 function App() {
   const [stickyHeader, setStickyHeader] = React.useState(false);
@@ -243,8 +244,21 @@ return (
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} innerWidth={innerWidth}/>
     </Route>
 
-    <Route path="/blog">
+    <Route path="/blog/:blogUrl">
       <HelmetProvider><Helmet><title>Blog</title></Helmet></HelmetProvider>
+      <BlogDetails
+      stickyHeader={stickyHeader}
+      innerWidth={innerWidth}
+      isProcessing={isProcessing}
+      setIsProcessing={setIsProcessing}
+      isPopupWithFormOpened={isPopupWithFormOpened}
+      setIsPopupWithFormOpened={setIsPopupWithFormOpened}
+      isPopupOpened={isPopupOpened}
+      setIsPopupOpened={setIsPopupOpened}
+      infoData={infoData}
+      setInfoData={setInfoData}
+      />
+      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
       {/*
         <Blog
         articlesList={articlesList} />
