@@ -1,8 +1,7 @@
 import React from 'react';
-import authorAvatar from '../../assets/images/team/authorAvatar.jpg';
-import testPreview from '../../assets/images/shop/thumb2.jpg';
+import BlogItem from '../BlogItem/BlogItem';
 
-function Blog() {
+function Blog(props) {
 
   return (
     <section className='blog'>
@@ -11,109 +10,7 @@ function Blog() {
         <h2 className='section__subtitle'>Свежие новости, акции и спецпредложения</h2>
       </div>
       <div className='blog__container wow fadeInUp delay-0-4s'>
-        <div className='blog__item'>
-
-          <div className='blog__preview-container'>
-            <img className='blog__preview' src={testPreview} />
-          </div>
-
-          <div className='blog__description'>
-
-            <p className='blog__date'>12 March 2022</p>
-            <a href="ya.ru" className='blog__title'>Как быстро раскрутиться в веб-разработке?</a>
-
-            <div className='blog__author'>
-
-              <div>
-                <img className='blog__author-avatar' src={authorAvatar} alt='Максим Якушенков, создатель веб-студии креативного дизайна Creative Empire' />
-              </div>
-
-              <div className='blog__author-description'>
-                <p>Автор:</p>
-                <a href='ya.ru' className='blog__link'>Максим Якушенков</a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <div className='blog__item'>
-
-          <div className='blog__preview-container'>
-            <img className='blog__preview' src={testPreview} />
-          </div>
-
-          <div className='blog__description'>
-
-            <p className='blog__date'>12 March 2022</p>
-            <a href="ya.ru" className='blog__title'>Как быстро раскрутиться в веб-разработке?</a>
-
-            <div className='blog__author'>
-
-              <div>
-                <img className='blog__author-avatar' src={authorAvatar} alt='Максим Якушенков, создатель веб-студии креативного дизайна Creative Empire' />
-              </div>
-
-              <div className='blog__author-description'>
-                <p>Автор:</p>
-                <a href='ya.ru' className='blog__link'>Максим Якушенков</a>
-              </div>
-
-        </div>
-</div>
-        </div>
-
-        <div className='blog__item'>
-
-        <div className='blog__preview-container'>
-          <img className='blog__preview' src={testPreview} />
-        </div>
-
-        <div className='blog__description'>
-
-          <p className='blog__date'>12 March 2022</p>
-          <a href="ya.ru" className='blog__title'>Как быстро раскрутиться в веб-разработке?</a>
-
-          <div className='blog__author'>
-
-            <div>
-              <img className='blog__author-avatar' src={authorAvatar} alt='Максим Якушенков, создатель веб-студии креативного дизайна Creative Empire' />
-            </div>
-
-            <div className='blog__author-description'>
-              <p>Автор:</p>
-              <a href='ya.ru' className='blog__link'>Максим Якушенков</a>
-            </div>
-
-          </div>
-        </div>
-        </div>
-
-        <div className='blog__item'>
-
-        <div className='blog__preview-container'>
-          <img className='blog__preview' src={testPreview} />
-        </div>
-
-        <div className='blog__description'>
-
-          <p className='blog__date'>12 March 2022</p>
-          <a href="ya.ru" className='blog__title'>Как быстро раскрутиться в веб-разработке?</a>
-
-          <div className='blog__author'>
-
-            <div>
-              <img className='blog__author-avatar' src={authorAvatar} alt='Максим Якушенков, создатель веб-студии креативного дизайна Creative Empire' />
-            </div>
-
-            <div className='blog__author-description'>
-              <p>Автор:</p>
-              <a href='ya.ru' className='blog__link'>Максим Якушенков</a>
-            </div>
-
-          </div>
-        </div>
-        </div>
+      {props.articlesData.map((article) => (<BlogItem key={article._id} {...article}/>))}
       </div>
     </section>
   );

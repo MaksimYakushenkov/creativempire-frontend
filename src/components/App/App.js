@@ -20,8 +20,13 @@ import Calculator from '../Calculator/Calculator';
 import ServiceDetails from '../ServiceDetails/ServiceDetails';
 import PortfolioDetails from '../PortfolioDetails/PortfolioDetails';
 import BlogDetails from '../BlogDetails/BlogDetails';
+import mainApi from '../../utils/mainApi/mainApi';
 
 function App() {
+  const [articlesData, setAcrticlesData] = React.useState([]);
+  const [article, setArticle] = React.useState({});
+  const [portfolio, setPortfolio] = React.useState({});
+  const [portfoliosData, setPortfoliosData] = React.useState([]);
   const [stickyHeader, setStickyHeader] = React.useState(false);
   const [isPopupOpened, setIsPopupOpened] = React.useState(false);
   const [isPopupWithFormOpened, setIsPopupWithFormOpened] = React.useState(false);
@@ -58,12 +63,35 @@ function App() {
         setScrollToTopHidden(false);
       }
    });
+   getData();
   }, []);
+
+  React.useEffect(() => {
+    console.log(portfoliosData);
+  }, [articlesData, portfoliosData])
 
   function detectSize() {
     setInnerWidth(window.innerWidth);
   }
 
+  function getData() {
+    mainApi.getArticles()
+    .then((articles) => {
+      setAcrticlesData(articles.articles);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+
+    mainApi.getPortfolio()
+    .then((portfolios) => {
+      setPortfoliosData(portfolios.portfolios);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+
+  }
   // const [articlesList, setAcrticleList] = React.useState([]);
   // const [article, setAcrticle] = React.useState([]);
   // React.useEffect(() => {
@@ -93,9 +121,13 @@ function App() {
 return (
 
     <>
-    <HelmetProvider><Helmet><title>My Title</title></Helmet></HelmetProvider>
+    
     <Switch>
     <Route exact path="/">
+      <HelmetProvider><Helmet>
+      <title>Title</title>
+      <meta name="description" content='ddd' />
+      </Helmet></HelmetProvider>
       <Header 
         innerWidth={innerWidth}
         stickyHeader={stickyHeader}
@@ -107,6 +139,8 @@ return (
         setInfoData={setInfoData}
       />
       <Home
+        articlesData={articlesData}
+        portfoliosData={portfoliosData}
         innerWidth={innerWidth} 
         isProcessing={isProcessing}
         setIsProcessing={setIsProcessing}
@@ -167,8 +201,11 @@ return (
       />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
-    <Route path="/portfolio/:name">
+    <Route path="/portfolio/:url">
       <PortfolioDetails
+      portfolio={portfolio}
+      setPortfolio={setPortfolio}
+      portfoliosData={portfoliosData}
       stickyHeader={stickyHeader}
       innerWidth={innerWidth}
       isProcessing={isProcessing}
@@ -184,7 +221,8 @@ return (
     </Route>
     <Route path="/portfolio"
     >
-      <Portfolio 
+      <Portfolio
+      portfoliosData={portfoliosData}
       innerWidth={innerWidth} 
       stickyHeader={stickyHeader}
       isProcessing={isProcessing}
@@ -245,8 +283,10 @@ return (
     </Route>
 
     <Route path="/blog/:blogUrl">
-      <HelmetProvider><Helmet><title>Blog</title></Helmet></HelmetProvider>
       <BlogDetails
+      article={article}
+      setArticle={setArticle}
+      articlesData={articlesData}
       stickyHeader={stickyHeader}
       innerWidth={innerWidth}
       isProcessing={isProcessing}
@@ -273,4 +313,4 @@ return (
 );
 }
 
-export default App;
+export default withRouter(App);

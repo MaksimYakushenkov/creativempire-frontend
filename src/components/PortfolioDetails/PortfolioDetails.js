@@ -6,11 +6,25 @@ import PageBanner from '../PageBanner/PageBanner';
 import './PortfolioDetails.css';
 import projectImage from '../../assets/images/projects/project-details.jpg';
 import PlaceMagic from '../PlaceMagic/PlaceMagic';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 function PortfolioDetails(props) {
+  const params = useParams();
+
+  React.useEffect(() => {
+    props.portfoliosData.map((portfolio) => {
+      if(portfolio.url === params.url) {
+        props.setPortfolio(portfolio)
+      };
+    })
+  }, [params])
 
   return (
     <>
+    <HelmetProvider><Helmet>
+    <title>{props.portfolio.metaTitle}</title>
+    <meta name="description" content={props.portfolio.metaDescription} />
+    </Helmet></HelmetProvider>
     <Header 
     stickyHeader={props.stickyHeader}
     innerWidth={props.innerWidth} 
@@ -22,7 +36,7 @@ function PortfolioDetails(props) {
     setInfoData={props.setInfoData}
     />
     <PageBanner 
-    header="Посадочная страница таролога"
+    header={props.portfolio.title}
     breadcumps={{
       link:'portfolio',
       linkTitle: 'Портфолио',
@@ -32,37 +46,35 @@ function PortfolioDetails(props) {
       <div className='project__container'>
         <div className='project__title'>
           <div className='project__title-container wow fadeInUp delay-0-2s'>
-            <img className='project__image' src={projectImage} alt='Из хедера'/>
-            <h2 className='project__header'>Посадочная страница таролога</h2>
-            <p className='project__paragraph'>Лендинг, с несколькими страницами</p>
+            <img className='project__image' src={props.portfolio.preview} alt={props.portfolio.title}/>
+            <h2 className='project__header'>{props.portfolio.title}</h2>
+            <p className='project__paragraph'>{props.portfolio.decription}</p>
           </div>
           <div className='project__info wow fadeInUp delay-0-4s'>
             <h3 className='project__info-title project__info-title_first'>Краткая информация:</h3>
             <div className='project__info-list'>
               <div className='project__info-item'>
                 <h3 className='project__info-title'>Категория</h3>
-                <p className='project__category'>Лендинг с несколькими страницами</p>
+                <p className='project__category'>{props.portfolio.category}</p>
               </div>
               <div className='project__info-item'>
                 <h3 className='project__info-title'>Клиент</h3>
-                <p className='project__client'>Астролог со стажем</p>
+                <p className='project__client'>{props.portfolio.client}</p>
               </div>
               <div className='project__info-item'>
                 <h3 className='project__info-title'>Длительность</h3>
-                <p className='project__duration'>160 часов</p>
+                <p className='project__duration'>{props.portfolio.duration} часов</p>
               </div>
               <div className='project__info-item'>
                 <h3 className='project__info-title'>Стоимость</h3>
-                <p className='project__category'>70 000 рублей</p>
+                <p className='project__category'>{props.portfolio.price} 000 рублей</p>
               </div>
             </div>
           </div>
 
         </div>
         <div className='project__description'>
-          <div className='project__description-content'>
-            <p>Какой то текст бла бла бла</p>
-          </div>
+          <div className='project__description-content' dangerouslySetInnerHTML={{ __html: props.portfolio.htmlCode }}/>
         </div>
       </div>
 

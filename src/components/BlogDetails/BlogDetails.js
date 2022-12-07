@@ -1,18 +1,30 @@
-import React, { useEffect } from 'react';
-import { Link, useState, useParams } from 'react-router-dom';
+import React, { useEffect, useRef } from 'react';
+import { Link, useState, useParams, withRouter } from 'react-router-dom';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import './BlogDetails.css';
-import projectImage from '../../assets/images/projects/project-details.jpg';
 import authorAvatar from '../../assets/images/team/authorAvatar.jpg';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 
 
 function BlogDetails(props) {
   const params = useParams();
 
+  React.useEffect(() => {
+    props.articlesData.map((article) => {
+      if(article.url === params.blogUrl) {
+        props.setArticle(article)
+      };
+    })
+  }, [params])
+
   return (
     <>
+    <HelmetProvider><Helmet>
+    <title>{props.article.metaTitle}</title>
+    <meta name="description" content={props.article.metaDescription} />
+    </Helmet></HelmetProvider>
     <Header 
     stickyHeader={props.stickyHeader}
     innerWidth={props.innerWidth} 
@@ -27,20 +39,20 @@ function BlogDetails(props) {
       <div className='blog-details__container'>
         <div className='blog-details__header'>
           <div className='blog-details__header-container'>
-            <h1 className='blog-details__title'>АПИ Как быстро раскрутиться в веб-разработке?</h1>
-            <p className='blog-details__subtitle'>АПИ Какой то короткий и небольшой текст о том, что в статье</p>
-            <img src={projectImage} alt='АПИ'/>
+            <h1 className='blog-details__title'>{props.article.title}</h1>
+            <p className='blog-details__subtitle'>{props.article.description}</p>
+            <img src={props.article.preview} alt={props.article.metaTitle}/>
           </div>
           <div className='blog-details__header-description'>
             <div className='blog-details__header-description-item'>
               <img className='blog-details__author-avatar' src={authorAvatar} alt='Максим Якушенков, создатель веб-студии креативного дизайна Creative Empire' />
               <a href='ya.ru' className='blog-details__header-description_link'>Максим Якушенков</a>
             </div>
-            <p className='blog-details__date'>12 March 2022</p>
+            <p className='blog-details__date'>{props.article.createdAt}</p>
           </div>
         </div>
 
-        <div className='blog-details__content'>АПИ ЧТО ТО </div>
+        <div className='blog-details__content' dangerouslySetInnerHTML={{ __html: props.article.htmlCode }} />
 
         <div className='blog-details__tags'>
           <h3 className='blog-details__tags-title'>Теги:</h3>
@@ -79,4 +91,4 @@ function BlogDetails(props) {
   );
 }
 
-export default BlogDetails;
+export default withRouter(BlogDetails);

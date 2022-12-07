@@ -27,13 +27,13 @@ function Home(props) {
       <AboutUs />
       <Statistics />
       <DesignArea innerWidth={props.innerWidth}/>
-      <LatestProjects innerWidth={props.innerWidth} />
+      <LatestProjects portfoliosData={props.portfoliosData} innerWidth={props.innerWidth} />
       <Work />
       <FastButtons />
       <PricePackages />
       <Testimonials innerWidth={props.innerWidth} />
       <ContactUs />
-      <Blog />
+      <Blog articlesData={props.articlesData}/>
     </main>
   );
 }

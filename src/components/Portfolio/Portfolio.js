@@ -6,8 +6,7 @@ import PageBanner from '../PageBanner/PageBanner';
 import Cooperation from '../Cooperation/Cooperation';
 import PlaceMagic from '../PlaceMagic/PlaceMagic';
 import Footer from '../Footer/Footer';
-import iconLink from '../../assets/images/icons/link.webp';
-import project2 from '../../assets/images/projects/project2.jpg';
+import PortfolioItem from '../PortfolioItem/PortfolioItem';
 
 function Portfolio(props) {
   const isotope = useRef();
@@ -117,66 +116,7 @@ function Portfolio(props) {
         <div className='portfolio__grid mt-30'>
 
           <div className='portfolio__list'>
-            <div className='portfolio__item wow fadeInUp delay-0-4s website'>
-              <img className='portfolio__image' src={project2} />
-              <div className='portfolio__description'>
-                <a className='portfolio__title' target='_blank' href='ya.ru'>Посадочная страница таролога</a>
-                <p className='portfolio__subtitle'>Веб-разработка</p>
-              </div>
-              <div className='portfolio__hover-container'>
-                <a className='portfolio__hover-link' target='_blank' href='ya.ru'><img className='portfolio__hover-image' src={iconLink} /></a>
-              </div>
-            </div>
-            <div className='portfolio__item wow fadeInUp delay-0-4s uxui'>
-              <img className='portfolio__image' src={project2} />
-              <div className='portfolio__description'>
-                <a className='portfolio__title' target='_blank' href='ya.ru'>Посадочная страница таролога</a>
-                <p className='portfolio__subtitle'>Веб-разработка</p>
-              </div>
-              <div className='portfolio__hover-container'>
-                <a className='portfolio__hover-link' target='_blank' href='ya.ru'><img className='portfolio__hover-image' src={iconLink} /></a>
-              </div>
-            </div>
-            <div className='portfolio__item wow fadeInUp delay-0-4s creative'>
-              <img className='portfolio__image' src={project2} />
-              <div className='portfolio__description'>
-                <a className='portfolio__title' target='_blank' href='ya.ru'>Посадочная страница таролога</a>
-                <p className='portfolio__subtitle'>Веб-разработка</p>
-              </div>
-              <div className='portfolio__hover-container'>
-                <a className='portfolio__hover-link' target='_blank' href='ya.ru'><img className='portfolio__hover-image' src={iconLink} /></a>
-              </div>
-            </div>
-            <div className='portfolio__item wow fadeInUp delay-0-4s website'>
-              <img className='portfolio__image' src={project2} />
-              <div className='portfolio__description'>
-                <a className='portfolio__title' target='_blank' href='ya.ru'>Посадочная страница таролога</a>
-                <p className='portfolio__subtitle'>Веб-разработка</p>
-              </div>
-              <div className='portfolio__hover-container'>
-                <a className='portfolio__hover-link' target='_blank' href='ya.ru'><img className='portfolio__hover-image' src={iconLink} /></a>
-              </div>
-            </div>
-            <div className='portfolio__item wow fadeInUp delay-0-4s uxui'>
-              <img className='portfolio__image' src={project2} />
-              <div className='portfolio__description'>
-                <a className='portfolio__title' target='_blank' href='ya.ru'>Посадочная страница таролога</a>
-                <p className='portfolio__subtitle'>Веб-разработка</p>
-              </div>
-              <div className='portfolio__hover-container'>
-                <a className='portfolio__hover-link' target='_blank' href='ya.ru'><img className='portfolio__hover-image' src={iconLink} /></a>
-              </div>
-            </div>
-            <div className='portfolio__item wow fadeInUp delay-0-4s creative'>
-              <img className='portfolio__image' src={project2} />
-              <div className='portfolio__description'>
-                <a className='portfolio__title' target='_blank' href='ya.ru'>Посадочная страница таролога</a>
-                <p className='portfolio__subtitle'>Веб-разработка</p>
-              </div>
-              <div className='portfolio__hover-container'>
-                <a className='portfolio__hover-link' target='_blank' href='ya.ru'><img className='portfolio__hover-image' src={iconLink} /></a>
-              </div>
-            </div>
+          {props.portfoliosData.map((portfolio) => (<PortfolioItem key={portfolio._id} {...portfolio}/>))}
           </div>
 
         </div>
