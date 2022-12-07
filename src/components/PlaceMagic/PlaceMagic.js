@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Parallax from '../Parallax/Parallax';
 
 function PlaceMagic() {
@@ -11,7 +12,7 @@ function PlaceMagic() {
           <h2 className='section__subtitle'>Место, где рождается <span className='text-color-animation'>креативная магия</span></h2>
           <p className='section__paragraph'>Станьте нашим клиентом уже сейчас и получите премиальный дизайн в подарок!</p>
         </div>
-        <button className='place-magic__button'>Связаться</button>
+        <Link to='/contact' className='place-magic__button'>Связаться</Link>
       </div>
 
       <Parallax classElement="placeMagic" />

@@ -16,6 +16,69 @@
   width: 550px;
 }
 
+.cooperation__button {
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  display: flex;
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: 25px;
+  background-color: #0d0e0d;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: 1px #fc653c solid;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.cooperation__button a {
+  text-decoration: none;
+}
+
+.cooperation__button::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fc653c;
+  transition: 0.75s;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  z-index: -1;
+}
+
+.cooperation__button:hover.cooperation__button::after {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.cooperation__button:hover {
+  cursor: pointer;
+}
+
+.cooperation__button_transparent {
+  background-color: transparent;
+}
+
+.cooperation__button img {
+  width: 20px;
+  height: 18px;
+  transform: translateX(0px);
+  transition: 0.75s;
+}
+
+.cooperation__button:hover img {
+  transform: translateX(10px);
+}
+
 .cooperation__header h3 {
   font-size: 30px;
 }
@@ -119,7 +182,7 @@
     width: 100%;
   }
 
-  .cooperation__header .slider__button {
+  .cooperation__header .cooperation__button {
     margin: 20px auto 0;
   }
 

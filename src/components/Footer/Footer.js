@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logos/logo-white.png';
 import iconDoubleRight from '../../assets/images/icons/double-right.png';
 import iconLoading from '../../assets/images/icons/loading.png';
@@ -89,11 +90,11 @@ function Footer(props) {
         <div className='footer__links pt-35 wow fadeInUp delay-0-4s'>
           <h3 className='footer__header'>Быстрые ссылки</h3>
           <ul className='footer__list'>
-            <li className='footer__list-item'><a className='footer__link' href="ya.ru" >Quick Link</a></li>
-            <li className='footer__list-item'><a className='footer__link' href="ya.ru" >Quick Link</a></li>
-            <li className='footer__list-item'><a className='footer__link' href="ya.ru" >Quick Link</a></li>
-            <li className='footer__list-item'><a className='footer__link' href="ya.ru" >Quick Link</a></li>
-            <li className='footer__list-item'><a className='footer__link' href="ya.ru" >Quick Link</a></li>
+            <li className='footer__list-item'><Link to="/services" className='footer__link'>Услуги и цены</Link></li>
+            <li className='footer__list-item'><Link to="/portfolio" className='footer__link'>Портфолио</Link></li>
+            <li className='footer__list-item'><Link to="/work-plan" className='footer__link'>План работы</Link></li>
+            <li className='footer__list-item'><Link to="/contact" className='footer__link '>Контакты</Link></li>
+            <li className='footer__list-item'><Link to="/calculator" className='footer__link'>Калькулятор</Link></li>
           </ul>
         </div>
         <div className='footer__subscribe wow fadeInRight delay-0-6s'>

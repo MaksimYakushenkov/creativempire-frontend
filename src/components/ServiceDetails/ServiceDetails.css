@@ -279,16 +279,16 @@
   font-size: 50px;
 }
 
-#prices .pricePackages__item {
+#prices .pricePackages__item, #uxprices .pricePackages__item {
   box-shadow: none;
   border: 2px solid #fc653c45;
   box-sizing: border-box;
 }
 
-#prices .pricePackages__item:hover {
+#prices .pricePackages__item:hover, #uxprices .pricePackages__item:hover {
   box-shadow: 10px 0 60px rgb(252 101 60 / 10%);
 }
 
-#prices .pricePackages__item {
+#prices .pricePackages__item, #uxprices .pricePackages__item {
   width: 680px;
 }

@@ -188,7 +188,7 @@ function UxUiDesign(props) {
               </div>
             </div>
       </div>
-      <div className='detail__container'>
+      <div id="uxprices" className='detail__container'>
 
           <div className='detail__with-image fd-rr'>
             <div className='detail__info wow fadeInLeft delay-0-2s'>

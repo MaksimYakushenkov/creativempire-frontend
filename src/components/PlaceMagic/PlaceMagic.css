@@ -7,7 +7,7 @@
 }
 
 .placeMagic {
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(10,4,0,0.8) 0%), url('../../assets/images/background/parallax-background.webp');
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(10,4,0,0.9) 0%), url('../../assets/images/background/parallax-background.webp');
 }
 
 .place-magic__container {
