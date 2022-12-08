@@ -162,6 +162,10 @@
   line-height: 25px!important;
 }
 
+.fw-b {
+  font-weight: 800;
+}
+
 /* DISPLAY:FLEX */
 
 .fd-rr {
@@ -190,6 +194,7 @@
 
 .paragraph-left-border {
   border-left: 7px solid #fc653c;
+  padding-left: 10px;
 }
 
 .icon {
@@ -512,6 +517,10 @@
 
   .as-c__m {
     align-self: center;
+  }
+
+  .p-0__m {
+    padding: 0!important;
   }
 }
 

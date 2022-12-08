@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import iconDoubleRight from '../../assets/images/icons/double-right.png';
-import cooperationImage from '../../assets/images/about/statistics-five.png';
+import cooperationImage from '../../assets/images/cooperation/cooperation-2.png';
 
 function Cooperation() {
 

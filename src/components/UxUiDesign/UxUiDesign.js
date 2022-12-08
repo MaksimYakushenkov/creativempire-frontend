@@ -29,12 +29,12 @@ function UxUiDesign(props) {
           <div className='detail__with-image'>
             <div className='detail__info wow fadeInLeft delay-0-2s'>
               <h2 className='detail__title'>Разработка UX/UI-дизайна под ключ в <a className='text-color-animation' href='./'>Creative Empire</a></h2>
-              <div className='detail__description gap-10 mt-40 pl-40'>
+              <div className='detail__description'>
                 <p className='detail__paragraph check-mark-before'>Создаем только уникальный дизайн, внедряем все адаптивы, не используя шаблонов и конструкторов</p>
                 <p className='detail__paragraph check-mark-before'>Для сайтов и приложений</p>
                 <p className='detail__paragraph check-mark-before'>Делаем разработку проектов любой сложности!</p>
               </div>
-              <button className='service-details__button mt-30'>Заказать UX/UI-дизайн</button>
+              <Link to='/contact' className='service-details__button'>Заказать <br/>UX/UI-дизайн</Link>
             </div>
             <div className='detail__image-container wow fadeInRight delay-0-4s'>
               <img className='detail__image' src={uxui1} alt="Разработка UX/UI-дизайна в Москве - заказать разработку под ключ в веб студии" />
@@ -42,13 +42,13 @@ function UxUiDesign(props) {
 
           </div>
       </div>
-      <div className='detail__container'>
+      <div id="whatisuxui" className='detail__container'>
         <div className='detail__with-image fd-rr'>
           <div className='detail__info'>
             <h2 className='detail__title wow fadeInDown delay-0-2s'>Что такое <span className='text-color-animation'>UX/UI дизайн</span>?</h2>
             <div className='detail__description'>
-              <p className='detail__paragraph mt-40 wow fadeInUp delay-0-4s'>Выражаясь простыми словами, UX/UI-дизайн — это то, что видит пользователь при использовании какого-либо ресурса, например сайта или приложения.</p>
-              <p className='detail__paragraph paragraph-left-border pl-10 mt-20  wow fadeInUp delay-0-6s'>Грамотно созданный дизайн пользовательского интерфейса позволяет повысить конверсии сайта, удержать внимание пользователя в приложении и увеличить обратную связь.</p>
+              <p className='detail__paragraph wow fadeInUp delay-0-4s'>Выражаясь простыми словами, UX/UI-дизайн — это то, что видит пользователь при использовании какого-либо ресурса, например сайта или приложения.</p>
+              <p className='detail__paragraph paragraph-left-border wow fadeInUp delay-0-6s'>Грамотно созданный дизайн пользовательского интерфейса позволяет повысить конверсии сайта, удержать внимание пользователя в приложении и увеличить обратную связь.</p>
             </div>
           </div>
           <div className='detail__image-container wow fadeInRight delay-0-4s'>
@@ -62,7 +62,7 @@ function UxUiDesign(props) {
         </div>
         
       </div>
-      <div className='detail__container bg-2'>
+      <div id="whyweareuxui" className='detail__container bg-2'>
           <div className='detail__full pt-40 pb-60'>
             <div className='detail__header-container'>
               <h2 className='detail__title wow fadeInDown delay-0-2s ta-c'>Если нужен <span className='text-color-animation'>UX/UI-дизайн</span>, <br></br>то почему <Link to="/">Creative Empire?</Link></h2>
@@ -135,11 +135,11 @@ function UxUiDesign(props) {
             </div>
           </div>
       </div>
-      <div id='whichSites' className='detail__container bg-2 pb-60'>
+      <div id='whichuxui' className='detail__container bg-2 pb-60'>
           <div className='detail__with-image'>
             <div className='detail__info wow fadeInLeft delay-0-2s'>
               <h2 className='detail__title'>Какой UX/UI <span className='text-color-animation'>мы разрабатываем</span>?</h2>
-              <div className='detail__description mt-40'>
+              <div className='detail__description'>
                 <p className='detail__paragraph'>Мы предоставляем услуги по дизайну макетов (UX-дизайн) и графическому дизайну (UI-дизайн) на основе методологий дизайн-мышления и дизайна, ориентированного на пользователя.</p>
               </div>
             </div>
@@ -155,12 +155,12 @@ function UxUiDesign(props) {
                   </div>
                   <h3 className='sites__title mt-30 subtitle-text-color'>Сайты</h3>
                   <ul className='sites__list'>
-                    <li className='paragraph-grey-color lh-20'>Одностраничного сайта (Landing Page)</li>
-                    <li className='paragraph-grey-color lh-20'>Интернет-магазина</li>
-                    <li className='paragraph-grey-color lh-20'>Корпоративного сайта</li>
-                    <li className='paragraph-grey-color lh-20'>Портала</li>
-                    <li className='paragraph-grey-color lh-20'>Сайта-визитки</li>
-                    <li className='paragraph-grey-color lh-20'>Сложных индивидуальных проектов</li>
+                    <li className='detail__list-paragraph'>Одностраничного сайта (Landing Page)</li>
+                    <li className='detail__list-paragraph'>Интернет-магазина</li>
+                    <li className='detail__list-paragraph'>Корпоративного сайта</li>
+                    <li className='detail__list-paragraph'>Портала</li>
+                    <li className='detail__list-paragraph'>Сайта-визитки</li>
+                    <li className='detail__list-paragraph'>Сложных индивидуальных проектов</li>
                   </ul>
                 </div>
                 <div className='sites__item wow fadeInUp delay-0-6s'>
@@ -169,9 +169,9 @@ function UxUiDesign(props) {
                   </div>
                   <h3 className='sites__title mt-30 subtitle-text-color'>Мобильные приложения</h3>
                   <ul className='sites__list'>
-                    <li className='paragraph-grey-color lh-20'>Для iOS</li>
-                    <li className='paragraph-grey-color lh-20'>Для Android</li>
-                    <li className='paragraph-grey-color lh-20'>PWA</li>
+                    <li className='detail__list-paragraph'>Для iOS</li>
+                    <li className='detail__list-paragraph'>Для Android</li>
+                    <li className='detail__list-paragraph'>PWA</li>
                   </ul>
                 </div>
                 <div className='sites__item wow fadeInUp delay-0-6s'>
@@ -180,9 +180,9 @@ function UxUiDesign(props) {
                   </div>
                   <h3 className='sites__title mt-30 subtitle-text-color'>Сайт и приложение</h3>
                   <ul className='sites__list'>
-                    <li className='paragraph-grey-color lh-20'>Единый стиль</li>
-                    <li className='paragraph-grey-color lh-20'>Вместе - дешевле</li>
-                    <li className='paragraph-grey-color lh-20'>Подходит любому бизнесу</li>
+                    <li className='detail__list-paragraph'>Единый стиль</li>
+                    <li className='detail__list-paragraph'>Вместе - дешевле</li>
+                    <li className='detail__list-paragraph'>Подходит любому бизнесу</li>
                   </ul>
                 </div>
               </div>

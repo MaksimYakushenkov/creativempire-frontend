@@ -30,12 +30,12 @@ function CreativeDesign(props) {
           <div className='detail__with-image'>
             <div className='detail__info wow fadeInLeft delay-0-2s'>
               <h2 className='detail__title'>Креативный дизайн под ключ в <Link className='text-color-animation' to='/'>Creative Empire</Link></h2>
-              <div className='detail__description gap-10 mt-40 pl-40'>
+              <div className='detail__description'>
                 <p className='detail__paragraph check-mark-before'>Создаем только уникальный дизайн, внедряем все адаптивы, не используя шаблонов и конструкторов</p>
                 <p className='detail__paragraph check-mark-before'>Для соцсетей, видеохостингов, сайтов</p>
                 <p className='detail__paragraph check-mark-before'>Делаем разработку проектов любой сложности!</p>
               </div>
-              <button className='service-details__button mt-30'>Заказать дизайн</button>
+              <Link to='/contact' className='service-details__button'>Заказать дизайн</Link>
             </div>
             <div className='detail__image-container wow fadeInRight delay-0-4s'>
               <img className='detail__image' src={creativeDesign1} alt="Креативный дизайн под ключ в Москве - заказать разработку под ключ в веб студии" />
@@ -43,12 +43,12 @@ function CreativeDesign(props) {
 
           </div>
       </div>
-      <div className='detail__container'>
+      <div id='whyneedcreative' className='detail__container'>
         <div className='detail__with-image fd-rr'>
           <div className='detail__info'>
             <h2 className='detail__title wow fadeInDown delay-0-2s'>Почему <span className='text-color-animation'>креативный дизайн</span> всем необходим?</h2>
             <div className='detail__description'>
-              <p className='detail__paragraph mt-40 wow fadeInUp delay-0-4s'>Красивый баннер, шапка на YouTube, обложка ВКонтакте, превью радуют глаз — не так ли? А для владельцев ресурса <b>лучший креативный дизайн</b> незаменим, ведь цепляющая страничка в соцсети — это лицо компании.</p>
+              <p className='detail__paragraph wow fadeInUp delay-0-4s'>Красивый баннер, шапка на YouTube, обложка ВКонтакте, превью радуют глаз — не так ли? А для владельцев ресурса <b>лучший креативный дизайн</b> незаменим, ведь цепляющая страничка в соцсети — это лицо компании.</p>
               <p className='detail__paragraph paragraph-left-border pl-10 mt-20  wow fadeInUp delay-0-6s'>Наш премиальный креативный дизайн пользуется популярностью у всех (блогеры, крупные компании, предприниматели), ведь позволяет повысить конверсии сайта, удержать внимание пользователя и увеличить обратную связь.</p>
             </div>
           </div>
@@ -57,19 +57,21 @@ function CreativeDesign(props) {
           </div>
           
         </div>
-        <div className='detail__description description__dashed mb-60 wow fadeInUp delay-0-6s'>
+        <div className='detail__description description__dashed wow fadeInUp delay-0-6s'>
           <p className='detail__paragraph'>Большинство наших креативных дизайн-проектов создаются в Adobe Photoshop, все исходники присылаем в формате <b>.psd</b>. По желанию нашего клиента мы также можем выполнить работу в любых других программных решениях.</p>
           <p className='detail__paragraph'>Для лучшего понимания друг друга желательно иметь техническое задание (ТЗ). Нет ТЗ? — ничего страшного! Можете <a href=''>скачать бриф</a> и заполнить его.</p>
         </div>
         
       </div>
-      <div className='detail__container bg-2'>
+      <div id="whywearecreative" className='detail__container bg-2'>
           <div className='detail__full pt-40 pb-60'>
             <div className='detail__header-container'>
               <h2 className='detail__title wow fadeInDown delay-0-2s ta-c'>Если нужен <span className='text-color-animation'>креативный дизайн</span>, <br></br>то почему <Link to="/">Creative Empire?</Link></h2>
-              <p className='detail__description detail__paragraph mt-30 wow fadeInUp delay-0-4s'>В нашей студии креативного дизайна работают не только дизайнеры, но еще и аналитики, которые способны проанализировать пользовательский опыт. Благодаря этому, мы предлагаем самое лучшее креативное решение на рынке в Москве и по всей России.</p>
+              <div className='detail__description'>
+                <p className='detail__paragraph wow fadeInUp delay-0-4s'>В нашей студии креативного дизайна работают не только дизайнеры, но еще и аналитики, которые способны проанализировать пользовательский опыт. Благодаря этому, мы предлагаем самое лучшее креативное решение на рынке в Москве и по всей России.</p>
+              </div>
             </div>
-            <div className='detail__switch mt-60 wow fadeInUp delay-0-8s'>
+            <div className='detail__switch wow fadeInUp delay-0-8s'>
               <div className='switch-container'>
                 <div className='switch__header'>
                   <div className='switch__header-item switch__header-item_active' data-header={1} onClick={props.switchDesciption}>
@@ -156,10 +158,10 @@ function CreativeDesign(props) {
                   </div>
                   <h3 className='sites__title mt-30 subtitle-text-color'>Сайты</h3>
                   <ul className='sites__list'>
-                    <li className='paragraph-grey-color lh-20'>Баннер</li>
-                    <li className='paragraph-grey-color lh-20'>Превью товара</li>
-                    <li className='paragraph-grey-color lh-20'>Рекламный баннер</li>
-                    <li className='paragraph-grey-color lh-20'>Любой другой креатив для сайта</li>
+                    <li className='detail__list-paragraph'>Баннер</li>
+                    <li className='detail__list-paragraph'>Превью товара</li>
+                    <li className='detail__list-paragraph'>Рекламный баннер</li>
+                    <li className='detail__list-paragraph'>Любой другой креатив для сайта</li>
                   </ul>
                 </div>
                 <div className='sites__item wow fadeInUp delay-0-6s'>
@@ -168,14 +170,14 @@ function CreativeDesign(props) {
                   </div>
                   <h3 className='sites__title mt-30 subtitle-text-color'>Соцсети и видеохостинги</h3>
                   <ul className='sites__list'>
-                    <li className='paragraph-grey-color lh-20'>Шапка группы ВКонтакте, Одноклассники</li>
-                    <li className='paragraph-grey-color lh-20'>Баннеры для постов ВКонтакте, Одноклассники</li>
-                    <li className='paragraph-grey-color lh-20'>Оформление групп ВКонтакте, Одноклассники</li>
-                    <li className='paragraph-grey-color lh-20'>Шапка для канала YouTube</li>
-                    <li className='paragraph-grey-color lh-20'>Оформление канала YouTube</li>
-                    <li className='paragraph-grey-color lh-20'>Шапка для канала RuTube</li>
-                    <li className='paragraph-grey-color lh-20'>Оформление канала RuTube</li>
-                    <li className='paragraph-grey-color lh-20'>Превью для видео</li>
+                    <li className='detail__list-paragraph'>Шапка группы ВКонтакте, Одноклассники</li>
+                    <li className='detail__list-paragraph'>Баннеры для постов ВКонтакте, Одноклассники</li>
+                    <li className='detail__list-paragraph'>Оформление групп ВКонтакте, Одноклассники</li>
+                    <li className='detail__list-paragraph'>Шапка для канала YouTube</li>
+                    <li className='detail__list-paragraph'>Оформление канала YouTube</li>
+                    <li className='detail__list-paragraph'>Шапка для канала RuTube</li>
+                    <li className='detail__list-paragraph'>Оформление канала RuTube</li>
+                    <li className='detail__list-paragraph'>Превью для видео</li>
 
                   </ul>
                 </div>
@@ -185,11 +187,11 @@ function CreativeDesign(props) {
                   </div>
                   <h3 className='sites__title mt-30 subtitle-text-color'>Маркетплейсы и другое</h3>
                   <ul className='sites__list'>
-                    <li className='paragraph-grey-color lh-20'>Карточка товара Wildberries</li>
-                    <li className='paragraph-grey-color lh-20'>Карточка товара Ozon</li>
-                    <li className='paragraph-grey-color lh-20'>Карточка товара Яндекс.Маркет</li>
-                    <li className='paragraph-grey-color lh-20'>Любой креатив</li>
-                    <li className='paragraph-grey-color lh-20'>Любая соцсеть или видеохостинг</li>
+                    <li className='detail__list-paragraph'>Карточка товара Wildberries</li>
+                    <li className='detail__list-paragraph'>Карточка товара Ozon</li>
+                    <li className='detail__list-paragraph'>Карточка товара Яндекс.Маркет</li>
+                    <li className='detail__list-paragraph'>Любой креатив</li>
+                    <li className='detail__list-paragraph'>Любая соцсеть или видеохостинг</li>
                   </ul>
                 </div>
               </div>

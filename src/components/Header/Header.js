@@ -99,7 +99,7 @@ function Header(props) {
           </div>
         </header>
         <ul className='menu__mobile-list'>
-          <li className=''><Link className='menu__mobile-item mobile-home' to='/calculator'>Главная</Link></li>
+          <li className=''><Link className='menu__mobile-item mobile-home' to='/'>Главная</Link></li>
           <li className=''><Link className='menu__mobile-item mobile-services' to='/services'>Услуги</Link></li>
           <li className='menu__mobile-item'><Link className='mobile__link-button' to='/calculator'></Link></li>
           <li className=''><Link className='menu__mobile-item mobile-portfolio' to='/portfolio'>Портфолио</Link></li>

@@ -53,6 +53,10 @@ function App() {
   });
 
   React.useEffect(() => {
+    getData();
+  }, []);
+
+  React.useEffect(() => {
     new WOW().init();
     window.addEventListener('scroll', () => {
       if(window.pageYOffset <= 50){
@@ -63,7 +67,6 @@ function App() {
         setScrollToTopHidden(false);
       }
    });
-   getData();
   }, []);
 
   React.useEffect(() => {

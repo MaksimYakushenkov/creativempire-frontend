@@ -38,3 +38,53 @@
   font-size: 18px;
   color: #fc653c;
 }
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+
+  .price-list-item {
+    width: 490px;
+  }
+
+  .price-list__title {
+    font-size: 18px;
+  }
+
+  .price-list__price::after {
+    font-size: 18px;
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .price-list-item {
+    width: 340px;
+  }
+
+  .price-list__title {
+    font-size: 18px;
+  }
+
+  .price-list__price::after {
+    font-size: 18px;
+  }
+
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+  .price-list-item {
+    width: 300px;
+  }
+
+  .price-list__title {
+    font-size: 18px;
+  }
+
+  .price-list__price::after {
+    font-size: 18px;
+  }
+
+
+}

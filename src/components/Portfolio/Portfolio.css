@@ -76,10 +76,12 @@
   flex-direction: column;
   align-items: center;
   align-content: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 20px;
   border: 2px solid #fc653c45;
   border-top: none;
+  min-height: 124px;
+  box-sizing: border-box;
 }
 
 .portfolio__title {
@@ -216,6 +218,10 @@
     height: 235px;
   }
 
+  .portfolio__description {
+    min-height: 110px;
+  }
+
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -273,6 +279,10 @@
   .portfolio__hover-container {
     width: 300px;
     height: 100%;
+  }
+
+  .portfolio__description {
+    min-height: auto;
   }
 
 }

@@ -107,6 +107,14 @@
 
   .cooperation__container {
     width: 1000px;
+    justify-content: center;
+    gap: 60px;
+  }
+
+  .cooperation__button {
+    padding: 7px 0;
+    font-size: 12px;
+    line-height: 24px;
   }
 
   .cooperation__header {
@@ -138,8 +146,15 @@
     padding-bottom: 60px;
   }
 
+  .cooperation__button {
+    padding: 7px 0;
+    font-size: 12px;
+    line-height: 24px;
+  }
+
   .cooperation__container {
     width: 700px;
+    gap: 60px;
   }
 
   .cooperation__header {
@@ -172,6 +187,12 @@
     padding-bottom: 30px;
   }
 
+  .cooperation__button {
+    padding: 7px 0;
+    font-size: 12px;
+    line-height: 24px;
+  }
+
   .cooperation__container {
     width: 300px;
     flex-direction: column-reverse;
@@ -183,7 +204,7 @@
   }
 
   .cooperation__header .cooperation__button {
-    margin: 20px auto 0;
+    margin: 30px auto 0;
   }
 
   .cooperation__image {

@@ -26,6 +26,8 @@
   border: none;
   cursor: pointer;
   width: 300px;
+  margin-top: 30px;
+  text-align: center;
 }
 
 .detail__with-image {
@@ -57,6 +59,8 @@
 .detail__description {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
 }
 
 .detail__paragraph{
@@ -78,6 +82,8 @@
   gap: 15px;
   padding: 50px;
   box-sizing: border-box;
+  margin-bottom: 60px;
+  margin-top: 0;
 }
 
 .detail__image-container {
@@ -147,6 +153,7 @@
 
 .detail__switch {
   width: 1280px;
+  margin-top: 60px;
 }
 
 .switch__header {
@@ -207,7 +214,7 @@
 
 .switch__description-item {
   width: 100%;
-  height: 300px;
+  min-height: 300px;
   background-color: #1e1e22;
   display: none;
   box-sizing: border-box;
@@ -230,7 +237,6 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-
 
 .detail__price-container {
   display: flex;
@@ -263,6 +269,11 @@
   
 }
 
+.detail__list-paragraph {
+  color: #adadb8;
+  line-height: 20px;
+}
+
 .sites__list {
   display: flex;
   flex-direction: column;
@@ -291,4 +302,365 @@
 
 #prices .pricePackages__item, #uxprices .pricePackages__item {
   width: 680px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+
+  .detail__with-image {
+    width: 1000px;
+    gap: 40px;
+  }
+
+  .detail__header-container {
+    width: 700px;
+  }
+
+  .detail__title {
+    font-size: 36px;
+  }
+
+  .detail__paragraph {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .service-details__button {
+    width: 90%;
+  }
+
+  .detail__nav ul {
+    justify-content: center;
+  }
+
+  .detail__nav a {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .detail__full {
+    width: 1000px;
+  }
+
+  #whyweare .detail__description {
+    width: 570px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #whyweareuxui .detail__description {
+    width: 570px;
+    margin: 30px auto 0;
+  }
+  
+  .detail__switch {
+    width: 1000px;
+  }
+
+  .switch__header-item {
+    width: 250px;
+  }
+
+  .switch__header_container h3 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  #prices .pricePackages__item, #uxprices .pricePackages__item {
+    width: 490px;
+  }
+
+  #prices .pricePackages__price {
+    font-size: 35px;
+  }
+
+  .sites__title {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .detail__list-paragraph {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .detail__with-image {
+    width: 700px;
+  }
+
+  .detail__title {
+    font-size: 30px;
+  }
+
+  .detail__image {
+    transform: translateX(-50px);
+    width: 400px;
+  }
+
+  .detail__image-container {
+    width: 260px;
+    max-width: 260px;
+  }
+
+  .detail__full .detail__paragraph {
+    width: 570px;
+  }
+
+  .detail__paragraph {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .service-details__button {
+    width: 90%;
+  }
+
+  .detail__nav a {
+    font-size: 12px;
+  }
+
+  .detail__nav li {
+    padding: 7px 15px;
+  }
+  
+  .detail__nav ul {
+    justify-content: center;
+  }
+
+  .fd-rr .detail__image {
+    transform: translateX(-100px);
+  }
+
+  .description__dashed {
+    width: 700px;
+  }
+
+  #whyweare .detail__description {
+    width: 570px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #whywearecreative .detail__description {
+    width: 570px;
+    margin: 30px auto 0;
+  }
+
+  .detail__switch {
+    width: 700px;
+  }
+
+  .switch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  
+  .switch__header {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px 30px;
+  }
+
+  .switch__header-item {
+    border-radius: 8px;
+    transform: none;
+    min-height: 230px;
+  }
+
+  .switch__header-item_active {
+    padding-bottom: 20px;
+  }
+
+  .switch__header_container {
+    border-radius: 8px;
+  }
+
+  .switch__header-item_active .switch__header_container {
+    border-bottom: 2px dashed #fc653c47;
+  }
+
+  .switch__description-item {
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .description__container {
+    border-radius: 8px;
+  }
+  
+  .switch__description-item {
+    min-height: auto;
+  }
+
+  .detail__price-container {
+    width: 700px;
+    gap: 60px;
+  }
+
+  .sites__item {
+    width: 250px;
+  }
+
+  .sites__title {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .sites__list {
+    gap: 8px;
+  }
+
+  .detail__list-paragraph {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  #prices .pricePackages__item, #uxprices .pricePackages__item {
+    width: 350px;
+  }
+
+  #prices .pricePackages__price {
+    font-size: 20px;
+  }
+
+  #whyweareuxui .detail__description {
+    margin: 30px auto 0;
+  }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+  #whatisuxui .detail__with-image {
+    padding: 0 0 15px;
+  }
+
+  #whichuxui .detail__with-image {
+    padding: 30px 0 30px;
+  }
+
+  #whichSites .detail__info .detail__description {
+    margin-top: 30px;
+  }
+
+  #whichuxui .detail__price-container {
+    gap: 40px;
+  }
+
+  .detail__with-image {
+    width: 300px;
+    flex-direction: column-reverse;
+    padding: 30px 0 60px;
+  }
+
+  .detail__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detail__image {
+    width: 300px;
+  }
+
+  .detail__image-container {
+    width: 300px;
+    max-width: 300px;
+  }
+
+  .detail__title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .detail__paragraph {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .detail__description {
+    width: 300px;
+    margin: 30px auto 0;
+    box-sizing: border-box;
+    padding-left: 0;
+  }
+
+  .service-details__button {
+    width: 90%;
+    box-sizing: border-box;
+  }
+
+  .detail__full {
+    display: none;
+  }
+
+  #forNeedWebsite .fd-rr {
+    flex-direction: column-reverse!important;
+  }
+
+  #whatisuxui .description__dashed {
+    margin: 0 0 60px;
+  }
+
+  .description__dashed {
+    padding: 20px;
+    margin: 30px 0 60px;
+  }
+
+  .detail__price-container {
+    width: 300px;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  #whichSites .detail__description {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  #whichuxui .detail__description {
+    margin: 30px auto 0;
+    padding: 0;
+  }
+
+
+  #uxprices .pricePackages__container {
+    margin-top: 0;
+  }
+
+  .detail__list-paragraph {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  #whichSites .sites__header {
+    width: 64px;
+    height: 64px;
+  }
+
+  #whichSites .sites__title {
+    margin-top: 15px!important;
+  }
+
+  #whichSites .sites__list {
+    margin-top: 20px;
+  }
+
+  #prices .pricePackages__item, #uxprices .pricePackages__item {
+    width: 300px;
+  }
+
+  #prices .pricePackages__price-area, #uxprices .pricePackages__price-area {
+    padding-top: 0;
+  }
+
+  #prices .detail__with-image, #forNeedWebsite .detail__with-image, #whyneedcreative  .detail__with-image {
+    padding: 30px 0 0;
+  }
+
 }

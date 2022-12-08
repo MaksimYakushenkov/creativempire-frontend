@@ -106,12 +106,32 @@
   background-position: center;
 }
 .work-plan__image.first {
- background-image: url('../../assets/images/work-plan/1.jpg');
+ background-image: url('../../assets/images/work-plan/work-plan-1.png');
 }
 
 .work-plan__image.second {
-  background-image: url('../../assets/images/work-plan/2.jpg');
- }
+  background-image: url('../../assets/images/work-plan/work-plan-2.png');
+}
+
+.work-plan__image.third {
+  background-image: url('../../assets/images/work-plan/work-plan-3.png');
+}
+
+.work-plan__image.fourth {
+  background-image: url('../../assets/images/work-plan/work-plan-4.png');
+}
+
+.work-plan__image.fifth {
+  background-image: url('../../assets/images/work-plan/work-plan-5.png');
+}
+
+.work-plan__image.sixth {
+  background-image: url('../../assets/images/work-plan/work-plan-6.png');
+}
+
+.work-plan__image.seventh {
+  background-image: url('../../assets/images/work-plan/work-plan-7.png');
+}
 
 .work-plan__description {
 

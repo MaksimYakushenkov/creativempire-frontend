@@ -73,7 +73,7 @@ function PortfolioDetails(props) {
           </div>
 
         </div>
-        <div className='project__description'>
+        <div className='project__description wow fadeInUp delay-0-6s'>
           <div className='project__description-content' dangerouslySetInnerHTML={{ __html: props.portfolio.htmlCode }}/>
         </div>
       </div>
