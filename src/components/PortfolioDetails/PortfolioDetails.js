@@ -7,16 +7,18 @@ import './PortfolioDetails.css';
 import projectImage from '../../assets/images/projects/project-details.jpg';
 import PlaceMagic from '../PlaceMagic/PlaceMagic';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
+import PageNotFound from '../PageNotFound/PageNotFound';
 
 function PortfolioDetails(props) {
   const params = useParams();
-
+  console.log()
   React.useEffect(() => {
     props.portfoliosData.map((portfolio) => {
       if(portfolio.url === params.url) {
         props.setPortfolio(portfolio)
       };
     })
+    console.log()
   }, [params])
 
   return (
@@ -42,6 +44,7 @@ function PortfolioDetails(props) {
       linkTitle: 'Портфолио',
     }}
     />
+    {Object.keys(props.portfolio).length > 0 ?
     <main className='project'>
       <div className='project__container'>
         <div className='project__title'>
@@ -79,6 +82,9 @@ function PortfolioDetails(props) {
       </div>
 
     </main>
+    :
+    <PageNotFound/>
+    }
     <PlaceMagic />
     <Footer
     isProcessing={props.isProcessing}

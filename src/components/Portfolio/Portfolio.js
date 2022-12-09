@@ -25,7 +25,7 @@ function Portfolio(props) {
         queue: false,
       },
     });
-  }, []);
+  }, [props.portfoliosData]);
 
 
   useEffect(() => {
@@ -116,7 +116,8 @@ function Portfolio(props) {
         <div className='portfolio__grid mt-30'>
 
           <div className='portfolio__list'>
-          {props.portfoliosData.map((portfolio) => (<PortfolioItem key={portfolio._id} {...portfolio}/>))}
+          {props.portfoliosData.length > 0 ?
+          props.portfoliosData.map((portfolio) => (<PortfolioItem key={portfolio._id} {...portfolio}/>)) : 'Упс, что-то пошло не так. Мы уже исправляем проблему!'}
           </div>
 
         </div>
