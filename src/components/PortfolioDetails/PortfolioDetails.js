@@ -4,7 +4,6 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import PageBanner from '../PageBanner/PageBanner';
 import './PortfolioDetails.css';
-import projectImage from '../../assets/images/projects/project-details.jpg';
 import PlaceMagic from '../PlaceMagic/PlaceMagic';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import PageNotFound from '../PageNotFound/PageNotFound';
@@ -23,35 +22,33 @@ function PortfolioDetails(props) {
 
   return (
     <>
+    {Object.keys(props.portfolio).length > 0 ?
+    <>
     <HelmetProvider><Helmet>
-    <title>{props.portfolio.metaTitle}</title>
-    <meta name="description" content={props.portfolio.metaDescription} />
+      <title>{`${props.portfolio.metaTitle} | Creative Empire — премиальная веб-студия креативного дизайна`}</title>
+      <meta name="description" content={props.portfolio.metaDescription} />
     </Helmet></HelmetProvider>
-    <Header 
+    <Header
     stickyHeader={props.stickyHeader}
-    innerWidth={props.innerWidth} 
+    innerWidth={props.innerWidth}
     isProcessing={props.isProcessing}
     setIsProcessing={props.setIsProcessing}
     isPopupWithFormOpened={props.isPopupWithFormOpened}
     setIsPopupWithFormOpened={props.setIsPopupWithFormOpened}
     infoData={props.infoData}
-    setInfoData={props.setInfoData}
-    />
-    <PageBanner 
+    setInfoData={props.setInfoData} />
+    <PageBanner
     header={props.portfolio.title}
     breadcumps={{
-      link:'portfolio',
+      link: 'portfolio',
       linkTitle: 'Портфолио',
     }}
     />
-    {Object.keys(props.portfolio).length > 0 ?
     <main className='project'>
       <div className='project__container'>
         <div className='project__title'>
           <div className='project__title-container wow fadeInUp delay-0-2s'>
-            <img className='project__image' src={props.portfolio.preview} alt={props.portfolio.title}/>
-            <h2 className='project__header'>{props.portfolio.title}</h2>
-            <p className='project__paragraph'>{props.portfolio.decription}</p>
+            <img className='project__image' src={props.portfolio.preview} alt={props.portfolio.title} />
           </div>
           <div className='project__info wow fadeInUp delay-0-4s'>
             <h3 className='project__info-title project__info-title_first'>Краткая информация:</h3>
@@ -76,15 +73,27 @@ function PortfolioDetails(props) {
           </div>
 
         </div>
-        <div className='project__description wow fadeInUp delay-0-6s'>
-          <div className='project__description-content' dangerouslySetInnerHTML={{ __html: props.portfolio.htmlCode }}/>
+        <div className='project__description'>
+
+          <div className='project__overview wow fadeInUp delay-0-4s'>
+            <h3 className='project__overview-title'>Обзор проекта</h3>
+            <div className='project__overview-description'  dangerouslySetInnerHTML={{ __html: props.portfolio.overview }} />
+          </div>
+
+          <div className='project__overview wow fadeInLeft delay-0-4s'>
+            <h3 className='project__overview-title'>Реализация проекта</h3>
+            <div className='project__overview-description' dangerouslySetInnerHTML={{ __html: props.portfolio.execution }} />
+          </div>
+
+          <div className='project__overview wow fadeInRight delay-0-4s'>
+            <h3 className='project__overview-title'>Результаты работы</h3>
+            <div className='project__overview-description' dangerouslySetInnerHTML={{ __html: props.portfolio.result}} />
+          </div>
+
+          <div className='project__description-content wow fadeInUp delay-0-8s' dangerouslySetInnerHTML={{ __html: props.portfolio.htmlCode }} />
         </div>
       </div>
-
     </main>
-    :
-    <PageNotFound/>
-    }
     <PlaceMagic />
     <Footer
     isProcessing={props.isProcessing}
@@ -92,8 +101,23 @@ function PortfolioDetails(props) {
     isPopupOpened={props.isPopupOpened}
     setIsPopupOpened={props.setIsPopupOpened}
     infoData={props.infoData}
-    setInfoData={props.setInfoData}
+    setInfoData={props.setInfoData} 
     />
+    </>
+    :
+    <PageNotFound
+    isProcessing={props.isProcessing}
+    setIsProcessing={props.setIsProcessing}
+    isPopupOpened={props.isPopupOpened}
+    setIsPopupOpened={props.setIsPopupOpened}
+    infoData={props.infoData}
+    setInfoData={props.setInfoData}
+    stickyHeader={props.stickyHeader}
+    innerWidth={props.innerWidth} 
+    isPopupWithFormOpened={props.isPopupWithFormOpened}
+    setIsPopupWithFormOpened={props.setIsPopupWithFormOpened}
+    />
+    }
     </>
   );
 }

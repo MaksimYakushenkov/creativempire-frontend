@@ -21,7 +21,7 @@ function CreateWebsite(props) {
   return (
     <>
     <PageBanner breadcumps={props.breadcumps} header={props.header} />
-    <main className={props.service}>
+    <main id="createWebsite" className={props.service}>
       <div className='detail__container'>
           <div className='detail__with-image'>
             <div className='detail__info wow fadeInLeft delay-0-2s'>
@@ -39,7 +39,7 @@ function CreateWebsite(props) {
 
           </div>
       </div>
-      <div className='detail__container bg-2'>
+      <div className='detail__container detail__navigation bg-2'>
           <div className='detail__full pt-40 pb-60'>
             <p className='detail__paragraph fw-b'>Для быстрой навигации по разделам нажмите на ссылку:</p>
             <nav className='detail__nav mt-20'>

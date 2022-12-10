@@ -85,6 +85,9 @@ class Form extends Component {
           <input id="user_phone" className="contactUs__input" onChange={this.handleChange} required name="user_phone" type="text" value={this.state.phone} placeholder="Ваш номер*" />
           <span className="user_phone-error error-message"></span>
         </div>
+        <div className='accept-rules'>
+          <p className='accept-rules__paragraph'>Нажимая на кнопку вы даете согласие на обработку персональных данных и соглашаетесь с <Link to="/privacy-policy" target="_blank">политикой конфиденциальности</Link>.</p>
+        </div>
         <button type="submit" className={`calculator__recall-button ${this.props.isProcessing && 'calculator__recall-button_loading'}`} disabled={!this.state.formValid}>{this.props.isProcessing ? <><img className='submit__loading' src={iconLoading} /></> : <>Обсудить проект</>}</button>
       </form>
       <Popup

@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer';
 import './BlogDetails.css';
 import authorAvatar from '../../assets/images/team/authorAvatar.jpg';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
-
+import PageNotFound from '../PageNotFound/PageNotFound';
 
 
 function BlogDetails(props) {
@@ -20,6 +20,8 @@ function BlogDetails(props) {
   }, [params])
 
   return (
+    <>
+    {Object.keys(props.article).length > 0 ?
     <>
     <HelmetProvider><Helmet>
     <title>{props.article.metaTitle}</title>
@@ -87,6 +89,21 @@ function BlogDetails(props) {
     infoData={props.infoData}
     setInfoData={props.setInfoData}
     />
+    </>
+    :
+    <PageNotFound
+    isProcessing={props.isProcessing}
+    setIsProcessing={props.setIsProcessing}
+    isPopupOpened={props.isPopupOpened}
+    setIsPopupOpened={props.setIsPopupOpened}
+    infoData={props.infoData}
+    setInfoData={props.setInfoData}
+    stickyHeader={props.stickyHeader}
+    innerWidth={props.innerWidth} 
+    isPopupWithFormOpened={props.isPopupWithFormOpened}
+    setIsPopupWithFormOpened={props.setIsPopupWithFormOpened}
+    />
+    }
     </>
   );
 }

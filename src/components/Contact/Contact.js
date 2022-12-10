@@ -11,6 +11,7 @@ import iconLoading from '../../assets/images/icons/loading.png';
 import validation from '../Validation/Validation';
 import Popup from '../Popup/Popup';
 import InfoToolTip from '../InfoToolTip/InfoToolTip';
+import { Link } from 'react-router-dom';
 
 function Contact(props) {
   const form = useRef();
@@ -136,6 +137,10 @@ function Contact(props) {
             <div className="contactUs__field">
               <textarea id="user_description" className="contactUs__input contactUs__textarea" onChange={handleChange} required name="user_description" value={description} type="text" placeholder="Описание проекта*" />
               <span className="user_description-error error-message"></span>
+            </div>
+
+            <div className='accept-rules'>
+              <p className='accept-rules__paragraph'>Нажимая на кнопку вы даете согласие на обработку персональных данных и соглашаетесь с <Link to="/privacy-policy" target="_blank">политикой конфиденциальности</Link>.</p>
             </div>
             <button type="submit" className='contactUs__submit-button pricePackages__link' disabled={!formValid}>{props.isProcessing ? <><img className='submit__loading' src={iconLoading} /></> : <>Отправить<img src={iconDoubleRight} /></>}</button>
             

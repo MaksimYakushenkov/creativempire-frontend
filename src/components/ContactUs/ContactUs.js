@@ -7,6 +7,7 @@ import iconTG from '../../assets/images/icons/telegram.png';
 import contactWaveLine from '../../assets/images/shapes/contact-wave-line.png';
 import sliderDots from '../../assets/images/slider/slider-dots.png';
 import contactDots from '../../assets/images/shapes/contact-dots.png';
+import { Link } from 'react-router-dom';
 
 function ContactUs() {
 
@@ -76,6 +77,10 @@ function ContactUs() {
             <div className="contactUs__field">
               <textarea id="projectDescription" className="contactUs__input contactUs__textarea" required name="password" type="password" placeholder="Описание проекта*"  />
               <span className="password-error error-message"></span>
+            </div>
+
+            <div className='accept-rules'>
+              <p className='accept-rules__paragraph'>Нажимая на кнопку вы даете согласие на обработку персональных данных и соглашаетесь с <Link to="/privacy-policy" target="_blank">политикой конфиденциальности</Link>.</p>
             </div>
 
             <button type="submit" className="contactUs__submit-button pricePackages__link" disabled>Отправить<img src={iconDoubleRight} /></button>

@@ -156,7 +156,7 @@
 
 .calculator__price-area {
   width: 350px;
-  height: 350px;
+  height: 400px;
   background-color: #17171a;
   padding: 30px;
   box-sizing: border-box;
@@ -388,7 +388,7 @@
   
   .calculator__price-area {
     width: 220px;
-    height: 283px;
+    height: auto;
     margin-bottom: -15px;
   }
 
@@ -517,7 +517,7 @@
   .calculator__price-area {
     width: 300px;
     padding: 20px;
-    height: 300px;
+    height: auto;
   }
 
   .calculator__price {

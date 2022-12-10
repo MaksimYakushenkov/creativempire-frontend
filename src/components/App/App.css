@@ -257,6 +257,11 @@
   animation: cooperationTextChangeColor 2s infinite;
 }
 
+.accept-rules__paragraph {
+  color: #adadb8;
+  font-size: 12px;
+}
+
 .section__shapes {
 }
 
@@ -414,10 +419,13 @@
     font-size: 16px;
     line-height: 18px;
   }
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-
+  .accept-rules__paragraph {
+    font-size: 9px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -473,6 +481,10 @@
 
   .fs-40 {
     font-size: 24px!important;
+  }
+
+  .accept-rules__paragraph {
+    font-size: 8px;
   }
 
   .order__button_small {

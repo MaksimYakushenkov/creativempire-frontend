@@ -1,0 +1,60 @@
+.page-with-text {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 60px 0;
+  gap: 15px;
+}
+
+.page-with-text p {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.paragraph__link {
+  color: #fff;
+  background-color: #fc653c;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+
+  .page-with-text p {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .page-with-text {
+    width: 700px;
+    gap: 30px;
+  }
+
+  .page-with-text p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  
+.page-with-text {
+    width: 300px;
+    gap: 15px;
+    padding-top: 30px;
+  }
+
+  .page-with-text h2 {
+    font-size: 20px;
+  }
+
+  .page-with-text p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+}

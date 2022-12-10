@@ -223,6 +223,10 @@ export default class HeaderSlider extends Component {
                 <span className="user_phone-error error-message"></span>
               </div>
 
+              <div className='accept-rules'>
+                <p className='accept-rules__paragraph'>Нажимая на кнопку вы даете согласие на обработку персональных данных и соглашаетесь с <Link to="/privacy-policy" target="_blank">политикой конфиденциальности</Link>.</p>
+              </div>
+
               <button type="submit" className='contactUs__submit-button pricePackages__link' disabled={!this.state.formValid}>{this.props.isProcessing ? <><img className='submit__loading' src={iconLoading} /></> : <>Перезвоните мне!</>}</button>
             </form>
           </div>}

@@ -21,6 +21,9 @@ import ServiceDetails from '../ServiceDetails/ServiceDetails';
 import PortfolioDetails from '../PortfolioDetails/PortfolioDetails';
 import BlogDetails from '../BlogDetails/BlogDetails';
 import mainApi from '../../utils/mainApi/mainApi';
+import PageNotFound from '../PageNotFound/PageNotFound';
+import PrivacyPolicy from '../PrivacyPolicy/PrivacyPolicy';
+import PersonalRules from '../PersonalRules/PersonalRules';
 
 function App() {
   const [articlesData, setAcrticlesData] = React.useState([]);
@@ -302,13 +305,51 @@ return (
       setInfoData={setInfoData}
       />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
-      {/*
-        <Blog
-        articlesList={articlesList} />
-        </Route>
-        <Route path="/articles/:url">
-    
-        <ArticleFull article={article} getArticle={getArticle} /> */}
+    </Route>
+    <Route path="/personal">
+      <PersonalRules
+      stickyHeader={stickyHeader}
+      innerWidth={innerWidth}
+      isProcessing={isProcessing}
+      setIsProcessing={setIsProcessing}
+      isPopupOpened={isPopupOpened}
+      setIsPopupOpened={setIsPopupOpened}
+      infoData={infoData}
+      setInfoData={setInfoData}
+      isPopupWithFormOpened={isPopupWithFormOpened}
+      setIsPopupWithFormOpened={setIsPopupWithFormOpened}
+      />
+      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
+    </Route>
+    <Route path="/privacy-policy">
+      <PrivacyPolicy
+      stickyHeader={stickyHeader}
+      innerWidth={innerWidth}
+      isProcessing={isProcessing}
+      setIsProcessing={setIsProcessing}
+      isPopupOpened={isPopupOpened}
+      setIsPopupOpened={setIsPopupOpened}
+      infoData={infoData}
+      setInfoData={setInfoData}
+      isPopupWithFormOpened={isPopupWithFormOpened}
+      setIsPopupWithFormOpened={setIsPopupWithFormOpened}
+      />
+      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
+    </Route>
+    <Route path="*">
+      <PageNotFound
+      stickyHeader={stickyHeader}
+      innerWidth={innerWidth}
+      isProcessing={isProcessing}
+      setIsProcessing={setIsProcessing}
+      isPopupOpened={isPopupOpened}
+      setIsPopupOpened={setIsPopupOpened}
+      infoData={infoData}
+      setInfoData={setInfoData}
+      isPopupWithFormOpened={isPopupWithFormOpened}
+      setIsPopupWithFormOpened={setIsPopupWithFormOpened}
+      />
+      <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
   </Switch>
   </>

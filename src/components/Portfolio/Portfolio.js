@@ -53,7 +53,7 @@ function Portfolio(props) {
     setInfoData={props.setInfoData}
     />
     <PageBanner
-        header="Портфолио"
+      header="Портфолио"
     />
     <Cooperation />
     <main className='portfolio'>

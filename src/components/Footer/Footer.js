@@ -107,6 +107,10 @@ function Footer(props) {
             <span className="user_email-error error-message"></span>
           </div>
 
+          <div className='accept-rules'>
+            <p className='accept-rules__paragraph'>Нажимая на кнопку вы даете согласие на обработку персональных данных и соглашаетесь с <Link to="/privacy-policy" target="_blank">политикой конфиденциальности</Link>.</p>
+          </div>
+
           <button type="submit" className="contactUs__submit-button pricePackages__link" disabled={!formValid}>{props.isProcessing ? <><img className='submit__loading' src={iconLoading} /></> : <>Отправить<img src={iconDoubleRight} /></>}</button>
 
           </form>
@@ -115,6 +119,10 @@ function Footer(props) {
       
       <div className='footer__copyright'>
         <p className='footer__paragraph'>© Copyright 2022 Creative Empire. Все права защищены.</p>
+        <div className='footer__privacy'>
+          <Link to="/personal" className='footer__privacy-link'>Обработка данных</Link>
+          <Link to="/privacy-policy" className='footer__privacy-link'>Политика конфиденциальности</Link>
+        </div>
       </div>
       <Popup 
       isPopupOpened={props.isPopupOpened}
