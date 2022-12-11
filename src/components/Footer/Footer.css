@@ -182,13 +182,28 @@
   padding-right: 10px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
   .footer__container {
-    width: 700px;
+    width: 900px;
     padding-top: 30px;
     padding-bottom: 30px;
   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer__container {
+    width: 700px;
+  }
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   
+  .footer__container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 
   .footer__description, .footer__links {
     padding-top: 0!important;

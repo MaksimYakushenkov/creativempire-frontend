@@ -4,12 +4,12 @@ import authorAvatar from '../../assets/images/team/authorAvatar.jpg';
 
 
 function BlogItem(blog) {
-
+  
   return (
     <div className='blog__item'>
 
           <div className='blog__preview-container'>
-            <img className='blog__preview' src={blog.preview} alt={blog.title} />
+            <img className='blog__preview' src={blog.miniPreview} alt={blog.title} />
           </div>
 
           <div className='blog__description'>

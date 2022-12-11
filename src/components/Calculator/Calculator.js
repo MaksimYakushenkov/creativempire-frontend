@@ -166,7 +166,7 @@ function Calculator(props) {
 
       <div className='calculator__container pt-120'>
 
-        <div className='calculator__slide-container'>
+        <div className='calculator__slide-container wow fadeInLeft delay-0-4s'>
 
 {/* first */}
         <div className='calculator__slide'>
@@ -175,7 +175,7 @@ function Calculator(props) {
             <h2>Какую услугу хотите заказать?</h2>
           </div>
 
-          <div className='calculator__block wow fadeInUp delay-0-4s product'>
+          <div className='calculator__block product'>
 
             <div className='calculator__radio calculator__radio_active' onClick={radioChecked}>
               <input id="website" className="calculator__input" name="product" type="radio" defaultChecked  value="website" data-price={20000}/>
@@ -255,7 +255,7 @@ function Calculator(props) {
                     <h2>Какой тип сайта вам необходим?</h2>
                   </div>
 
-                  <div className='calculator__block wow fadeInUp delay-0-4s website-product'>
+                  <div className='calculator__block fadeInUp delay-0-4s website-product'>
 
                     <div className='calculator__radio calculator__radio_active' onClick={radioChecked}>
                       <input id="onepage" className="calculator__input" name="website-product" type="radio" defaultChecked  value="onepage" data-price={0}/>
@@ -312,7 +312,7 @@ function Calculator(props) {
                   <div className='calculator__header  fadeInUp delay-0-2s'>
                       <h2>Нужен ли премиальный дизайн?</h2>
                   </div>
-                  <div className='calculator__block wow fadeInUp delay-0-4s jc-c premium-design'>
+                  <div className='calculator__block fadeInUp delay-0-4s jc-c premium-design'>
                   <div className='calculator__radio calculator__radio_active' onClick={radioChecked}>
                       <input className="calculator__input" name="premium-design" type="radio"  value="no" defaultChecked data-price={0}/>
                         <div className='calculator__radio-container'>
@@ -342,7 +342,7 @@ function Calculator(props) {
                 <div className='calculator__header  fadeInUp delay-0-2s'>
                     <h2>Нужен ли логотип?</h2>
                 </div>
-                <div className='calculator__block wow fadeInUp delay-0-4s need-logo'>
+                <div className='calculator__block fadeInUp delay-0-4s need-logo'>
                   <div className='calculator__radio calculator__radio_active' onClick={radioChecked}>
                     <input className="calculator__input" name="need-logo" type="radio" value="yes" defaultChecked data-price={0}/>
                       <div className='calculator__radio-container'>
@@ -382,7 +382,7 @@ function Calculator(props) {
                     <h2>Будет ли CMS?</h2>
                     <p>CMS - это система для удобного управления сайтом, другими словами - личный кабинет владельца.</p>
                 </div>
-                <div className='calculator__block wow fadeInUp delay-0-4s need-cms'>
+                <div className='calculator__block fadeInUp delay-0-4s need-cms'>
                   <div className='calculator__radio calculator__radio_active' onClick={radioChecked}>
                     <input className="calculator__input" name="need-cms" type="radio" value="yes" defaultChecked data-price={0}/>
                       <div className='calculator__radio-container'>
@@ -422,7 +422,7 @@ function Calculator(props) {
   <div className='calculator__header  fadeInUp delay-0-2s'>
       <h2>Для чего нужен UX/UI дизайн?</h2>
   </div>
-  <div className='calculator__block wow fadeInUp delay-0-4s ux-place'>
+  <div className='calculator__block fadeInUp delay-0-4s ux-place'>
     <div className='calculator__radio calculator__radio_active' onClick={radioChecked}>
       <input className="calculator__input" name="ux-place" type="radio" defaultChecked value="yes" data-price={0}/>
         <div className='calculator__radio-container'>
@@ -462,7 +462,7 @@ function Calculator(props) {
   <div className='calculator__header  fadeInUp delay-0-2s'>
       <h2>Какую услугу хотите?</h2>
   </div>
-  <div className='calculator__block wow fadeInUp delay-0-4s creative-product'>
+  <div className='calculator__block fadeInUp delay-0-4s creative-product'>
     <div className='calculator__radio calculator__radio_active' onClick={radioChecked}>
       <input className="calculator__input" name="creative-product" type="radio" defaultChecked value="yes" data-price={1000}/>
         <div className='calculator__radio-container'>
@@ -532,7 +532,7 @@ function Calculator(props) {
               <h2>Поздравляем! Расчет окончен.</h2>
               <div className='answer__image' ></div>
             </div>
-            <div className='calculator__block ai-c fd-r wow fadeInUp delay-0-4s answer'>
+            <div className='calculator__block ai-c fd-r fadeInUp delay-0-4s answer'>
               <h3><span>{choosedProductText}</span> – это всегда индивидуальный проект. Будет лучше, если мы свяжемся с вами и обсудим все подробно. Таким образом мы сможем точно оценить стоимость работы и сориентировать вас по срокам.</h3>
               
             </div>

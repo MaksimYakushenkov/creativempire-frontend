@@ -3,9 +3,10 @@ import { Link, useState, useParams, withRouter } from 'react-router-dom';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import './BlogDetails.css';
-import authorAvatar from '../../assets/images/team/authorAvatar.jpg';
+import authorAvatar from '../../assets/images/team/blog__details-avatar.jpg';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import PageNotFound from '../PageNotFound/PageNotFound';
+import Cooperation from '../Cooperation/Cooperation';
 
 
 function BlogDetails(props) {
@@ -17,6 +18,7 @@ function BlogDetails(props) {
         props.setArticle(article)
       };
     })
+    console.log()
   }, [params])
 
   return (
@@ -24,8 +26,8 @@ function BlogDetails(props) {
     {Object.keys(props.article).length > 0 ?
     <>
     <HelmetProvider><Helmet>
-    <title>{props.article.metaTitle}</title>
-    <meta name="description" content={props.article.metaDescription} />
+      <title>{`${props.article.metaTitle} | Creative Empire — премиальная веб-студия креативного дизайна`}</title>
+      <meta name="description" content={props.article.metaDescription} />
     </Helmet></HelmetProvider>
     <Header 
     stickyHeader={props.stickyHeader}
@@ -41,27 +43,21 @@ function BlogDetails(props) {
       <div className='blog-details__container'>
         <div className='blog-details__header'>
           <div className='blog-details__header-container'>
+            <img className='blog__header-preview' src={props.article.preview} alt={props.article.metaTitle}/>
             <h1 className='blog-details__title'>{props.article.title}</h1>
             <p className='blog-details__subtitle'>{props.article.description}</p>
-            <img src={props.article.preview} alt={props.article.metaTitle}/>
-          </div>
-          <div className='blog-details__header-description'>
-            <div className='blog-details__header-description-item'>
-              <img className='blog-details__author-avatar' src={authorAvatar} alt='Максим Якушенков, создатель веб-студии креативного дизайна Creative Empire' />
-              <a href='ya.ru' className='blog-details__header-description_link'>Максим Якушенков</a>
-            </div>
-            <p className='blog-details__date'>{props.article.createdAt}</p>
           </div>
         </div>
 
         <div className='blog-details__content' dangerouslySetInnerHTML={{ __html: props.article.htmlCode }} />
 
         <div className='blog-details__tags'>
-          <h3 className='blog-details__tags-title'>Теги:</h3>
+          <p className='blog-details__date'>Опубликовано:  <span><b>{props.article.createdAt}</b></span></p>
+          <p className='blog-details__tags-title'>Теги:</p>
           <ul className='blog-details__tags-list'>
-            <li className='blog-details__tags-item'>Апи Дизайн</li>
-            <li className='blog-details__tags-item'>Апи Брендинг</li>
-            <li className='blog-details__tags-item'>Апи Маркетинг</li>
+            {props.article.tags.map((tag, index) => {
+              return <li key={index} className='blog-details__tags-item'><b>{tag}</b></li>
+              })}
           </ul>
         </div>
 
@@ -69,17 +65,25 @@ function BlogDetails(props) {
           <img className='blog-details__author-avatar' src={authorAvatar} alt='Максим Якушенков, создатель веб-студии креативного дизайна Creative Empire' />
           <div className='blog-details__author-about'>
             <h3>Максим Якушенков</h3>
-            <p>Краткая инфа о себе Краткая инфа о себеКраткая инфа о себеКраткая инфа о себеКраткая инфа о себеКраткая инфа о себеКраткая инфа о себе</p>
+            <p>СЕО digital-студии креативного дизайна «Creative Empire». Full Stack Developer с опытом работы в IT 10 лет.</p>
             <ul className='blog-details__social-list'>
-              <li className='blog-details__social-item'>VK</li>
-              <li className='blog-details__social-item'>TG</li>
-              <li className='blog-details__social-item'>BE</li>
+              <li className='blog-details__social-item'>
+                <a href='https://vk.com/maximyakushenkov' target="_blank" rel="noreferrer"><i className='footer__i vkontakte' target="_blank"/></a>
+                </li>
+              <li className='blog-details__social-item'>
+                <a href='https://t.me/yakushenkovm' target="_blank" rel="noreferrer"><i className='footer__i telegram'/></a>
+              </li>
+              {/* <li className='blog-details__social-item'>
+                <a href='https://t.me/yakushenkovm' target="_blank" rel="noreferrer"><i className='footer__i behance'/></a>
+              </li> */}
             </ul>
           </div>
         </div>
 
       </div>
     </main>
+
+    <Cooperation />
      
     <Footer
     isProcessing={props.isProcessing}

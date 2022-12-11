@@ -47,7 +47,13 @@ function LatestProjects(props) {
           <h3 className='section__title first-color'>••• Лучшие проекты •••</h3>
           <h2 className='section__subtitle'>Посмотрите примеры наших работ</h2>
       </div>
+      {props.portfoliosData.length > 0 ?
       <Slider {...settings} className='latestProjects__slider'>
+          {props.portfoliosData.map((portfolio) => (<PortfolioItem key={portfolio._id} {...portfolio}/>))}
+      </Slider>
+        :
+        'Упс, что-то пошло не так. Мы уже исправляем проблему!'}
+{/*       
       <div>
           <div className='latestProjects__project wow fadeInUp delay-0-2s'>
             <img className='latestProjects__image' src={project1} />
@@ -119,8 +125,8 @@ function LatestProjects(props) {
               <a className='latestProjects__hover-link' target='_blank' href='ya.ru'><img className='latestProjects__hover-image' src={iconLink} /></a>
             </div>
           </div>
-        </div>
-      </Slider>
+        </div> */}
+      
     </section>
   );
 }

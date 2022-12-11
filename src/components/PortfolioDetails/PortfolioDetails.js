@@ -17,7 +17,6 @@ function PortfolioDetails(props) {
         props.setPortfolio(portfolio)
       };
     })
-    console.log()
   }, [params])
 
   return (
@@ -80,14 +79,19 @@ function PortfolioDetails(props) {
             <div className='project__overview-description'  dangerouslySetInnerHTML={{ __html: props.portfolio.overview }} />
           </div>
 
+          {
+            props.portfolio.filter === "website" || props.portfolio.filter === "uxui" ?
+          
           <div className='project__overview wow fadeInLeft delay-0-4s'>
             <h3 className='project__overview-title'>Реализация проекта</h3>
             <div className='project__overview-description' dangerouslySetInnerHTML={{ __html: props.portfolio.execution }} />
           </div>
-
+          :
+          ''
+          }
           <div className='project__overview wow fadeInRight delay-0-4s'>
             <h3 className='project__overview-title'>Результаты работы</h3>
-            <div className='project__overview-description' dangerouslySetInnerHTML={{ __html: props.portfolio.result}} />
+            {props.portfolio.filter === "website" || props.portfolio.filter === "uxui" ? <div className='project__overview-description' dangerouslySetInnerHTML={{ __html: props.portfolio.result}} /> : ''}
           </div>
 
           <div className='project__description-content wow fadeInUp delay-0-8s' dangerouslySetInnerHTML={{ __html: props.portfolio.htmlCode }} />
