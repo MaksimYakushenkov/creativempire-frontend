@@ -144,7 +144,10 @@ return (
         isPopupSliderOpened={isPopupSliderOpened}
         setIsPopupSliderOpened={setIsPopupSliderOpened}
         infoData={infoData}
-        setInfoData={setInfoData}/>
+        setInfoData={setInfoData}
+        isPopupOpened={isPopupOpened}
+        setIsPopupOpened={setIsPopupOpened}
+      />
       <Footer 
       isProcessing={isProcessing}
       setIsProcessing={setIsProcessing}

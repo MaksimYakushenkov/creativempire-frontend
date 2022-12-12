@@ -4,7 +4,6 @@ import Slider from "react-slick";
 import slide1 from '../../assets/images/slider/slide1.webp';
 import slide2 from '../../assets/images/slider/slide2.webp';
 import slide3 from '../../assets/images/slider/slide3.webp';
-import imgageCaption from '../../assets/images/slider/design_slider.png';
 import sliderDots from '../../assets/images/slider/slider-dots.png';
 import sliderWaveLine from '../../assets/images/slider/slider-wave-line.png';
 import sliderCircle from '../../assets/images/slider/slider-circle.png';
@@ -132,11 +131,11 @@ export default class HeaderSlider extends Component {
                   <p className="slider__paragraph">Лучшие креативные решения для вашего бизнеса или хобби! Оставьте заявку и мы вам перезвоним.</p>
                   <div className="slide__buttons">
                     <Link className='slider__button slider__button_transparent' to='/contact'>Контакты
-                      <img src={iconDoubleRight} />
+                      <img src={iconDoubleRight} alt='Иконка право'/>
                     </Link>
                     <button onClick={this.callBack} className="slider__button">
                       Быстрый заказ
-                      <img src={iconDoubleRight} />
+                      <img src={iconDoubleRight} alt='Иконка право'/>
                     </button>
                   </div>
                 </div>
@@ -153,11 +152,11 @@ export default class HeaderSlider extends Component {
                   <p className="slider__paragraph">Современный креатив продвигает. Поэтому наши лучшие решения гарантированно поднимут вас на голову выше конкурентов.</p>
                   <div className="slide__buttons">
                     <Link className='slider__button slider__button_transparent' to='/contact'>Контакты
-                      <img src={iconDoubleRight} />
+                      <img src={iconDoubleRight} alt='Иконка право'/>
                     </Link>
                     <button onClick={this.callBack} className="slider__button">
                       Быстрый заказ
-                      <img src={iconDoubleRight} />
+                      <img src={iconDoubleRight} alt='Иконка право'/>
                     </button>
                   </div>
                 </div>
@@ -176,11 +175,11 @@ export default class HeaderSlider extends Component {
                   <p className="slider__paragraph">Уникальный дизайн каждому клиенту. Заставьте свой бизнес работать на вас — а мы в этом поможем!</p>
                   <div className="slide__buttons">
                     <Link className='slider__button slider__button_transparent' to='/contact'>Контакты
-                    <img src={iconDoubleRight} />
+                    <img src={iconDoubleRight} alt='Иконка право'/>
                     </Link>
                     <button onClick={this.callBack} className="slider__button">
                       Быстрый заказ
-                      <img src={iconDoubleRight} />
+                      <img src={iconDoubleRight} alt='Иконка право'/>
                     </button>
                   </div>
                 </div>
@@ -227,7 +226,7 @@ export default class HeaderSlider extends Component {
                 <p className='accept-rules__paragraph'>Нажимая на кнопку вы даете согласие на обработку персональных данных и соглашаетесь с <Link to="/privacy-policy" target="_blank">политикой конфиденциальности</Link>.</p>
               </div>
 
-              <button type="submit" className='contactUs__submit-button pricePackages__link' disabled={!this.state.formValid}>{this.props.isProcessing ? <><img className='submit__loading' src={iconLoading} /></> : <>Перезвоните мне!</>}</button>
+              <button type="submit" className='contactUs__submit-button pricePackages__link' disabled={!this.state.formValid}>{this.props.isProcessing ? <><img className='submit__loading' src={iconLoading} alt='Иконка загрузки'/></> : <>Перезвоните мне!</>}</button>
             </form>
           </div>}
       </PopupWithForm>

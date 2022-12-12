@@ -32,7 +32,14 @@ function Home(props) {
       <FastButtons />
       <PricePackages />
       <Testimonials innerWidth={props.innerWidth} />
-      <ContactUs />
+      <ContactUs
+          isPopupOpened={props.isPopupOpened}
+          setIsPopupOpened={props.setIsPopupOpened}
+          infoData={props.infoData}
+          setInfoData={props.setInfoData}
+          isProcessing={props.isProcessing}
+          setIsProcessing={props.setIsProcessing}
+      />
       <Blog articlesData={props.articlesData}/>
     </main>
   );

@@ -147,7 +147,7 @@ function Contact(props) {
             <div className='accept-rules'>
               <p className='accept-rules__paragraph'>Нажимая на кнопку вы даете согласие на обработку персональных данных и соглашаетесь с <Link to="/privacy-policy" target="_blank">политикой конфиденциальности</Link>.</p>
             </div>
-            <button type="submit" className='contactUs__submit-button pricePackages__link' disabled={!formValid}>{props.isProcessing ? <><img className='submit__loading' src={iconLoading} /></> : <>Отправить<img src={iconDoubleRight} /></>}</button>
+            <button type="submit" className='contactUs__submit-button pricePackages__link' disabled={!formValid}>{props.isProcessing ? <><img className='submit__loading' src={iconLoading} alt='Иконка загрузки' /></> : <>Отправить<img src={iconDoubleRight} alt='Иконка стрелка вправо'/></>}</button>
             
           </form>
         </div>

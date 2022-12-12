@@ -416,9 +416,9 @@
 
   .slider_circle {
     animation: shapeAnimationThreeMobile 30s infinite;
-    top: 1%;
-    left: 5%;
-    opacity: 0.4;
+    top: 20px;
+    left: 164px;
+    opacity: 0.2;
   }
 
   .slide__container {
@@ -455,9 +455,13 @@
   }
 
   .slider__button {
-    font-size: 8px;
-    line-height: 10px;
-    padding: 8px 10px;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 15px 20px;
+  }
+  
+  .slider__button img {
+    display: none;
   }
 
   .slide__buttons {
@@ -476,9 +480,10 @@
   }
 
   .slider__dots.first {
-    right: -20px;
-    top: -10px;
+    right: -40px;
+    top: 87px;
     width: 80px;
+    opacity: 0.5;
   }
 
   .slider__dots.second {
