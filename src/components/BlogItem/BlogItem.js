@@ -25,7 +25,7 @@ function BlogItem(blog) {
 
               <div className='blog__author-description'>
                 <p>Автор:</p>
-                <a href='ya.ru' className='blog__link'>Максим Якушенков</a>
+                <a href='https://t.me/yakushenkovm' className='blog__link' target="_blank" rel="noreferrer">Максим Якушенков</a>
               </div>
 
             </div>

@@ -7,7 +7,7 @@ function PortfolioItem(portfolio) {
 
   return (
     <div>
-      <div className={`portfolio__item wow fadeInUp delay-0-4s ${portfolio.filter}`}>
+      <div className={`portfolio__item ${portfolio.filter}`}>
         <img className='portfolio__image' src={portfolio.miniPreview} alt={portfolio.title} />
         <div className='portfolio__description'>
           <Link to={`/portfolio/${portfolio.url}`} className="portfolio__title">{portfolio.title}</Link>

@@ -34,6 +34,10 @@ import publicKey from '../../utils/emailJS/emailJS-config';
 import emailjs from '@emailjs/browser';
 import Form from '../Form/Form';
 
+import { HelmetProvider, Helmet } from 'react-helmet-async';
+
+
+
 function Calculator(props) {
   const [price, setPrice] = React.useState(0);
   const [numStep, setNumStep] = React.useState(0);
@@ -145,6 +149,10 @@ function Calculator(props) {
 
   return (
     <>
+    <HelmetProvider><Helmet>
+      <title>{`Рассчитать стоимость услуг онлайн | Creative Empire — премиальная веб-студия креативного дизайна`}</title>
+      <meta name="description" content="Рассчитайте стоимость услуг онлайн на нашем сайте. Вы можете узнать сколько стоит: разработка сайта под ключ, создание UX/UI-дизайна, креативный дизайн и др. Creative Empire — премиальная веб-студия креативного дизайна." />
+    </Helmet></HelmetProvider>
    <Header
     innerWidth={props.innerWidth}
     stickyHeader={props.stickyHeader}

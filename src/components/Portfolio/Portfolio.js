@@ -7,6 +7,7 @@ import Cooperation from '../Cooperation/Cooperation';
 import PlaceMagic from '../PlaceMagic/PlaceMagic';
 import Footer from '../Footer/Footer';
 import PortfolioItem from '../PortfolioItem/PortfolioItem';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 function Portfolio(props) {
   const isotope = useRef();
@@ -42,6 +43,10 @@ function Portfolio(props) {
 
   return (
     <>
+    <HelmetProvider><Helmet>
+      <title>{`Примеры наших работ | Creative Empire — премиальная веб-студия креативного дизайна`}</title>
+      <meta name="description" content="Посмотрите примеры наших работы. Здесь собраны самые лучшие проекты: разработка сайта под ключ, создание UX/UI-дизайна, креативный дизайн и др. Creative Empire — премиальная веб-студия креативного дизайна." />
+    </Helmet></HelmetProvider>
     <Header
     innerWidth={props.innerWidth}
     stickyHeader={props.stickyHeader}

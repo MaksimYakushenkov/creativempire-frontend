@@ -95,7 +95,9 @@
 
 }
 
-
+.check-mark-before {
+  margin-left: 40px;
+}
 
 .check-mark-before::before {
   content: '';
@@ -163,6 +165,11 @@
   flex-direction: row;
   justify-content: space-between;
   position: relative;
+}
+
+.switch-container a {
+  color: #fc653c;
+  font-weight: 800;
 }
 
 .switch__header-item {

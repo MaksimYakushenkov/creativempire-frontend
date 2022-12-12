@@ -19,11 +19,16 @@ import switchImage2 from '../../assets/images/services/switchImage2.png';
 import switchImage3 from '../../assets/images/services/switchImage3.png';
 import switchImage4 from '../../assets/images/services/switchImage4.png';
 import iconSiteApp from '../../assets/images/icons/site-app.png';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 function CreativeDesign(props) {
 
   return (
     <>
+    <HelmetProvider><Helmet>
+      <title>{`Креативный дизайн под ключ | Creative Empire — премиальная веб-студия креативного дизайна`}</title>
+      <meta name="description" content="Узнайте онлайн, сколько стоит создание креативного дизайна под ключ в Creative Empire — премиальной веб-студии креативного дизайна." />
+    </Helmet></HelmetProvider>
     <PageBanner breadcumps={props.breadcumps} header={props.header} />
     <main className={props.service}>
       <div className='detail__container'>
@@ -110,7 +115,7 @@ function CreativeDesign(props) {
                   </div>
                   <div className='switch__description-item' data-description={2}>
                     <div className='description__container'>
-                      <h2 className='mb-30'>Лушчим клиентам — лучший дизайн!</h2>
+                      <h2 className='mb-30'>Лучшим клиентам — лучший дизайн!</h2>
                         <p className='detail__paragraph'>
                           Мы ежемесячно проводим аналитику современных трендов в дизайне. На основании полученных данных мы разрабатываем новую концепцию и внедряем ее уже в следующих проектах. Поэтому можем гарантировать самое высокое качество наших продуктов.
                         </p>
@@ -119,7 +124,7 @@ function CreativeDesign(props) {
                   <div className='switch__description-item' data-description={3}>
                   <div className='description__container'>
                       <h2 className='mb-30'>Полный контроль и ведение</h2>
-                      <p className='detail__paragraph'>Разработка дизайна происходит в несколько этапов (обзор конкурентов, прототипование, создание дизайна, внесение правок). После подтверждения заказа вы всегда будете знать о том, на каком этапе разработки находится ваш проект, в какие сроки этот этам будет реализован. Помимо этого, вы всегда сможете тщательно ознакомиться с проделанной работой. Мы готовы сделать некритичные правки без дополнительной оплаты.</p>
+                      <p className='detail__paragraph'>Разработка дизайна происходит в несколько этапов (обзор конкурентов, прототипование, создание дизайна, внесение правок) — ознакомиться со всеми можно здесь: <Link to='/work-plan'>план работы</Link>. После подтверждения заказа вы всегда будете знать о том, на каком этапе разработки находится ваш проект, в какие сроки этот этам будет реализован. Помимо этого, вы всегда сможете тщательно ознакомиться с проделанной работой. Мы готовы сделать некритичные правки без дополнительной оплаты.</p>
 
                     </div>
                   </div>

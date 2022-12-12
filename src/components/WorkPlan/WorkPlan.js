@@ -5,11 +5,16 @@ import PageBanner from '../PageBanner/PageBanner';
 import PlaceMagic from '../PlaceMagic/PlaceMagic';
 import Cooperation from '../Cooperation/Cooperation';
 import Footer from '../Footer/Footer';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 function WorkPlan(props) {
 
   return (
     <>
+    <HelmetProvider><Helmet>
+      <title>{`План работы от и до | Creative Empire — премиальная веб-студия креативного дизайна`}</title>
+      <meta name="description" content="Рассказываем о плане работы после заказа и оплаты проекта. Creative Empire — премиальная веб-студия креативного дизайна." />
+    </Helmet></HelmetProvider>
     <Header
     innerWidth={props.innerWidth}
     stickyHeader={props.stickyHeader}

@@ -13,7 +13,7 @@ class PageNotFound extends React.Component {
       <>
       <HelmetProvider><Helmet>
       <title>404 — Страница не найдена! | Creative Empire — премиальная веб-студия креативного дизайна</title>
-      <meta name="description" content="Вернитесь на предыдущую страницу или перейдите на главную." />
+      <meta name="description" content="Вернитесь на предыдущую страницу или перейдите на главную. Creative Empire — премиальная веб-студия креативного дизайна." />
       </Helmet></HelmetProvider>
       <Header 
       stickyHeader={this.props.stickyHeader}

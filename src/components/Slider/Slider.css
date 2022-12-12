@@ -244,6 +244,10 @@
   right: 276px;
 }
 
+ .slider__details {
+  z-index: -1;
+ }
+ 
 .slider__dots {
   position: absolute;
   -webkit-animation: circle_rotate 27s infinite;

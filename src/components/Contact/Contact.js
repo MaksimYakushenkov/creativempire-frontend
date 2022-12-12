@@ -12,6 +12,7 @@ import validation from '../Validation/Validation';
 import Popup from '../Popup/Popup';
 import InfoToolTip from '../InfoToolTip/InfoToolTip';
 import { Link } from 'react-router-dom';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 function Contact(props) {
   const form = useRef();
@@ -90,6 +91,10 @@ function Contact(props) {
 
   return (
     <>
+    <HelmetProvider><Helmet>
+      <title>{`Все способы связи | Creative Empire — премиальная веб-студия креативного дизайна`}</title>
+      <meta name="description" content="Вы можете связаться с нами по нескольким каналам связи. Напишите нам в соцсети, или отправьте заявку онлайн, чтобы узнать сколько стоит: разработка сайта под ключ, создание UX/UI-дизайна, креативный дизайн и др. Creative Empire — премиальная веб-студия креативного дизайна." />
+    </Helmet></HelmetProvider>
     <Header
     innerWidth={props.innerWidth}
     stickyHeader={props.stickyHeader}
@@ -170,7 +175,7 @@ function Contact(props) {
               <div className='contact__list__container'>
                 <h3 className='contact__list-title'>Мессенджеры</h3>
                 <a href="https://t.me/creativempire" className="contact__list-link">Telegram</a>
-                <a href="https://t.me/" className="contact__list-link">WhatsApp</a>
+                {/* <a href="https://t.me/" className="contact__list-link">WhatsApp</a> */}
               </div>
             </div>
 
@@ -179,8 +184,12 @@ function Contact(props) {
           <div className='contact__social wow fadeInUp delay-0-8s'>
             <h3 className='contact__social-header'>Подписывайтесь на нас</h3>
             <ul className='contact__social-list'>
-              <li className='contact__social-list-item'><a className='' href="ya.ru"><i className='icon icon-vkontakte'></i></a></li>
-              <li className='contact__social-list-item'><a className='' href="ya.ru"><i className='icon icon-telegram'></i></a></li>
+              <li className='contact__social-list-item'>
+                <a className='' href="https://vk.com/creativempire_studio" target="_blank" rel="noreferrer"><i className='icon icon-vkontakte'></i></a>
+              </li>
+              <li className='contact__social-list-item'>
+                <a className='' href="https://t.me/creativempire" target="_blank" rel="noreferrer"><i className='icon icon-telegram'></i></a>
+              </li>
             </ul>
           </div>
         </div>

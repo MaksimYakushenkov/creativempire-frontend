@@ -304,7 +304,7 @@
   .work__shape {
     transform: rotate(90deg);
     right: -40px;
-    top: 0;
+    top: 40px;
   }
   
 }

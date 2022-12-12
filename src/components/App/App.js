@@ -83,7 +83,7 @@ function App() {
   function getData() {
     mainApi.getArticles()
     .then((articles) => {
-      setAcrticlesData(articles.articles);
+      setAcrticlesData(articles.articles.reverse());
     })
     .catch((err) => {
       console.log(err);
@@ -91,7 +91,7 @@ function App() {
 
     mainApi.getPortfolio()
     .then((portfolios) => {
-      setPortfoliosData(portfolios.portfolios);
+      setPortfoliosData(portfolios.portfolios.reverse());
     })
     .catch((err) => {
       console.log(err);
@@ -130,10 +130,10 @@ return (
     
     <Switch>
     <Route exact path="/">
-      <HelmetProvider><Helmet>
-      <title>Title</title>
-      <meta name="description" content='ddd' />
-      </Helmet></HelmetProvider>
+    <HelmetProvider><Helmet>
+      <title>Creative Empire — премиальная веб-студия креативного дизайна</title>
+      <meta name="description" content="Creative Empire — премиальная веб-студия креативного дизайна. Лучшие креативные решения для вашего бизнеса или хобби! Оставьте заявку и мы вам перезвоним." />
+    </Helmet></HelmetProvider>
       <Header 
         innerWidth={innerWidth}
         stickyHeader={stickyHeader}
@@ -181,6 +181,10 @@ return (
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
     <Route path="/services">
+      <HelmetProvider><Helmet>
+        <title>{`Услуги | Creative Empire — премиальная веб-студия креативного дизайна`}</title>
+        <meta name="description" content="Узнайте подробнее о наших услугах по разработке вебсайта под ключ, создании UX/UI-дизайна, креативному дизайну и др. Creative Empire — премиальная веб-студия креативного дизайна." />
+      </Helmet></HelmetProvider>
       <Header
         innerWidth={innerWidth}
         stickyHeader={stickyHeader}

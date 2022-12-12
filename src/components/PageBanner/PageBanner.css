@@ -69,6 +69,18 @@
 }
 
 .page-banner__circle {
+  background: #fc653c;
+  border-radius: 50%;
+  height: 500px;
+  left: -212px;
+  opacity: .3;
+  position: absolute;
+  top: -156px;
+  width: 500px;
+  z-index: -2;
+}
+
+/* .page-banner__circle {
   width: 700px;
   height: 700px;
   z-index: -2;
@@ -78,7 +90,7 @@
   border-radius: 50%;
   position: absolute;
   opacity: 0.3;
-}
+} */
 
 .page-banner__img {
   position: absolute;
@@ -146,8 +158,10 @@
   }
 
   .page-banner__circle {
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -150px;
   }
 
 }

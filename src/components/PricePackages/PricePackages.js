@@ -28,7 +28,7 @@ function PricePackages() {
               <div className='pricePackages__price-area'>
                 <span className='pricePackages__price'>25 000</span>
                 <p>Скидка 25%</p>
-                <Link className='pricePackages__link' to='/services/create-website' target='_blank'>Подробнее
+                <Link className='pricePackages__link' to='/services/create-website' >Подробнее
                 <img src={iconDoubleRight} alt='Создание сайтов под ключ — заказать разработку сайта под ключ онлайн в веб-студии креативного дизайна Creative Empire'/></Link>
               </div>
             </div>
@@ -47,7 +47,7 @@ function PricePackages() {
               <div className='pricePackages__price-area'>
                 <span className='pricePackages__price'>55 000</span>
                 <p>Скидка 25%</p>
-                <Link className='pricePackages__link' to='/services/create-website' target='_blank'>Подробнее
+                <Link className='pricePackages__link' to='/services/create-website' >Подробнее
                 <img src={iconDoubleRight} alt='Создание сайтов под ключ — заказать разработку сайта под ключ онлайн в веб-студии креативного дизайна Creative Empire'/></Link>
               </div>
             </div>
@@ -66,7 +66,7 @@ function PricePackages() {
               <div className='pricePackages__price-area'>
                 <span className='pricePackages__price'>100 000</span>
                 <p>Скидка 25%</p>
-                <Link className='pricePackages__link' to='/services/create-website' target='_blank'>Подробнее
+                <Link className='pricePackages__link' to='/services/create-website' >Подробнее
                 <img src={iconDoubleRight} alt='Создание сайтов под ключ — заказать разработку сайта под ключ онлайн в веб-студии креативного дизайна Creative Empire'/></Link>
               </div>
             </div>
@@ -85,7 +85,7 @@ function PricePackages() {
               <div className='pricePackages__price-area'>
                 <span className='pricePackages__price'>220 000</span>
                 <p>Скидка 25%</p>
-                <Link className='pricePackages__link' to='/services/create-website' target='_blank'>Подробнее
+                <Link className='pricePackages__link' to='/services/create-website' >Подробнее
                 <img src={iconDoubleRight} alt='Создание сайтов под ключ — заказать разработку сайта под ключ онлайн в веб-студии креативного дизайна Creative Empire'/></Link>
               </div>
             </div>

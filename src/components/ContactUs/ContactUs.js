@@ -34,18 +34,18 @@ function ContactUs() {
               </div>
               <a href="https://t.me/creativempire" className="contactUs__link">Telegram</a>
             </li>
-            <li className="contactUs__list-item">
+            {/* <li className="contactUs__list-item">
               <div className='contactUs__image-container'>
                 <img src={iconWA} />
               </div>
               <a href="https://t.me/" className="contactUs__link">WhatsApp</a>
-            </li>
-            <li className="contactUs__list-item">
+            </li> */}
+            {/* <li className="contactUs__list-item">
               <div className='contactUs__image-container'>
                 <img src={iconPhone} />
               </div>
               <a href="tel:+7-929-638-13-88" className="contactUs__link">+7-929-638-13-88</a>
-            </li>
+            </li> */}
           </ul>
 
         </div>

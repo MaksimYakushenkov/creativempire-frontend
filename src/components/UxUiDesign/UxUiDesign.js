@@ -17,12 +17,16 @@ import switchImage2 from '../../assets/images/services/switchImage2.png';
 import switchImage3 from '../../assets/images/services/switchImage3.png';
 import switchImage4 from '../../assets/images/services/switchImage4.png';
 import iconSiteApp from '../../assets/images/icons/site-app.png';
-
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 function UxUiDesign(props) {
 
   return (
     <>
+    <HelmetProvider><Helmet>
+      <title>{`Разработка UX/UI-дизайна под ключ | Creative Empire — премиальная веб-студия креативного дизайна`}</title>
+      <meta name="description" content="Узнайте онлайн, сколько стоит разработка UX/UI-дизайна под ключ в Creative Empire — премиальной веб-студии креативного дизайна." />
+    </Helmet></HelmetProvider>
     <PageBanner breadcumps={props.breadcumps} header={props.header} />
     <main className={props.service}>
       <div className='detail__container'>
@@ -116,7 +120,7 @@ function UxUiDesign(props) {
                   <div className='switch__description-item' data-description={3}>
                   <div className='description__container'>
                       <h2 className='mb-30'>Полный контроль и ведение</h2>
-                      <p className='detail__paragraph'>Разработка дизайна происходит в несколько этапов (обзор конкурентов, прототипование, создание дизайна, внесение правок). После подтверждения заказа вы всегда будете знать о том, на каком этапе разработки находится ваш проект, в какие сроки этот этам будет реализован. Помимо этого, вы всегда сможете тщательно ознакомиться с проделанной работой. Мы готовы сделать некритичные правки без дополнительной оплаты.</p>
+                      <p className='detail__paragraph'>Разработка дизайна происходит в несколько этапов (обзор конкурентов, прототипование, создание дизайна, внесение правок) — ознакомиться со всеми можно здесь: <Link to='/work-plan'>план работы</Link>. После подтверждения заказа вы всегда будете знать о том, на каком этапе разработки находится ваш проект, в какие сроки этот этам будет реализован. Помимо этого, вы всегда сможете тщательно ознакомиться с проделанной работой. Мы готовы сделать некритичные правки без дополнительной оплаты.</p>
 
                     </div>
                   </div>

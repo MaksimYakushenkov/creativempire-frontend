@@ -83,8 +83,8 @@ function Footer(props) {
           </a>
           <p className='footer__paragraph'>Веб-студия креативного дизайна Creative Empire предлагает только лучшие и современные решения по доступной цене. Мы работаем на качество и всегда готовы пойти на компромисс с клиентом, если это, конечно, не нарушает нашу основную миссию.</p>
           <div className='footer__social'>
-            <a className='footer__social-link' href="ya.ru"><i className='footer__i vkontakte'></i></a>
-            <a className='footer__social-link' href="ya.ru"><i className='footer__i telegram'></i></a>
+            <a className='footer__social-link' href="https://vk.com/creativempire_studio" target="_blank" rel="noreferrer"><i className='footer__i vkontakte'></i></a>
+            <a className='footer__social-link' href="https://t.me/creativempire" target="_blank" rel="noreferrer"><i className='footer__i telegram'></i></a>
           </div>
         </div>
         <div className='footer__links pt-35 wow fadeInUp delay-0-4s'>
