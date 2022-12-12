@@ -1,9 +1,7 @@
-import React, { Component, useEffect } from 'react';
-import { Route, Switch, Link, withRouter, useHistory, } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { Route, Switch, withRouter, useHistory, } from "react-router-dom";
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import WOW from 'wow.js';
-import ArticleFull from '../articleFull/ArticleFull';
-import articlesApi from '../../utils/mainApi';
 import Header from '../Header/Header';
 import Home from '../Home/Home';
 import Footer from '../Footer/Footer';
@@ -43,7 +41,7 @@ function App() {
     text: ""
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener('resize', detectSize);
 
     return () => {
@@ -51,15 +49,7 @@ function App() {
     }
   }, [innerWidth]);
 
-  history.listen((location, action) => {
-    window.scrollTo(0, 0)
-  });
-
-  React.useEffect(() => {
-    getData();
-  }, []);
-
-  React.useEffect(() => {
+  useEffect(() => {
     new WOW().init();
     window.addEventListener('scroll', () => {
       if(window.pageYOffset <= 50){
@@ -70,11 +60,12 @@ function App() {
         setScrollToTopHidden(false);
       }
    });
+   getData();
   }, []);
 
-  React.useEffect(() => {
-    console.log(portfoliosData);
-  }, [articlesData, portfoliosData])
+  history.listen((location, action) => {
+    window.scrollTo(0, 0)
+  });
 
   function detectSize() {
     setInnerWidth(window.innerWidth);
@@ -100,7 +91,7 @@ function App() {
   }
   // const [articlesList, setAcrticleList] = React.useState([]);
   // const [article, setAcrticle] = React.useState([]);
-  // React.useEffect(() => {
+  // useEffect(() => {
   //   getArticlesData();
   // }, []);
   

@@ -1,13 +1,15 @@
 import React from "react";
-import { Route, Switch, Link, withRouter, useHistory, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 
 function ArticleFull(props) {
   let { url } = useParams();
+  
   React.useEffect(() => {
    props.getArticle(url);
   }, []);
+
   return (
     <>
     <HelmetProvider><Helmet><title>{props.article.metaTitle}</title>
