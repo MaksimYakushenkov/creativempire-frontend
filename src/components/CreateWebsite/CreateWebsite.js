@@ -286,9 +286,9 @@ function CreateWebsite(props) {
           </div>
 
       </div>
-      <div id='lastProjects' className=''>
-        <LatestProjects innerWidth={props.innerWidth} />
-      </div>
+      {/* <div id='lastProjects' className=''>
+        <LatestProjects portfoliosData={props.portfoliosData.filter((portfolio)=> portfolio.filter === 'website')} innerWidth={props.innerWidth} />
+      </div> */}
       <Cooperation />
     </main>
     </>

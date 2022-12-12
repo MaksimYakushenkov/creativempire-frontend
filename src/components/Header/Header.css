@@ -53,6 +53,7 @@
   font-weight: 700;
   color: #fff;
   text-decoration: none;
+  min-width: 62px;
 }
 
 .menu__mobile-item:nth-child(3) {

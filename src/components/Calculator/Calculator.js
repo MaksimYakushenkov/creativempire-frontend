@@ -263,7 +263,7 @@ function Calculator(props) {
                           <div className='calculator__input-image'>
                             <img src={iconWebsite} alt="Заказать разработку сайта под ключ в Москве в студии Creative Empire" />
                           </div>
-                          <h3 className='calculator__radio-header'>Одностраничный</h3>
+                          <h3 className='calculator__radio-header'>Landing Page</h3>
                         </div>
                         {/* <p className='calculator__radio-description'>Нужно ли краткое описание</p> */}
                     </div>

@@ -41,7 +41,7 @@ function BlogDetails(props) {
     />
     <main className='blog-details'>
       <div className='blog-details__container'>
-        <div className='blog-details__header'>
+        <div className='blog-details__header wow fadeInUp delay-02-s'>
           <div className='blog-details__header-container'>
             <img className='blog__header-preview' src={props.article.preview} alt={props.article.metaTitle}/>
             <h1 className='blog-details__title'>{props.article.title}</h1>
@@ -49,19 +49,25 @@ function BlogDetails(props) {
           </div>
         </div>
 
-        <div className='blog-details__content' dangerouslySetInnerHTML={{ __html: props.article.htmlCode }} />
+        <div className='blog-details__content wow fadeInUp delay-04-s' dangerouslySetInnerHTML={{ __html: props.article.htmlCode }} />
 
-        <div className='blog-details__tags'>
-          <p className='blog-details__date'>Опубликовано:  <span><b>{props.article.createdAt}</b></span></p>
-          <p className='blog-details__tags-title'>Теги:</p>
-          <ul className='blog-details__tags-list'>
-            {props.article.tags.map((tag, index) => {
-              return <li key={index} className='blog-details__tags-item'><b>{tag}</b></li>
-              })}
-          </ul>
+        <div className='blog-details__footer'>
+          <div className='blog-details__date'>
+            <p className='blog-details__date-paragraph'>Опубликовано:</p>
+            <span><b>{props.article.createdAt}</b></span>
+          </div>
+          
+          <div className='blog-details__tags'>
+            <p className='blog-details__tags-title'>Теги:</p>
+            <ul className='blog-details__tags-list'>
+              {props.article.tags.map((tag, index) => {
+                return <li key={index} className='blog-details__tags-item'><b>{tag}</b></li>
+                })}
+            </ul>
+          </div>
         </div>
 
-        <div className='blog-details__author'>
+        <div className='blog-details__author wow fadeInUp delay-04-s'>
           <img className='blog-details__author-avatar' src={authorAvatar} alt='Максим Якушенков, создатель веб-студии креативного дизайна Creative Empire' />
           <div className='blog-details__author-about'>
             <h3>Максим Якушенков</h3>

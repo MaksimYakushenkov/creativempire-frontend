@@ -239,9 +239,9 @@ function UxUiDesign(props) {
           </div>
 
       </div>
-      <div id='lastProjects' className=''>
-        <LatestProjects innerWidth={props.innerWidth} />
-      </div>
+      {/* <div id='lastProjects' className=''>
+        <LatestProjects place="uxui" portfoliosData={props.portfoliosData.filter((portfolio)=> portfolio.filter === 'uxui')} innerWidth={props.innerWidth} />
+      </div> */}
       <Cooperation />
     </main>
     </>

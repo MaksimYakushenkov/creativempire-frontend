@@ -313,9 +313,9 @@ function CreativeDesign(props) {
 
               </table> */}
       </div>
-      <div id='lastProjects' className=''>
-        <LatestProjects innerWidth={props.innerWidth} />
-      </div>
+      {/* <div id='lastProjects' className=''>
+        <LatestProjects place="creative" portfoliosData={props.portfoliosData} innerWidth={props.innerWidth}/>
+      </div> */}
       <Cooperation />
     </main>
     </>

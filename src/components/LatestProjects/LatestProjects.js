@@ -12,7 +12,6 @@ import PortfolioItem from '../PortfolioItem/PortfolioItem';
 
 function LatestProjects(props) {
   
-  
   const settings = props.innerWidth > 1023 ? { 
     dots: true,
     infinite: true,

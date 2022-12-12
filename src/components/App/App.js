@@ -176,6 +176,7 @@ return (
       setIsPopupOpened={setIsPopupOpened}
       infoData={infoData}
       setInfoData={setInfoData}
+      portfoliosData={portfoliosData}
       />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>

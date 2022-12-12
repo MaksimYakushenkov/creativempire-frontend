@@ -44,7 +44,7 @@
 
 .calculator__header h2 {
   line-height: 30px;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .calculator__header p {
@@ -383,7 +383,7 @@
 
   .calculator__price::before {
     font-size: 20px;
-    top: -15px;
+    top: -20px;
   }
   
   .calculator__price-area {
@@ -444,12 +444,13 @@
   .calculator__container {
     width: 300px;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+    padding-top: 60px!important;
   }
 
   .calculator__slide {
     width: 300px;
-    min-height: 580px
+    min-height: 350px
   }
 
   .calculator__header {
@@ -467,28 +468,31 @@
 
   .calculator__block {
     gap: 15px;
+    margin-top: 40px;
+    margin-bottom: 0;
   }
 
   .calculator__radio {
     width: 140px;
     text-align: center;
-    min-height: 130px;
+    min-height: auto;
+
+  }
+  
+  .calculator__radio-container {
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
   }
 
   .calculator__input-image {
-    width: 40px;
-    min-width: 40px;
-    height: 40px;
-  }
-
-  .calculator__input-image img {
-    width: 35px;
-    left: 10px;
+    display: none;
   }
 
   .calculator__radio-header {
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: start;
   }
 
   .calculator__button {
@@ -501,12 +505,12 @@
   }
 
   .answer__image {
-    width: 270px;
-    height: 180px;
+    width: 200px;
+    height: 134px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 30px auto;
+    margin: 10px auto;
   }
 
   .calculator__block.answer h3 {

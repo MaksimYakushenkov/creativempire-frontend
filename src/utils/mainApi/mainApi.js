@@ -13,9 +13,6 @@ class MainApi {
   getArticles() {
     return fetch(`${this._baseUrl}/articles`, {
       method: 'GET',
-      headers: {
-        "Content-Type": "application/json",
-      }
     })
     .then(res => {
       return this._checkResponse(res);
@@ -24,9 +21,6 @@ class MainApi {
   getPortfolio() {
     return fetch(`${this._baseUrl}/portfolios`, {
       method: 'GET',
-      headers: {
-        "Content-Type": "application/json",
-      }
     })
     .then(res => {
       return this._checkResponse(res);

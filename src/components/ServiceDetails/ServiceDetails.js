@@ -49,7 +49,8 @@ function ServiceDetails(props) {
           linkTitle: 'Услуги',
         }}
         innerWidth={props.innerWidth}
-        switchDesciption={switchDesciption}/> 
+        switchDesciption={switchDesciption}
+        portfoliosData={props.portfoliosData}/> 
       }
       { params.service === 'ux-ui-design' && 
         <UxUiDesign 
@@ -60,7 +61,8 @@ function ServiceDetails(props) {
           linkTitle: 'Услуги',
         }}
         innerWidth={props.innerWidth}
-        switchDesciption={switchDesciption}/> 
+        switchDesciption={switchDesciption}
+        portfoliosData={props.portfoliosData}/> 
       }
 
       { params.service === 'creative-design' && 
@@ -72,10 +74,11 @@ function ServiceDetails(props) {
           linkTitle: 'Услуги',
         }}
         innerWidth={props.innerWidth}
-        switchDesciption={switchDesciption}/> 
+        switchDesciption={switchDesciption}
+        portfoliosData={props.portfoliosData}/> 
       }
       
-      { params.service === '' && <CreateWebsite switchDesciption={switchDesciption}/> }
+      {/* { params.service === '' && <CreateWebsite switchDesciption={switchDesciption}/> } */}
 
 
 
