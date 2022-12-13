@@ -8,12 +8,21 @@ import PlaceMagic from '../PlaceMagic/PlaceMagic';
 
 class PageNotFound extends React.Component {
 
+  // React.useEffect(() =>{
+  //   props.history.push(`/not-found`);
+  // }, [])
+
   render(){
     return(
       <>
       <HelmetProvider><Helmet>
       <title>404 — Страница не найдена! | Creative Empire — премиальная веб-студия креативного дизайна</title>
       <meta name="description" content="Вернитесь на предыдущую страницу или перейдите на главную. Creative Empire — премиальная веб-студия креативного дизайна." />
+
+      <meta property="og:title" content="404 — Страница не найдена! | Creative Empire — премиальная веб-студия креативного дизайна" />
+      <meta property="og:site_name" content="creativempire.ru" />
+      <meta property="og:url" content={window.location.href} />
+      <meta property="og:description" content="Вернитесь на предыдущую страницу или перейдите на главную. Creative Empire — премиальная веб-студия креативного дизайна." />
       </Helmet></HelmetProvider>
       <Header 
       stickyHeader={this.props.stickyHeader}

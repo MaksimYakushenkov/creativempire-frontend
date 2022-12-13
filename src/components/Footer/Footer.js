@@ -2,10 +2,11 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logos/logo-white.png';
 import iconDoubleRight from '../../assets/images/icons/double-right.png';
-import iconLoading from '../../assets/images/icons/loading.png';
-import validation from '../Validation/Validation';
+
 import Popup from '../Popup/Popup';
 import InfoToolTip from '../InfoToolTip/InfoToolTip';
+import iconLoading from '../../assets/images/icons/loading.png';
+import validation from '../Validation/Validation';
 import publicKey from '../../utils/emailJS/emailJS-config';
 import emailjs from '@emailjs/browser';
 
@@ -13,7 +14,6 @@ function Footer(props) {
   const form = useRef();
   const [email, setEmail] = React.useState('');
   const [emailValid, setEmailValid] = React.useState(false);
-  const [formValid, setFormValid] = React.useState(false);
 
   React.useEffect(() => {
     const formContainer = document.querySelector('.footer__subscribe');
@@ -32,13 +32,9 @@ function Footer(props) {
     props.setIsPopupOpened(false);
   }
 
-  function isFormValid() {
-    setFormValid(emailValid);
-  }
-
   function resetForm() {
     setEmail('');
-    setFormValid(false);
+    setEmailValid(false);
   }
 
   function sendEmail(e) {
@@ -69,7 +65,6 @@ function Footer(props) {
     const {value} = e.target;
     setEmail(value)
     setEmailValid(validation.validateInput(e.target));
-    isFormValid();
   }
  
 
@@ -111,7 +106,7 @@ function Footer(props) {
             <p className='accept-rules__paragraph'>Нажимая на кнопку вы даете согласие на обработку персональных данных и соглашаетесь с <Link to="/privacy-policy" target="_blank">политикой конфиденциальности</Link>.</p>
           </div>
 
-          <button type="submit" className="contactUs__submit-button pricePackages__link" disabled={!formValid}>{props.isProcessing ? <><img className='submit__loading' src={iconLoading} /></> : <>Отправить<img src={iconDoubleRight} /></>}</button>
+          <button type="submit" className="contactUs__submit-button pricePackages__link" disabled={!emailValid}>{props.isProcessing ? <><img className='submit__loading' src={iconLoading} alt='Иконка загрузки'/></> : <>Отправить<img src={iconDoubleRight} alt='Иконка стрелки вправо'/></>}</button>
 
           </form>
         </div>
@@ -125,14 +120,14 @@ function Footer(props) {
         </div>
       </div>
       <Popup 
-      isPopupOpened={props.isPopupOpened}
-      setIsPopupOpened={props.setIsPopupOpened}
-      closePopup={closePopup}
-      >
-        <InfoToolTip 
-        data={props.infoData}
+    isPopupOpened={props.isPopupOpened}
+    setIsPopupOpened={props.setIsPopupOpened}
+    closePopup={closePopup}
+    >
+      <InfoToolTip 
+      data={props.infoData}
       />
-      </Popup>
+    </Popup>
     </footer>
   );
 }

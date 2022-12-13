@@ -28,6 +28,12 @@ function BlogDetails(props) {
     <HelmetProvider><Helmet>
       <title>{`${props.article.metaTitle} | Creative Empire — премиальная веб-студия креативного дизайна`}</title>
       <meta name="description" content={props.article.metaDescription} />
+      
+      <meta property="og:title" content={`${props.article.metaTitle} | Creative Empire — премиальная веб-студия креативного дизайна`} />
+      <meta property="og:site_name" content="creativempire.ru" />
+      <meta property="og:url" content={`https://creativempire.ru/${props.article.url}`} />
+      <meta property="og:description" content={props.article.description} />
+      <meta property="og:image" content={props.article.preview} />
     </Helmet></HelmetProvider>
     <Header 
     stickyHeader={props.stickyHeader}

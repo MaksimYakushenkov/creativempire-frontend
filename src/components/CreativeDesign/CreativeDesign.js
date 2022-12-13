@@ -1,19 +1,15 @@
 import React, { useEffect } from 'react';
 import './CreativeDesign.css';
 import { Link, useState, useParams } from 'react-router-dom';
-import Header from '../Header/Header';
 import PageBanner from '../PageBanner/PageBanner';
-import LatestProjects from '../LatestProjects/LatestProjects';
 import Cooperation from '../Cooperation/Cooperation';
 import creativeDesign1 from '../../assets/images/services/creative-design/creative-design1.png';
 import creativeDesign2 from '../../assets/images/services/creative-design/creative-design2.png';
 import creativeDesign3 from '../../assets/images/services/creative-design/creative-design3.png';
 import creativeDesign4 from '../../assets/images/services/creative-design/creative-design4.png';
-import createWebsite2 from '../../assets/images/services/create-website2.png';
-import createWebsite3 from '../../assets/images/services/create-website3.png';
+
 import iconWebsite from '../../assets/images/icons/website.png';
 import iconUi from '../../assets/images/icons/ui.png';
-import iconWordpress from '../../assets/images/icons/wordpress.png';
 import switchImage1 from '../../assets/images/services/switchImage1.png';
 import switchImage2 from '../../assets/images/services/switchImage2.png';
 import switchImage3 from '../../assets/images/services/switchImage3.png';
@@ -28,6 +24,11 @@ function CreativeDesign(props) {
     <HelmetProvider><Helmet>
       <title>{`Креативный дизайн под ключ | Creative Empire — премиальная веб-студия креативного дизайна`}</title>
       <meta name="description" content="Узнайте онлайн, сколько стоит создание креативного дизайна под ключ в Creative Empire — премиальной веб-студии креативного дизайна." />
+
+      <meta property="og:title" content="`Креативный дизайн под ключ | Creative Empire — премиальная веб-студия креативного дизайна" />
+      <meta property="og:site_name" content="creativempire.ru" />
+      <meta property="og:url" content="https://creativempire.ru/services/creative-design" />
+      <meta property="og:description" content="Узнайте онлайн, сколько стоит создание креативного дизайна под ключ в Creative Empire — премиальной веб-студии креативного дизайна." />
     </Helmet></HelmetProvider>
     <PageBanner breadcumps={props.breadcumps} header={props.header} />
     <main className={props.service}>

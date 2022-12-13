@@ -46,6 +46,11 @@ function Portfolio(props) {
     <HelmetProvider><Helmet>
       <title>{`Примеры наших работ | Creative Empire — премиальная веб-студия креативного дизайна`}</title>
       <meta name="description" content="Посмотрите примеры наших работы. Здесь собраны самые лучшие проекты: разработка сайта под ключ, создание UX/UI-дизайна, креативный дизайн и др. Creative Empire — премиальная веб-студия креативного дизайна." />
+
+      <meta property="og:title" content="Примеры наших работ | Creative Empire — премиальная веб-студия креативного дизайна" />
+      <meta property="og:site_name" content="creativempire.ru" />
+      <meta property="og:url" content="https://creativempire.ru/portfolio" />
+      <meta property="og:description" content="Посмотрите примеры наших работы. Здесь собраны самые лучшие проекты: разработка сайта под ключ, создание UX/UI-дизайна, креативный дизайн и др. Creative Empire — премиальная веб-студия креативного дизайна." />
     </Helmet></HelmetProvider>
     <Header
     innerWidth={props.innerWidth}

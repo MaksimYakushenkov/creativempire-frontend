@@ -24,6 +24,11 @@ function CreateWebsite(props) {
     <HelmetProvider><Helmet>
       <title>{`Разработка сайта под ключ | Creative Empire — премиальная веб-студия креативного дизайна`}</title>
       <meta name="description" content="Узнайте онлайн, сколько стоит разработка сайта под ключ в Creative Empire — премиальной веб-студии креативного дизайна." />
+
+      <meta property="og:title" content="Разработка сайта под ключ | Creative Empire — премиальная веб-студия креативного дизайна" />
+      <meta property="og:site_name" content="creativempire.ru" />
+      <meta property="og:url" content="https://creativempire.ru/services/create-website" />
+      <meta property="og:description" content="Узнайте онлайн, сколько стоит разработка сайта под ключ в Creative Empire — премиальной веб-студии креативного дизайна." />
     </Helmet></HelmetProvider>
     <PageBanner breadcumps={props.breadcumps} header={props.header} />
     <main id="createWebsite" className={props.service}>

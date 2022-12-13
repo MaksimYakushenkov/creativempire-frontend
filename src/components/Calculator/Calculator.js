@@ -152,6 +152,11 @@ function Calculator(props) {
     <HelmetProvider><Helmet>
       <title>{`Рассчитать стоимость услуг онлайн | Creative Empire — премиальная веб-студия креативного дизайна`}</title>
       <meta name="description" content="Рассчитайте стоимость услуг онлайн на нашем сайте. Вы можете узнать сколько стоит: разработка сайта под ключ, создание UX/UI-дизайна, креативный дизайн и др. Creative Empire — премиальная веб-студия креативного дизайна." />
+      
+      <meta property="og:title" content="Рассчитать стоимость услуг онлайн | Creative Empire — премиальная веб-студия креативного дизайна" />
+      <meta property="og:site_name" content="creativempire.ru" />
+      <meta property="og:url" content="https://creativempire.ru/calculator" />
+      <meta property="og:description" content="Рассчитайте стоимость услуг онлайн на нашем сайте. Вы можете узнать сколько стоит: разработка сайта под ключ, создание UX/UI-дизайна, креативный дизайн и др. Creative Empire — премиальная веб-студия креативного дизайна." />
     </Helmet></HelmetProvider>
    <Header
     innerWidth={props.innerWidth}

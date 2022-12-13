@@ -9,8 +9,6 @@ import Footer from '../Footer/Footer';
 import iconDoubleRight from '../../assets/images/icons/double-right.png';
 import iconLoading from '../../assets/images/icons/loading.png';
 import validation from '../Validation/Validation';
-import Popup from '../Popup/Popup';
-import InfoToolTip from '../InfoToolTip/InfoToolTip';
 import { Link } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
@@ -25,11 +23,6 @@ function Contact(props) {
   const [emailValid, setEmailValid] = React.useState(false);
   const [descriptionVaild, setDescriptionVaild] = React.useState(false);
   const [formValid, setFormValid] = React.useState(false);
-
-  function closePopup() {
-    props.setIsPopupOpened(false);
-  }
-
   
   function sendEmail(e) {
     e.preventDefault();
@@ -94,6 +87,12 @@ function Contact(props) {
     <HelmetProvider><Helmet>
       <title>{`Все способы связи | Creative Empire — премиальная веб-студия креативного дизайна`}</title>
       <meta name="description" content="Вы можете связаться с нами по нескольким каналам связи. Напишите нам в соцсети, или отправьте заявку онлайн, чтобы узнать сколько стоит: разработка сайта под ключ, создание UX/UI-дизайна, креативный дизайн и др. Creative Empire — премиальная веб-студия креативного дизайна." />
+
+      <meta property="og:title" content="Все способы связи | Creative Empire — премиальная веб-студия креативного дизайна" />
+      <meta property="og:site_name" content="creativempire.ru" />
+      <meta property="og:url" content="https://creativempire.ru/contact" />
+      <meta property="og:description" content="Вы можете связаться с нами по нескольким каналам связи. Напишите нам в соцсети, или отправьте заявку онлайн, чтобы узнать сколько стоит: разработка сайта под ключ, создание UX/UI-дизайна, креативный дизайн и др. Creative Empire — премиальная веб-студия креативного дизайна." />
+" />
     </Helmet></HelmetProvider>
     <Header
     innerWidth={props.innerWidth}
@@ -198,15 +197,6 @@ function Contact(props) {
     </main>
 
     <PlaceMagic />
-    <Popup 
-    isPopupOpened={props.isPopupOpened}
-    setIsPopupOpened={props.setIsPopupOpened}
-    closePopup={closePopup}
-    >
-      <InfoToolTip 
-      data={props.infoData}
-      />
-    </Popup>
     <Footer
     isProcessing={props.isProcessing}
     setIsProcessing={props.setIsProcessing}

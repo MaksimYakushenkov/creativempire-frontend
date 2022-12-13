@@ -14,6 +14,11 @@ function WorkPlan(props) {
     <HelmetProvider><Helmet>
       <title>{`План работы от и до | Creative Empire — премиальная веб-студия креативного дизайна`}</title>
       <meta name="description" content="Рассказываем о плане работы после заказа и оплаты проекта. Creative Empire — премиальная веб-студия креативного дизайна." />
+
+      <meta property="og:title" content="План работы от и до | Creative Empire — премиальная веб-студия креативного дизайна" />
+      <meta property="og:site_name" content="creativempire.ru" />
+      <meta property="og:url" content="https://creativempire.ru/work-plan" />
+      <meta property="og:description" content="Рассказываем о плане работы после заказа и оплаты проекта. Creative Empire — премиальная веб-студия креативного дизайна." />
     </Helmet></HelmetProvider>
     <Header
     innerWidth={props.innerWidth}

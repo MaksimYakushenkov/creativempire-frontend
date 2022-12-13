@@ -26,6 +26,12 @@ function PortfolioDetails(props) {
     <HelmetProvider><Helmet>
       <title>{`${props.portfolio.metaTitle} | Creative Empire — премиальная веб-студия креативного дизайна`}</title>
       <meta name="description" content={props.portfolio.metaDescription} />
+
+      <meta property="og:title" content={`${props.portfolio.metaTitle} | Creative Empire — премиальная веб-студия креативного дизайна`} />
+      <meta property="og:site_name" content="creativempire.ru" />
+      <meta property="og:url" content={`https://creativempire.ru/${props.portfolio.url}`} />
+      <meta property="og:description" content={props.portfolio.metaDescription} />
+      <meta property="og:image" content={props.portfolio.preview} />
     </Helmet></HelmetProvider>
     <Header
     stickyHeader={props.stickyHeader}

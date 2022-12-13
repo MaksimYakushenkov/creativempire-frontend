@@ -26,6 +26,11 @@ function UxUiDesign(props) {
     <HelmetProvider><Helmet>
       <title>{`Разработка UX/UI-дизайна под ключ | Creative Empire — премиальная веб-студия креативного дизайна`}</title>
       <meta name="description" content="Узнайте онлайн, сколько стоит разработка UX/UI-дизайна под ключ в Creative Empire — премиальной веб-студии креативного дизайна." />
+
+      <meta property="og:title" content="Разработка UX/UI-дизайна под ключ | Creative Empire — премиальная веб-студия креативного дизайна" />
+      <meta property="og:site_name" content="creativempire.ru" />
+      <meta property="og:url" content="https://creativempire.ru/services/ux-ui-design" />
+      <meta property="og:description" content="Узнайте онлайн, сколько стоит разработка UX/UI-дизайна под ключ в Creative Empire — премиальной веб-студии креативного дизайна." />
     </Helmet></HelmetProvider>
     <PageBanner breadcumps={props.breadcumps} header={props.header} />
     <main className={props.service}>
