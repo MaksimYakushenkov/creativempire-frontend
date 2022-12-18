@@ -92,7 +92,6 @@ function Contact(props) {
       <meta property="og:site_name" content="creativempire.ru" />
       <meta property="og:url" content="https://creativempire.ru/contact" />
       <meta property="og:description" content="Вы можете связаться с нами по нескольким каналам связи. Напишите нам в соцсети, или отправьте заявку онлайн, чтобы узнать сколько стоит: разработка сайта под ключ, создание UX/UI-дизайна, креативный дизайн и др. Creative Empire — премиальная веб-студия креативного дизайна." />
-" />
     </Helmet></HelmetProvider>
     <Header
     innerWidth={props.innerWidth}

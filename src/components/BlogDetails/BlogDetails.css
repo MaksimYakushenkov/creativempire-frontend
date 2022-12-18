@@ -69,8 +69,29 @@
   font-size: 18px;
 }
 
-.blog-details__content figure, .blog-details__content img {
+.blog-details__content li {
+  line-height: 24px;
+  font-size: 18px;
+}
+
+.blog-details__content blockquote {
+  border-left: 5px solid #adadb8;
+  padding-left: 15px;
+  margin: 30px 0 15px;
+}
+
+.blog-details__content blockquote p {
   margin: 0;
+}
+
+.blog-details__content figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-details__content figure, .blog-details__content img {
+  margin: 15px 0 0;
   padding: 0;
   max-width: 960px;
 }
@@ -180,7 +201,11 @@
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
 
-  .blog-details__content p {
+  .blog-details__content {
+    width: 1000px;
+  }
+
+  .blog-details__content p, .blog-details__content li {
     line-height: 18px;
     font-size: 16px;
 }
@@ -206,7 +231,11 @@
     font-size: 30px;
   }
 
-  .blog-details__content p, .blog-details__footer p {
+  .blog-details__content {
+    width: 700px;
+  }
+
+  .blog-details__content p, .blog-details__footer p, .blog-details__content li {
     font-size: 14px;
     line-height: 20px;
   }
@@ -235,6 +264,10 @@
 
   .blog-details__tags-list, .blog-details__social-list {
     flex-wrap: wrap;
+  }
+
+  .blog-details__content figure, .blog-details__content img {
+    max-width: 720px;
   }
 }
 
@@ -267,9 +300,17 @@
     padding-bottom: 30px;
   }
 
-  .blog-details__content p, .blog-details__footer p {
+  .blog-details__content {
+    width: 300px;
+  }
+
+  .blog-details__content p, .blog-details__footer p, .blog-details__content li {
     font-size: 12px;
     line-height: 14px;
+  }
+
+  .blog-details__content ol {
+    padding-left: 30px;
   }
 
   .blog-details__content h2, .blog-details__content h3, .blog-details__content h4 {
@@ -298,6 +339,8 @@
     line-height: 18px;
   }
 
+
+
   .blog-details__author-avatar {
     width: 120px;
     height: 120px;
@@ -305,6 +348,10 @@
 
   .blog-details__social-list {
     margin-top: 20px;
+  }
+
+  .blog-details__content figure, .blog-details__content img {
+    max-width: 320px;
   }
 
   .blog-details__footer {
