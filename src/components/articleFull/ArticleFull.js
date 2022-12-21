@@ -25,7 +25,7 @@ function ArticleFull(props) {
     </Helmet></HelmetProvider>
     
       <h1>{props.article.metaTitle}</h1><p>{url}</p>
-      <div dangerouslySetInnerHTML={{ __html: props.article.htmlCode }} />
+      <div dangerouslySetInnerHTML={{ __html: props.article.htmlCode.htmlCode.replace('<h1>&nbsp;</h1>', '') }} />
       </>
   );
 }

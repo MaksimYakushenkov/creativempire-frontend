@@ -100,7 +100,7 @@ function PortfolioDetails(props) {
             {props.portfolio.filter === "website" || props.portfolio.filter === "uxui" ? <div className='project__overview-description' dangerouslySetInnerHTML={{ __html: props.portfolio.result}} /> : ''}
           </div>
 
-          <div className='project__description-content wow fadeInUp delay-0-8s' dangerouslySetInnerHTML={{ __html: props.portfolio.htmlCode }} />
+          <div className='project__description-content wow fadeInUp delay-0-8s' dangerouslySetInnerHTML={{ __html: props.portfolio.htmlCode.replace('<h1>&nbsp;</h1>', '')}} />
         </div>
       </div>
     </main>
