@@ -124,6 +124,13 @@ return (
     <HelmetProvider><Helmet>
       <title>Creative Empire — премиальная веб-студия креативного дизайна</title>
       <meta name="description" content="Creative Empire — премиальная веб-студия креативного дизайна. Лучшие креативные решения для вашего бизнеса или хобби! Оставьте заявку и мы вам перезвоним." />
+      <meta property="og:title" content="Creative Empire — премиальная веб-студия креативного дизайна"/>
+      <meta property="og:site_name" content="creativempire.ru"/>
+      <meta property="og:url" content="https://creativempire.ru/"/>
+      <meta property="og:description" content="Creative Empire — премиальная веб-студия креативного дизайна. Лучшие креативные решения для вашего бизнеса или хобби! Оставьте заявку и мы вам перезвоним."/>
+      <meta property="og:image" content="https://api.creativempire.ru/uploads/opengraph__home.jpg"/>
+      <meta property="og:image:width" content="968"/>
+      <meta property="og:image:height" content="504"/>
     </Helmet></HelmetProvider>
       <Header 
         innerWidth={innerWidth}
@@ -335,7 +342,7 @@ return (
       />
       <ScrollToTop scrollToTopHidden={scrollToTopHidden} />
     </Route>
-    <Route path="*">
+    <Route path="*" status={404}>
       <PageNotFound
       stickyHeader={stickyHeader}
       innerWidth={innerWidth}
