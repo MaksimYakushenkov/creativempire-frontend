@@ -30,7 +30,7 @@ class MainApi {
 
 
 const mainApi = new MainApi({
-  baseUrl: 'https://api.creativempire.ru',
+  baseUrl: process.env.REACT_APP_API_URL,
 });
 
 export default mainApi;
